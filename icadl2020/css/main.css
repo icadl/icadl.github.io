@@ -337,13 +337,13 @@ nav {
   text-align: center;
 }
 .logo-name {
-  margin-bottom: 0;
+  margin-bottom: 5px;
   font-size: 10em;
   letter-spacing: -0.04em;
 }
 .tagline {
-  margin-bottom: 0;
-  font-size: 1.2em;
+  margin-bottom: 5px;
+  font-size: 3em;
   letter-spacing: -0.02em;
 }
 .call-action-area .price {
@@ -600,8 +600,8 @@ nav {
     font-size: 4em;
   }
   .tagline {
-    margin-bottom: 0;
-    font-size: 1.2em;
+    margin-bottom: 5px;
+    font-size: 3em;
   }
   .call-action-area .price {
     font-size: 2em;
