@@ -152,6 +152,7 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
+  background-size:cover;
 }
 svg:not(:root) {
   overflow: hidden;
@@ -333,7 +334,10 @@ nav {
    HEADER
    ========================================================================== */
 .header {
+  padding: 150px 0 100px;
+/*
   padding: 100px 0 100px;
+*/
   text-align: center;
 }
 .logo-name {
@@ -720,7 +724,10 @@ nav {
   background-color: #2b2b2b;
   background-repeat: no-repeat;
   background-position: center bottom;
+  background-size: cover;
+/*
   background-size: 100% auto;
+*/
 }
 .logo-link,
 .tagline,
