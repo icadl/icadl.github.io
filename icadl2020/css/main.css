@@ -282,10 +282,10 @@ hr {
   position: relative;
 }
 .content {
-  padding: 50px 0;
+  padding: 10px 0;
 }
 .content section {
-  padding-top: 50px;
+  padding-top: 10px;
 }
 /* =============================================================================
    BASIC STYLES
@@ -314,30 +314,12 @@ p {
   position: relative;
   top: -1px;
 }
-/* =============================================================================
-   NAVIGATION
-   ========================================================================== */
-nav {
-  padding: 15px 0;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-}
-.nav-item {
-  display: inline-block;
-  margin-right: 15px;
-}
-.nav-link {
-  font-size: 1.4em;
-}
+
 /* =============================================================================
    HEADER
    ========================================================================== */
 .header {
-  padding: 150px 0 100px;
-/*
-  padding: 100px 0 100px;
-*/
+  padding: 200px 0 300px;
   text-align: center;
 }
 .logo-name {
@@ -524,6 +506,9 @@ nav {
    Media Queries
    ========================================================================== */
 @media only screen and (max-width: 1024px) {
+  .header {
+    background-size: auto 100%;
+  }	
   .wrapper {
     width: 100%;
     padding: 0 20px;
@@ -704,11 +689,20 @@ h6 {
 /* =============================================================================
    NAVIGATION
    ========================================================================== */
+.nav-item {
+  display: inline-block;
+  margin-right: 15px;
+}
 nav {
   background: #2b2b2b;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 .nav-link {
   color: #e7e7e7;
+  font-size: 1.4em;
 }
 .nav-link:active,
 .nav-link:hover,
@@ -721,13 +715,11 @@ nav {
    ========================================================================== */
 .header {
   background-image: url('../img/cover.jpg');
-  background-color: #2b2b2b;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: cover;
-/*
+  /*background-color: #2b2b2b;*/
+  background-repeat: no-repeat; 
+  background-position: center top; 
   background-size: 100% auto;
-*/
+
 }
 .logo-link,
 .tagline,
