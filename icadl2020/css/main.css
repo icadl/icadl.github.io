@@ -285,7 +285,7 @@ hr {
   padding: 10px 0;
 }
 .content section {
-  padding-top: 10px;
+  padding-top: 90px;
 }
 /* =============================================================================
    BASIC STYLES
@@ -319,7 +319,7 @@ p {
    HEADER
    ========================================================================== */
 .header {
-  padding: 200px 0 300px;
+  padding: 200px 0 210px;
   text-align: center;
 }
 .logo-name {
