@@ -16,10 +16,10 @@
 <body>
   <div class="global">
  		<!-- NAVIGATION -->
-    <nav id="nav">
+	<nav id="nav">
   	<ul class="wrapper">
     
-      <li class="nav-item">
+      <li class="nav-item itemactive">
         <a href="#welcome" title="Welcome" class="nav-link">
           Welcome
         </a>
@@ -63,8 +63,8 @@
     <div class="content" id="content">
       <div class="wrapper">
         <!-- section: welcome -->
-          <section class="welcome" id="welcome">
-            <h2 class="section-title">Welcome</h2>
+          <section class="welcome" id="welcome"><!--
+            <h2 class="section-title">Welcome</h2> -->
 
 							<p itemprop="description"><h3><center>The 22nd International Conference on Asia-Pacific Digital Libraries (ICADL 2020)</center></h3></p>
 							
@@ -76,13 +76,13 @@
 							
 							<p>Many emerging research areas such as Digital Humanities, Open Sciences, Social Informatics originated from digital library research over the past decades, and it is essential that ICADL continues as a platform for scholars to connect and develop in these emerging as well as extant areas. ICADL 2020 is planned as a forum for researchers to exchange ideas and discuss together across domains for innovative digital information environment especially during a time of pandemic, upheavals in work, culture, health services and so on. An important feature of ICADL is the diversity of the Asia-Pacific region in many aspects – languages, cultures, social systems, development levels and technologies. This diversity will bring new ideas and thoughts to the participants.</p>
 							
-							<p>This year the conference will be <b><u>held online</b></u> same as many other related events due to COVID-19 pandemics. Presentations will be then performed online as well as they will be also recorded and disseminated later for open access by the community. <b>There will be no attendance fee (neither for participants nor for authors), and only prior registration of the attendees’ information is required. The conference is free for anyone to attend!</b></p>
+							<p>This year the conference will be <b>held online</b> same as many other related events due to COVID-19 pandemics. Presentations will be then performed online as well as they will be also recorded and disseminated later for open access by the community. <b>There will be no attendance fee (neither for participants nor for authors), and only prior registration of the attendees’ information is required. The conference is free for anyone to attend!</b></p>
 							
 							<p>Proceedings of ICADL 2020 will be published by Springer as an LNCS volume, which is indexed by Scopus. In this year we invite three kinds of submissions: full research papers, short research papers and practitioners papers. Note that there will be no demo or poster submissions for this year. We encourage the potential authors who planned to submit posters or demos to consider extending their submissions to a short paper format that has length up to 6 pages.</p>
           </section>
         <!-- section cfp -->
           <section class="cfp" id="cfp">
-            <h2 class="section-title">Call for Papers</h2>
+           <!-- <h2 class="section-title">Call for Papers</h2> -->
 
 					<p itemprop="description"><h3>Topics</h3></p>
 					<p>We invite submissions on diverse topics related to digital libraries and related fields including (but not limited to):</p>
@@ -163,7 +163,7 @@
           </section>
         <!-- section: submission -->
           <section class="submission" id="submission">
-            <h2 class="section-title">Submission</h2>
+            <!-- <h2 class="section-title">Submission</h2> -->
 
 						<p><h3>Formatting & Submission Lengths</h3></p>
 						
@@ -186,7 +186,7 @@
           </section>
         <!-- section: dates  -->
           <section class="dates" id="dates">
-            <h2 class="section-title">Important Dates</h2>
+            <!-- <h2 class="section-title">Important Dates</h2> -->
 
 							<h5>
 							<ul>
@@ -201,7 +201,7 @@
           </section>
         <!-- section: organizers -->
           <section class="organizers" id="organizers">
-            <h2 class="section-title">Organizers</h2>
+            <!-- <h2 class="section-title">Organizers</h2> -->
 
 						<p itemprop="description"><h3>Conference Committee</h3></p>
 						
@@ -265,8 +265,17 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="https://icadl.github.io/icadl2020/js/jquery.js"><\/script>')</script>
-  
+  <script>
+  	window.jQuery || document.write('<script src="https://icadl.github.io/icadl2020/js/jquery.js"><\/script>')
+  	
+  	$(document).ready(function() {
+		    $('nav#nav ul li').on('click', function(){		    	
+		        $(this).closest('ul').find('.itemactive').attr('class','nav-item');
+		        $(this).addClass('itemactive');
+
+		    });
+		});
+  </script>  
   
 </body>
 </html>
