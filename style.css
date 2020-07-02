@@ -56,6 +56,8 @@ p,li{
 .top > .global-region-inner > .box-plugin > .bg-nav > .navigation-2-plugin  > ul{
     background-color: #fd426a;
     border-color: #fd426a;
+    margin:0;
+    padding:0;
 }
 
 
@@ -102,6 +104,15 @@ p,li{
 .top > .global-region-inner > .box-plugin > .bg-nav > .navigation-2-plugin  > ul > li:hover > a {
     color: rgb(69, 69, 69);
   }
+
+.top > .global-region-inner > .box-plugin > .bg-nav > .navigation-2-plugin > ul > li.k-item{
+    list-style:none;
+    position: relative;
+    float: left;
+    border-style: solid;
+    vertical-align: top;
+}
+
 .top > .global-region-inner > .box-plugin > .bg-nav > .navigation-2-plugin  > ul > li.k-state-active {
     padding-top: 0;
     padding-right: 0;
@@ -118,9 +129,12 @@ p,li{
     -webkit-box-shadow: 0 0 0 0 rgb(127, 127, 127),0 0 0 0 rgb(127, 127, 127) inset;
     box-shadow: 0 0 0 0 rgb(127, 127, 127),0 0 0 0 rgb(127, 127, 127) inset;
   }
+
+
 .top > .global-region-inner > .box-plugin > .bg-nav > .navigation-2-plugin  > ul > li.k-state-active > a {
     color: rgb(69, 69, 69);
   }
+
   /***************/
   /* neo sub nav */
   /***************/
@@ -186,7 +200,7 @@ p,li{
     color: rgb(69, 69, 69);
   }
 
-.top > .global-region-inner > .image-plugin > .neo-asset-inner{
+.top > .global-region-inner > .image-plugin > .neo-asset-inner img{
     width: 250px;
     position: relative;
     left: 2px;
