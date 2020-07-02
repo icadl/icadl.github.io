@@ -204,6 +204,11 @@ p,li{
     color: rgb(69, 69, 69);
   }
 
+.top > .global-region-inner > .image-plugin{
+    width: 250px;
+    margin-bottom: 10px;
+}
+
 .top > .global-region-inner > .image-plugin > .neo-asset-inner img{
     width: 250px;
     position: relative;
