@@ -206,7 +206,7 @@ p,li{
 
 .top > .global-region-inner > .image-plugin{
     width: 250px;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .top > .global-region-inner > .image-plugin > .neo-asset-inner img{
