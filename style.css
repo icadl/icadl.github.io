@@ -27,8 +27,11 @@ p,li{
 .top > .global-region-inner > .text-plugin h1{
     font-family: 'Gudea', sans-serif;
     font-size: 48px;
+    font-weight: 400;
     color: #6a6a6a;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .top > .global-region-inner > .box-plugin{
@@ -84,6 +87,7 @@ p,li{
   }
 .top > .global-region-inner > .box-plugin > .bg-nav > .navigation-2-plugin  > ul > li > a {
     color: rgb(255, 255, 255);
+    text-decoration: none;
   }
 .top > .global-region-inner > .box-plugin > .bg-nav > .navigation-2-plugin  > ul > li >a:hover {
     padding-top: 0;
@@ -109,7 +113,6 @@ p,li{
     list-style:none;
     position: relative;
     float: left;
-    border-style: solid;
     vertical-align: top;
 }
 
@@ -133,6 +136,7 @@ p,li{
 
 .top > .global-region-inner > .box-plugin > .bg-nav > .navigation-2-plugin  > ul > li.k-state-active > a {
     color: rgb(69, 69, 69);
+    text-decoration: none;
   }
 
   /***************/
