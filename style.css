@@ -293,7 +293,7 @@ p,li{
     z-index: 398;
 }
 
-.center > .global-region-inner > .text-plugin .title_2016{
+.center > .global-region-inner > .text-plugin .title_2020{
     position: absolute; 
     text-align: center;
     font-size: 72px;
@@ -315,7 +315,6 @@ p,li{
     position: relative;
     display: inline-block;
     padding: 0 55px;
-    width: 100%;
     font-family: 'Anonymous Pro', sans-serif;
     font-size: 45px;
     font-weight: 700;
@@ -458,7 +457,6 @@ ul.site_list li{
 #footer > .global-region-inner{
     position: relative; 
     margin: 0px auto; 
-    height: 217px; 
     width: 962px;
     padding-top: 95px;
 }
