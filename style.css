@@ -314,7 +314,7 @@ p,li{
 .center > .global-region-inner > .box-plugin > .page-title > h2{
     position: relative;
     display: inline-block;
-    padding: 0 55px;
+    width: 100%;
     font-family: 'Anonymous Pro', sans-serif;
     font-size: 45px;
     font-weight: 700;
