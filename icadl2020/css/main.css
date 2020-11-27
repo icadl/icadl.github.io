@@ -856,9 +856,15 @@ nav {
 .schedule-tbl th {
   color: #2b2b2b;
 }
+
+.schedule-tbl li::before {
+	content: "#" counter(li) ;
+  display: inline-block; width: 1.5em;
+  margin-left: -2em}
 .schedule-tbl li {
   font-size: 1em;
-  list-style: circle;
+  counter-increment: li;
+  //list-style: circle;  
 }
 .schedule-tbl .speaker-photo .photo {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
