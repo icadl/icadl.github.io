@@ -25,9 +25,48 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        
+        <!-- toast notify -->
+				<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+				<script type="text/javascript" src="js/toaster/toastr.min.js"></script>
+				<link href="js/toaster/toastr.css" rel="stylesheet" type="text/css" />
+				<script language="javascript" type="text/javascript">
+					function getState(){
+			          //do getdata 
+			          var news_list=document.getElementById('news_list').getElementsByTagName('li');
+			          console.log(news_list);
+			          for (var i = 0; i < news_list.length; i++) {
+                	notify(news_list[i].innerText,"Info");
+            		}
+								
+			         // setTimeout('getState();',1000); //100ms
+					}	
+				  function notify(name,sdate) {
+				    	toastr.success(name,sdate,{positionClass: "toast-top-right"});
+				    	toastr.options.closeButton = false;
+				    	//toastr.options.closeMethod = 'fadeOut';
+				    	//toastr.options.closeDuration = 300;
+				    	//toastr.options.closeEasing = 'swing';
+				    	toastr.options.debug=false;
+				//    	toastr.options.newestOnTop=true;
+				    	toastr.options.progressBar=true;
+				    	//toastr.options.positionClass="toast-top-full-width";
+				    	//toastr.options.preventDuplicates=false;
+				    	toastr.options.onclick=null;
+				    	toastr.options.showDuration=500;
+				    	toastr.options.hideDuration=300;
+				    	toastr.options.timeOut=10000;
+				    	toastr.options.extendedTimeOut=1000;
+				    	toastr.options.showEasing="swing";
+				    	toastr.options.hideEasing="linear";
+				    	toastr.options.showMethod="fadeIn";
+				    	toastr.options.hideMethod="fadeOut";
+				    	toastr.options.closeMethod = "slideUp";
+				  }
+				</script>        
     </head>
 
-    <body>
+    <body onload="getState();">
         <div class="wrapper">
             <!-- Top Bar Start -->
             <div class="top-bar">
@@ -141,9 +180,9 @@
           <section class="news" id="news">
             <p itemprop="description" style="border-top-width:0px;padding-top:50px"><h3>News</h3></p>
 						<p>
-							<ul>
+							<ul id="news_list">
 								 <li>The registration form is now open. Please <a href="#Registration">register</a>!</li>
-								<li>The <a href="#Program">program</a> was released!</li>								 
+								 <li>The <a href="#Program">program</a> was released!</li>								 
 							</ul>
 						</p>								
           </section>          
@@ -334,7 +373,7 @@
 							</tr>																												
 							<tr class="schedule-coffee"><td>21:00-21:30</td>
 								<td>Break</td></tr>			
-							<tr><td>21:00-22:00</td>
+							<tr><td>21:30-22:30</td>
 								<td>
 									<b>Keynote 1:</b><br/>
 									Speaker: Dr. Wesley Teter (Adviser, Learning Economy Foundation)<br/>
@@ -394,9 +433,9 @@
 										<b>Session 8:&nbsp;Neural-based Learning</b>
 										<ul>
 											<li>8-1&nbsp;[Full paper]&nbsp;<i>PEERAssist: Leveraging on Paper-Review Interactions To Predict Peer Review Decisions</i>&nbsp;(Prabhat Kumar Bharti, Shashi Ranjan, Tirthankar Ghosal, Asif Ekbal, and Mayank Agarwal)</li>	
-											<li>8-2&nbsp;[Short paper]&nbsp;<i>Multilingual Epidemic Event Extraction</i>&nbsp;(Stephen Mutuvi, Emanuela Boros, Antoine Doucet, Gaël Lejeune, Adam Jatowt, and Moses Odeo)</li>	
-											<li>8-3&nbsp;[Short paper]&nbsp;<i>Automated Mining of Leaderboards for Empirical AI Research</i>&nbsp;(Salomon Kabongo Kabenamualu, Jennifer D'Souza, and Sören Auer)</li>	
-											<li>8-4&nbsp;[Practitioners paper]&nbsp;<i>Embedding transcription and transliteration layers in the Digital Library of Polish and Poland-related News Pamphlets</i>&nbsp;(Maciej Ogrodniczuk and Włodzimierz Gruszczyński)</li>	
+											<li>8-2&nbsp;[Full paper]&nbsp;<i>Multilingual Epidemic Event Extraction</i>&nbsp;(Stephen Mutuvi, Emanuela Boros, Antoine Doucet, Gaël Lejeune, Adam Jatowt, and Moses Odeo)</li>	
+											<li>8-3&nbsp;[Full paper]&nbsp;<i>Automated Mining of Leaderboards for Empirical AI Research</i>&nbsp;(Salomon Kabongo Kabenamualu, Jennifer D'Souza, and Sören Auer)</li>	
+											<li>8-4&nbsp;[Practice paper]&nbsp;<i>Embedding transcription and transliteration layers in the Digital Library of Polish and Poland-related News Pamphlets</i>&nbsp;(Maciej Ogrodniczuk and Włodzimierz Gruszczyński)</li>	
 										</ul>	
 									</td>
 												
@@ -620,5 +659,5 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
-    </body>
+ </body>
 </html>
