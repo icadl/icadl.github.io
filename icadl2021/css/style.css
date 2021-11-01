@@ -421,7 +421,12 @@ a:focus {
     font-size: 50px;
     font-weight: 700;
 }
-
+section a {
+background: url(../img/ex_link.gif) right 60% no-repeat;
+color: #000099;
+padding-right:11px;
+margin-right: 2px;
+}
 @media (max-width: 767.98px) {
     .section-header h2 {
         font-size: 30px;
