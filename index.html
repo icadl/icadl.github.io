@@ -1,750 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>ICADL 2021 - The 23rd International Conference on Asia-Pacific Digital Libraries</title>
-  			<meta charset="utf-8">
-  			<meta name="description" content="The 23rd International Conference on Asia-Pacific Digital Libraries (ICADL 2021)"/>
-  			<meta name="keywords" content="Information Technologies, Data Science &amp; Applications, Knowledge discovery,digital library,Semantic Web, linked data,metadata technologies,Cultural Information,Digital Humanities,Community Informatics,Access and usage of Web Archives,Data analytics for social networks,Intellectual property issues,Information behavior analysis with digital libraries, ICADL"/>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+  <title>ICADL</title> 
+  <meta name="DESCRIPTION" content="International Conference on Asia-Pacific Digital Libraries, ICADL"/> 
+  <meta name="KEYWORDS" content="International Conference on Asia-Pacific Digital Libraries, ICADL"/> 
+ 
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Anonymous+Pro:wght@400;700&family=Gudea:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css"/> 
+  <link rel="stylesheet" type="text/css" href="http://assets.neo.registeredsite.com/libs/jqueryui/1.10.3/themes/base/minified/jquery-ui.min.css"/> 
+  <link rel="stylesheet" type="text/css" href="http://assets.neo.registeredsite.com/libs/bootstrap/3.2.0/css/bootstrap.min.css"/> 
+  <link rel="stylesheet" type="text/css" href="http://assets.neo.registeredsite.com/libs/jquery/1.10.1/custom-scrollbar/jquery.mCustomScrollbar.css"/> 
+  <link rel="stylesheet" type="text/css" href="http://assets.neo.registeredsite.com/libs/jquery.fancyScroll/1.0/jquery.fancyScroll.css"/> 
+  <link rel="stylesheet" type="text/css" href="http://assets.neo.registeredsite.com/libs/jquery.contextMenu/2.1.1/css/jquery.contextMenu.min.css"/> 
+  <link rel="stylesheet" type="text/css" href="http://assets.neo.registeredsite.com/libs/colorpicker/spectrum/1.1.1/spectrum.css"/> 
+  <link rel="stylesheet" type="text/css" href="http://assets.neo.registeredsite.com/libs/web/css/site.css"/> 
+  <link rel="stylesheet" type="text/css" href="http://assets.neo.registeredsite.com/libs/web/pagetree/1.0/css/pagetree.css"/> 
+  <link rel="stylesheet" type="text/css" href="http://assets.neo.registeredsite.com/libs/introjs/2.0/intro.min.css"/> 
+  <link rel="stylesheet" type="text/css" href="http://assets.neo.registeredsite.com/plugins/neo.css?ct=1461813021731"/> 
+  <script type="text/javascript">
+  var builderSettings = {
+    appRoot: '/http://app.neo.registeredsite.com/neo/',
+    appRelativePath: '/neo',
+    assetsRoot: '/http://assets.neo.registeredsite.com',
+    repositoryRoot: '/http://repository.neo.registeredsite.com',
+    spRoot: '/http://repository.neo.registeredsite.com/starting-points',
+    usersRoot: '/http://users.neo.registeredsite.com',
+    sitesearchUrl: '/http://sitesearch.services.matrixbuilder.com/sitesearch/search',
+    siteDomain: '03ca523.netsolhost.com',
+    isBuilder : false,
+    isPreview : false
+  };
+</script> 
 
-        <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+ </head>
 
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+ <body class="neo-publish">
+  <!-- New builder template -->
+  
+  <!--End Includes-->
+  <div  id="canvas" data-ng-app="webcomApp" class="aire default page-bg sp-supports-nav2 ui-selectable"> 
 
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <!--<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">-->
-        <link href="lib/slick/slick.css" rel="stylesheet">
-        <link href="lib/slick/slick-theme.css" rel="stylesheet">
-
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-        
-        <!-- toast notify -->
-				<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-				<script type="text/javascript" src="js/toaster/toastr.min.js"></script>
-				<link href="js/toaster/toastr.css" rel="stylesheet" type="text/css" />
-				<script language="javascript" type="text/javascript">
-					function getState(){
-			          //do getdata 
-			          var news_list=document.getElementById('news_list').getElementsByTagName('li');
-			          console.log(news_list);
-			          for (var i = news_list.length-1; i >=0; i--) {
-                	notify(news_list[i].innerHTML,"Info");
-            		}
-								
-			         // setTimeout('getState();',1000); //100ms
-					}	
-				  function notify(name,sdate) {
-				    	toastr.success(name,sdate,{positionClass: "toast-top-right"});
-				    	toastr.options.closeButton = false;
-				    	//toastr.options.closeMethod = 'fadeOut';
-				    	//toastr.options.closeDuration = 300;
-				    	//toastr.options.closeEasing = 'swing';
-				    	toastr.options.debug=false;
-				//    	toastr.options.newestOnTop=true;
-				    	toastr.options.progressBar=true;
-				    	//toastr.options.positionClass="toast-top-full-width";
-				    	//toastr.options.preventDuplicates=false;
-				    	toastr.options.onclick=null;
-				    	toastr.options.showDuration=500;
-				    	toastr.options.hideDuration=300;
-				    	toastr.options.timeOut=10000;
-				    	toastr.options.extendedTimeOut=1000;
-				    	toastr.options.showEasing="swing";
-				    	toastr.options.hideEasing="linear";
-				    	toastr.options.showMethod="fadeIn";
-				    	toastr.options.hideMethod="fadeOut";
-				    	toastr.options.closeMethod = "slideUp";
-				  }
-				</script>        
-    </head>
-
-    <body onload="getState();">
-        <div class="wrapper">
-            <!-- Top Bar Start -->
-            <div class="top-bar">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 col-md-12">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <h1>ICADL 2021</h1>
-                                    <!-- <img src="img/logo.jpg" alt="Logo"> -->
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-7 d-none d-lg-block">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="top-bar-item">
-                                        <div class="top-bar-icon">
-                                            <i class="flaticon-calendar"></i>
-                                        </div>
-                                        <div class="top-bar-text">
-                                            <h3>Registration</h3>
-                                            <p>Nov. 25, 2021</p>
-                                        </div>
-                                    </div>
-                                </div>                                
-                                <div class="col-4">
-                                    <div class="top-bar-item">
-                                        <div class="top-bar-icon">
-                                            <i class="flaticon-calendar"></i>
-                                        </div>
-                                        <div class="top-bar-text">
-                                            <h3>OnLine meeting</h3>
-                                            <p>Dec. 1-3, 2021</p>                                           
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="top-bar-item">
-                                        <div class="top-bar-icon">
-                                            <i class="flaticon-send-mail"></i>
-                                        </div>
-                                        <div class="top-bar-text">
-                                            <h3>Email Us</h3>
-                                            <p>icadl2021@easychair.org</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Top Bar End -->
-
-            <!-- Nav Bar Start -->
-            <div class="nav-bar">
-                <div class="container-fluid">
-                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-                        <a href="#" class="navbar-brand">MENU</a>
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                            <div class="navbar-nav mr-auto">
-                                <a href="index.html#welcome" title="Welcome" class="nav-link">Welcome</a>
-                                <a href="index.html#news" title="News" class="nav-link">News</a>
-                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Submission</a>
-                                    <div class="dropdown-menu">
-                                        <a href="index.html#cfp" class="dropdown-item">Call for Papers</a>                                    	
-                                        <a href="index.html#submission" class="dropdown-item">Submission</a>
-                                    </div>
-                                </div>									        			
-									        			<a href="index.html#dates" title="Important Dates" class="nav-link">Important Dates</a>
-                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Program</a>
-                                    <div class="dropdown-menu">
-                                        <a href="index.html#Program" class="dropdown-item">Program</a>
-                                        <a href="keynotes.html" class="dropdown-item">Keynotes</a>
-                                        <a href="panel.html" class="dropdown-item">Panel</a>
-                                        <a href="socialevent.html" class="dropdown-item">Social event</a>
-                                        <a href="#zoom" class="dropdown-item">ZOOM Instructions</a>
-                                    </div>
-                                </div>
-										        		<a href="index.html#accepted" title="Accepted papers" class="nav-link">Accepted papers</a>
-																<div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Organizers</a>
-                                    <div class="dropdown-menu">
-                                        <a href="index.html#organizers" class="dropdown-item">Organizers</a>
-                                        <a href="index.html#host" class="dropdown-item">Host</a>
-                                    </div>
-                                </div>										        		                                        
-																<a href="APiConf.html" class="nav-link">AP-iConference</a>
-                            </div>
-                            <div class="ml-auto">
-                                <a class="btn" href="#Registration">Registration</a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-            <!-- Nav Bar End -->            
-    <div class="content" id="content">
-      <div class="wrapper">
-		   	<div class="header">
-				    <h1 class="logo-name">
-				      <a class="logo-link" href="#welcome" title="" itemprop="name"></a><!-- don't show banner word-->
-				    </h1>	
-				</div>      	
-        <!-- section: welcome -->
-          <section class="welcome" id="welcome"><!--
-            <h2 class="section-title">Welcome</h2> -->
-
-							<p itemprop="description" style="border-top-width:0px;padding-top:120px">
-								<center>
-									<h2>
-										The 23rd International Conference on Asia-Pacific Digital Libraries (ICADL 2021)</h2><br/><h3>December 1 - 3, 2021 (online conference)</h3></center></p>
-							
-							<p itemprop="description"><h4><center>Towards Open and Trustworthy Digital Societies</center></h4></p>
-							
-							
-							<p itemprop="description"><a href="https://icadl.net/">International Conference on Asia-Pacific Digital Libraries (ICADL)</a>, which started in Hong Kong in 1998 and over the years traveled many countries in the Asia-Pacific region, is known as a major digital library conference. Along with JCDL and TPDL, ICADL is held annually as one of the three top venues for connecting digital library, computer science, and library and information science communities.</p>
-							
-							<p>This year ICADL will be held online from December 1st to 3rd, 2021 (JST time zone), same as last year. Doctoral consortium will also be held with Asia-Pacific Chapter of iSchools (AP-iSchools) collaboration. Under the COVID-19 pandemic, we have learned that online opportunities give us new normal lifestyle. We believe that new and fair innovations, mechanisms, are systems are necessary towards realizing Open and Trustworthy Digital Societies. The theme for ICADL 2021 is " <b>Towards Open and Trustworthy Digital Societies</b> ". ICADL 2021 will provide an opportunity for researchers from not only Asia-Pacific regions but also all over the world to exchange and discuss their ideas together across different domains to achieve innovative digital information environment especially during this pandemic time. Attendees can join ICADL for free of charge! Registration is still required prior to the conference.</p>
-							<p>The Best Paper and the Best Student Paper will be awarded by Program Committee among the accepted full papers. Same as in the last year, selected best papers will be invited for a special issue to be published with the International Journal on Digital Libraries (IJDL), Springer.</p>
-          </section>
-        <!-- section: news -->
-          <section class="news" id="news">
-            <p itemprop="description" style="border-top-width:0px;padding-top:50px"><h3>News</h3></p>
-						<p>
-							<ul id="news_list">
-								 <li>The registration deadline has been extended to <font color='red'>November 25</font></li>
-								 <li>The registration form is now open. Please <a href="#Registration">register</a>!</li>
-								 <li>The <a href="#Program">program</a> was released!</li>								 
-							</ul>
-						</p>								
-          </section>          
-        <!-- section cfp -->
-          <section class="cfp" id="cfp">
-           <!-- <h2 class="section-title">Call for Papers</h2> -->
-
-					<p itemprop="description" style="border-top-width:0px;padding-top:50px"><h3>Call for Papers</h3></p>
-					<p>Proceedings of ICADL 2021 will be published by Springer as an LNCS volume, which is indexed by Scopus. This year, we have the following three submission categories: full research papers, short research papers, and practice papers. Note that there will be no demo or poster submissions. We encourage potential authors who will submit posters or demos to extend their work to short paper format, which is at most 6 pages. </p>
-					<p>If there is any interest for organizing workshops, tutorial, and panel sessions with ICADL 2021, we will consider them on request. Please contact conference organizers (<a href="mailto:icadl2021@easychair.org">icadl2021@easychair.org</a>) with your proposal. The information about the accepted events will put on the conference website and we will encourage attendees to join the events.</p>
-					<p>The review for practice paper submissions will put less emphasis on the novelty and more on real world practices and applications of DL technologies in institutions or companies.</p>
-					<p>Sufficient time for oral will be given to oral presentation for accepted papers in all submission categories using a presentation platform to be chosen later (e.g., ZOOM). Each accepted paper must be presented online by at least one of the co-authors. </p>
-
-					<p><h3>Topics</h3></p>
-					<p>We invite submissions on diverse topics related to digital libraries and related fields including (but not limited to):</p>
-					
-					<p>
-						<h4>Information Technologies, Data Science &amp; Applications</h4>
-							<ul>
-								<li>Information retrieval and access technologies to digital collections</li>
-								<li>Data mining and information extraction</li>
-								<li>IoT and digital libraries</li>
-								<li>AI for digital libraries</li>
-								<li>Natural language processing techniques in digital collections</li>
-								<li>Knowledge discovery from digital libraries content</li>
-								<li>Recommender systems for digital libraries content</li>
-								<li>Infrastructures &amp; development of Web Archives</li>
-								<li>Data science techniques</li>
-								<li>Semantic Web, linked data, and metadata technologies</li>
-								<li>Ontologies and knowledge organization systems</li>
-								<li>Applications and quality assurance of digital libraries</li>
-								<li>Research data and open access</li>
-								<li>Visualization, user interface, and user experience</li>
-								<li>Social networking and collaborative interfaces in digital libraries</li>
-								<li>Personal information management and personal digital libraries</li>
-								<li>Information service technologies in digital libraries</li>
-								<li>Bibliometrics and scholarly communication in digital libraries</li>
-								<li>Curation and preservation technologies in digital libraries</li>
-								<li>Information organization support</li>
-							</ul>
-					</p>
-
-					<p>
-						<h4>Cultural Information, Digital Humanities &amp; Scholarly Data Analysis</h4>
-						<ul>
-							<li>Cultural heritage access and analysis</li>
-							<li>Digital history</li>
-							<li>Scholarly data analysis</li>
-							<li>Scientometrics</li>
-							<li>Access and usage of Web Archives</li>
-							<li>Community Informatics</li>
-							<li>Cultural heritage and museum informatics</li>
-							<li>Collaborations among archives, libraries, and museums</li>
-							<li>Collection development and discovery</li>
-							<li>Digital cultural memory initiatives</li>
-							<li>Memory organizations in the digital space</li>
-							<li>Digital preservation and digital curation</li>
-							<li>Digital library/digital archive infrastructures</li>
-							<li>Digital library education and digital literacy</li>
-							<li>Higher education uses of digital collections</li>
-							<li>Research data infrastructures, management and use</li>
-							<li>Information policies</li>
-							<li>Participatory cultural heritage</li>
-						</ul>
-					</p>
-					
-						<p>
-							<h4>Social Informatics and Socio-technological Issues in Digital Libraries</h4>
-							<ul>
-								<li>Data analytics for social networks</li>
-								<li>Socio-technical aspects of digital libraries</li>
-								<li>Sustainability of digital libraries</li>
-								<li>Research methods for digital libraries during social isolation times</li>
-								<li>Roles of digital libraries for isolated societies</li>
-								<li>Digital libraries for learning, collaboration, and organization in the networked environment</li>
-								<li>Societal and cultural issues in knowledge, information, and data</li>
-								<li>Intellectual freedom, censorship, misinformation</li>
-								<li>Intellectual property issues</li>
-								<li>Policy, legal, and ethical concerns for digital libraries</li>
-								<li>Social, legal, ethical, financial issues of Web Archives</li>
-								<li>Social policy issues on digital libraries</li>
-								<li>Information behavior analysis</li>
-								<li>Social science </li>
-								<li>Information work and digital libraries</li>
-								<li>Information economics and digital libraries</li>
-								<li>Education with digital libraries</li>
-								<li>Participatory cultures and digital libraries</li>
-								<li>Digital scholarship and services</li>
-								<li>Open data initiatives and utilization</li>
-							</ul>
-						</p>
-          </section>
-        <!-- section: submission -->
-          <section class="submission" id="submission">
-            <!-- <h2 class="section-title">Submission</h2> -->
-
-						<p itemprop="description" style="border-top-width:0px;padding-top:50px"><h3>Submission</h3></p>
-						
-						<p>All submissions must be in English, in PDF format. Papers should follow <a href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" target="_blank">Springer Computer Science Proceedings guidelines (https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines)</a>.
-							All papers are to be submitted via the conference’s EasyChair submission system (<a href="https://easychair.org/conferences/?conf=icadl2021" target="_blank">https://easychair.org/conferences/?conf=icadl2021</a>). The conference uses a single-blind review process. At least 3 Program Committee members will review each submission. </p>
-						<p><h4>Formatting &amp; Submission Lengths</h4></p>
-						<p>The lengths of submissions should be as follows:</p>						
-						<p>
-							<ul>
-								<li>Full papers: 12-14 pages + references</li>
-								<li>Short papers: 6-8 pages + references</li>
-								<li>Practice papers: 6-8 pages + references</li>
-							</ul>
-						</p>						
-          </section>
-        <!-- section: dates  -->
-          <section class="dates" id="dates">
-            <p itemprop="description" style="border-top-width:20px;padding-top:50px"><h3>Important Dates</h3></p>
-						<p>The schedule is shown below. All the dates are Anywhere on Earth (AoE) time zone:</p>
-						<p>
-								<ul>
-									<li>Full, Short Research and Practice Papers Submission: <span style="text-decoration:line-through">July 1, 2021</span> <font color='red'>July 14, 2021 (extended)</font></li>
-									<li>Acceptance Notification (All paper categories): <span style="text-decoration:line-through">August 20, 2021</span> <font color='red'>August 30, 2021 (extended)</font></li>
-									<li>Camera Ready Copy of Papers: September 20, 2021</li>						
-									<li>Attendee and Author Information Registration Deadline: <span style="text-decoration:line-through">November 15, 2021</span> <font color='red'> November 25, 2021 (extended)</font></li>
-									<li>Conference: December 1 - 3, 2021</li>									
-								</ul>
-						</p>
-
-          </section>
-<!-- section: Program (tentative) -->
-          <section class="dates" id="Program">
-						<p itemprop="description" style="border-top-width:20px;padding-top:50px"><h3>Program</h3>
-						
-						<p>
-						<h4>Day 1 (Dec. 1): 13:00-22:30 (Japan Standard Time) ICADL</h4>
-						<table class="schedule-tbl">
-							<tr><th>Time</th><th>Session</th><th>Zoom Link</th></tr>
-							<tr class="schedule-coffee"><td>13:00-13:30</td>
-							<td>Opening</td>
-							<td><a href="https://us06web.zoom.us/j/87884833614">ZOOM LINK: https://us06web.zoom.us/j/87884833614 </a></td></tr>
-							<tr><td>13:30-15:00</td>
-									<td>
-										<b>Session 1:&nbsp;Knowledge Discovery from Digital Collections</b>
-										<ul>
-											<li>1-1&nbsp;[Full paper]&nbsp;<i>Diachronic Linguistic Periodization of Temporal Document Collections for Discovering Evolutionary Word Semantics</i>&nbsp;(Yijun Duan, Adam Jatowt, Masatoshi Yoshikawa, Xin Liu, and Akiyoshi Matono)</li>	
-											<li>1-2&nbsp;[Full paper]&nbsp;<i>Joint Model Using Character and Word Embeddings for Detecting Internet Slang Words</i>&nbsp;(Yihong Liu, and Yohei Seki)</li>	
-											<li>1-3&nbsp;[Short paper]&nbsp;<i>Knowledge Discovery from the Digital Library’s Contents: A holistic approach</i>&nbsp;(Md. Habibur Rahman, Sohaimi Zakaria, and Azree Ahmad)</li>	
-											<li>1-4&nbsp;[Short paper]&nbsp;<i>DataQuest: An Approach To Automatically Extract Dataset Mentions From Scientific Papers</i>&nbsp;(Sandeep Kumar, Tirthankar Ghosal, and Asif Ekbal)</li>	
-											<li>1-5&nbsp;[Practice paper]&nbsp;<i>A Prototype System for Monitoring Emotion and Sentiment Trends towards Nuclear Energy on Twitter using Deep Learning</i>&nbsp;(Snehameena Arumugam, Likai Peng, Jin-Cheon Na, Guangze Lin, Roopika Ganesh, Xiaoyin Li, Qing Chen, Shirley S. Ho, and Erik Cambria)</li>	
-										</ul>		
-									</td>
-									<td><a href="https://us06web.zoom.us/j/87884833614">ZOOM LINK: https://us06web.zoom.us/j/87884833614 </a></td>
-							</tr>	
-							<tr class="schedule-coffee"><td>15:00-15:30</td>
-							<td>Break</td><td>&nbsp;</td></tr>	
-							<tr><td>15:30-17:00</td>
-									<td>
-										<b>Session 2:&nbsp;Text Classification and Matching</b>
-										<ul>
-											<li>2-1&nbsp;[Full paper]&nbsp;<i>Automating the Choice Between Single or Dual Annotation for Classifier Training</i>&nbsp;(Satoshi Fukuda, Emi Ishita, Yoichi Tomiura, and Douglas Oard)</li>	
-											<li>2-2&nbsp;[Full paper]&nbsp;<i>Integrating Semantic Space Finetuning and Self-training for Semi-supervised Multi-label Text Classification</i>&nbsp;(Zhewei Xu, and Mizuho Iwaihara)</li>	
-											<li>2-3&nbsp;[Short paper]&nbsp;<i>Named entity recognition architecture combining contextual and global features</i>&nbsp;(Thi Hong Hanh Tran, Antoine Doucet, Nicolas SidÈre, Jose Moreno, and Senja Pollak)</li>	
-											<li>2-4&nbsp;[Short paper]&nbsp;<i>A Consistency Analysis of NLP Approaches for Reviewer-Manuscript Matching</i>&nbsp;(Nishith Kotak, Anil K. Roy, Sourish Dasgupta, and Tirthankar Ghosal)</li>	
-										</ul>
-									</td>
-									<td><a href="https://us06web.zoom.us/j/87884833614">ZOOM LINK: https://us06web.zoom.us/j/87884833614 </a></td>
-							</tr>	
-							<tr class="schedule-coffee"><td>17:00-17:30</td>
-							<td>Break</td><td>&nbsp;</td></tr>		
-							<tr><td>17:30-19:00</td>
-									<td>
-										<b>Session 3:&nbsp;Data Infrastructures for Digital Libraries</b>
-										<ul>
-											<li>3-1&nbsp;[Full paper]&nbsp;<i>When expertise gone missing: Uncovering the loss of prolific contributors in Wikipedia</i>&nbsp;(Paramita Das, Bhanu Prakash Reddy Guda, Debajit Chakraborty, Soumya Sarkar, and Animesh Mukherjee)</li>	
-											<li>3-2&nbsp;[Full paper]&nbsp;<i>Federating Scholarly Infrastructures with GraphQL</i>&nbsp;(Muhammad Haris, Kheir Eddine Farfar, Markus Stocker, and Sören Auer)</li>	
-											<li>3-3&nbsp;[Short paper]&nbsp;<i>Simple DL: A toolkit to create simple digital libraries</i>&nbsp;(Hussein Suleman)</li>	
-											<li>3-4&nbsp;[Short paper]&nbsp;<i>Towards Approximating Population-Level Mental Health in Thailand Using Large-Scale Social Media Data</i>&nbsp;(Krittin Chatrinan, Anon Kangpanich, Tanawin Wichit, Thanapon Noraset, Suppawong Tuarob, and Tanisa Tawichsri)</li>	
-											<li>3-5&nbsp;[Practice paper]&nbsp;<i>Analysis of Usefulness of Critique Documents on Musical Performance: Toward better Instrcutional Document Format</i>&nbsp;(Masaki Matsubara, Rina Kagawa, Takeshi Hirano, and Isao Tsuji)</li>	
-										</ul>	
-									</td>		
-									<td><a href="https://us06web.zoom.us/j/87884833614">ZOOM LINK: https://us06web.zoom.us/j/87884833614 </a></td>						
-							</tr>	
-							<tr class="schedule-coffee"><td>19:00-19:30</td>
-								<td>Break</td><td>&nbsp;</td></tr>			
-							<tr><td>19:30-21:00</td>
-								<td>
-										<b>Session 4:&nbsp;Search for Better User Experience</b>
-										<ul>
-											<li>4-1&nbsp;[Full paper]&nbsp;<i>A Qualitative Evaluation of User-perceived Satisfaction for Link-based vs. Text-based Wikipedia Article Recommendations</i>&nbsp;(Malte Ostendorff, Corinna Breitinger, and Bela Gipp)</li>	
-											<li>4-2&nbsp;[Full paper]&nbsp;<i>Narrative Query Graphs for Entity-Interaction-Aware Document Retrieval</i>&nbsp;(Hermann Kroll, Jan Pirklbauer, Jan-Christoph Kalo, Morris Kunz, Johannes Ruthmann, and Wolf-Tilo Balke)</li>	
-											<li>4-3&nbsp;[Short paper]&nbsp;<i>BookReach-UI: A book-curation interface for school librarians to support inquiry learning</i>&nbsp;(Shuntaro Yada, Takuma Asaishi, and Rei Miyata)</li>	
-											<li>4-4&nbsp;[Short paper]&nbsp;<i>SmartReviews: Towards Human- and Machine-actionable Representation of Review Articles</i>&nbsp;(Allard Oelen, Markus Stocker, and Sören Auer)</li>	
-											<li>4-5&nbsp;[Practice paper]&nbsp;<i>A Large-scale Collection Reselection Method Oriented by Library Space Rebuilding Based on the Statistics of Zero-borrowing Books</i>&nbsp;(Lei Huang)</li>	
-										</ul>	
-								</td>
-								<td><a href="https://us06web.zoom.us/j/87884833614">ZOOM LINK: https://us06web.zoom.us/j/87884833614 </a></td>
-							</tr>																												
-							<tr class="schedule-coffee"><td>21:00-21:30</td>
-								<td>Break</td><td>&nbsp;</td></tr>			
-							<tr><td>21:30-22:30</td>
-								<td>
-									<b>Keynote 1:</b><br/>
-									Speaker: <a href="keynotes.html#keynote1">Dr. Wesley Teter</a> (UNESCO Asia and Pacific Regional Bureau for Education)<br/>
-								</td>
-								<td><a href="https://us06web.zoom.us/j/82782204520">ZOOM LINK: https://us06web.zoom.us/j/82782204520 (Webinar) </a></td>
-							</tr>								
-						</table>
-						</p>
-						
-						<p>
-						<h4>Day 2 (Dec. 2): 13:00-22:00 (Japan Standard Time) ICADL</h4>
-						<table class="schedule-tbl">
-							<tr><th>Time</th><th>Session</th><th>Zoom Link</th></tr>
-							<tr><td>13:00-14:30</td>
-									<td>
-										<b>Session 5:&nbsp;Information Extraction</b>
-										<ul>
-											<li>5-1&nbsp;[Full paper]&nbsp;<i>Automatic Cause-Effect Relation Extraction from Dental Textbooks Using BERT</i>&nbsp;(Terapat Chansai, Ruksit Rojpaisarnkit, Teerakarn Boriboonsub, Suppawong Tuarob, Myat Su Yin, Peter Haddawy, Saeed-Ul Hassan, and Mihai Pomarlan)</li>	
-											<li>5-2&nbsp;[Full paper]&nbsp;<i>ContriSci: A BERT-based Multitasking Deep Neural Architecture to Identify Contribution Statements from Research Papers</i>&nbsp;(Komal Gupta, Ammaar Ahmad, Tirthankar Ghosal, and Asif Ekbal)</li>	
-											<li>5-3&nbsp;[Short paper]&nbsp;<i>Supervised Learning of Keyphrase Extraction Utilizing Prior Summarization</i>&nbsp;(Tingyi Liu and Mizuho Iwaihara)</li>	
-											<li>5-4&nbsp;[Short paper]&nbsp;<i>Bert-based Chinese Medical Keyphrase Extraction Model Enhanced with External Features</i>&nbsp;(Liangping Ding, Zhixiong Zhang, and Yang Zhao)</li>	
-										</ul>	
-									</td>
-								  <td><a href="https://us06web.zoom.us/j/87552490942">ZOOM LINK: https://us06web.zoom.us/j/87552490942 </a></td>
-							</tr>	
-							<tr class="schedule-coffee"><td>14:30-15:00</td>
-							<td>Break</td><td>&nbsp;</td></tr>	
-							<tr><td>15:00-16:30</td>
-									<td>
-										<b>Session 6:&nbsp;Data Modeling</b>
-										<ul>
-											<li>6-1&nbsp;[Full paper]&nbsp;<i>Modelling archaeological buildings using CIDOC-CRM and its extensions: the case of Fuwairit, Qatar</i>&nbsp;(Manolis Gergatsoulis, Georgios Papaioannou, Eleftherios Kalogeros, Ioannis Mpismpikopoulos, Katerina Tsiouprou, and Robert Carter)</li>	
-											<li>6-2&nbsp;[Full paper]&nbsp;<i>Integrating Heterogeneous Data about Quebec Literature into an IFLA LRM Knowledge Base</i>&nbsp;(Ludovic Font, Dominique Piché, Amal Zouaq, and Michel Gagnon)</li>	
-											<li>6-3&nbsp;[Short paper]&nbsp;<i>Evaluating the Robustness of Embedding-based Topic Models to OCR Noise</i>&nbsp;(Elaine Zosa, Stephen Mutuvi, Antoine Doucet, and Mark Granroth-Wilding)</li>	
-											<li>6-4&nbsp;[Short paper]&nbsp;<i>Pattern-based Acquisition of Scientific Entities from Scholarly Article Titles</i>&nbsp;(Jennifer D'Souza, and Sören Auer)</li>	
-											<li>6-5&nbsp;[Practice paper]&nbsp;<i>Enriching the Metadata of a Digital Collection to Enhance Accessibility: A Case Study at PRAC. in Kyushu University Library, Japan</i>&nbsp;(Tetsuya Nakatoh, Hironori Kodama, Yuko Hori, and Emi Ishita)</li>	
-										</ul>	
-									</td>
-									<td><a href="https://us06web.zoom.us/j/87552490942">ZOOM LINK: https://us06web.zoom.us/j/87552490942 </a></td>			
-							</tr>	
-							<tr class="schedule-coffee"><td>16:30-17:00</td>
-							<td>Break</td><td>&nbsp;</td></tr>		
-							<tr><td>17:00-18:30</td>
-									<td>
-										<b>Session 7:&nbsp;Multimedia</b>
-										<ul>
-											<li>7-1&nbsp;[Full paper]&nbsp;<i>A Novel Approach to Analyze Fashion Digital Library from Humanities</i>&nbsp;(Satoshi Takahashi, Keiko Yamaguchi, and Asuka Watanabe)</li>	
-											<li>7-2&nbsp;[Full paper]&nbsp;<i>The Effect of Library Virtual Tour on Library Image Formation: Study in Perpustakaan BPK RI</i>&nbsp;(Zaidan A. Qois and Luki Wijayanti)</li>	
-											<li>7-3&nbsp;[Short paper]&nbsp;<i>Exploring the research utility of fan-created data in the Japanese visual media domain</i>&nbsp;(Senan Kiryakos and Magnus Pfeffer)</li>	
-											<li>7-4&nbsp;[Short paper]&nbsp;<i>Interactive Curation of Semantic Representations in Digital Libraries</i>&nbsp;(Tim Repke and Ralf Krestel)</li>	
-										</ul>	
-									</td>		
-									<td><a href="https://us06web.zoom.us/j/87552490942">ZOOM LINK: https://us06web.zoom.us/j/87552490942 </a></td>									
-							</tr>	
-							<tr class="schedule-coffee"><td>18:30-19:00</td>
-								<td>Break</td><td></td></tr>	
-							<tr><td>19:00-20:30</td>
-									<td>
-										<b>Session 8:&nbsp;Neural-based Learning</b>
-										<ul>
-											<li>8-1&nbsp;[Full paper]&nbsp;<i>PEERAssist: Leveraging on Paper-Review Interactions To Predict Peer Review Decisions</i>&nbsp;(Prabhat Kumar Bharti, Shashi Ranjan, Tirthankar Ghosal, Asif Ekbal, and Mayank Agarwal)</li>	
-											<li>8-2&nbsp;[Full paper]&nbsp;<i>Multilingual Epidemic Event Extraction</i>&nbsp;(Stephen Mutuvi, Emanuela Boros, Antoine Doucet, Gaël Lejeune, Adam Jatowt, and Moses Odeo)</li>	
-											<li>8-3&nbsp;[Full paper]&nbsp;<i>Automated Mining of Leaderboards for Empirical AI Research</i>&nbsp;(Salomon Kabongo Kabenamualu, Jennifer D'Souza, and Sören Auer)</li>	
-											<li>8-4&nbsp;[Practice paper]&nbsp;<i>Embedding transcription and transliteration layers in the Digital Library of Polish and Poland-related News Pamphlets</i>&nbsp;(Maciej Ogrodniczuk and Włodzimierz Gruszczyński)</li>	
-										</ul>	
-									</td>
-									<td><a href="https://us06web.zoom.us/j/87552490942">ZOOM LINK: https://us06web.zoom.us/j/87552490942 </a></td>			
-							</tr>	
-							<tr class="schedule-coffee"><td>20:30-21:00</td>
-								<td>Break</td><td>&nbsp;</td></tr>
-							<tr><td>21:00-22:00</td>
-									<td>
-										<b>Social Event & Introduction to ICADL'22</b>
-									</td>
-									<td><a href="https://us06web.zoom.us/j/85258614314">ZOOM LINK: https://us06web.zoom.us/j/85258614314 (Webinar) </a></td>			
-							</tr>								
-						</table>
-						</p>
-						<p>
-						<h4>Day 3 (Dec. 3): 11:00-18:30 (Japan Standard Time) ICADL &amp; AP-iConference</h4>
-						<table class="schedule-tbl">
-							<tr><th>Time</th><th>Session</th><th>Zoom Link</th></tr>
-							<tr><td>11:00</td>
-									<td>
-										Opening for AP-iConference 2021
-									</td>								
-									<td><a href="https://us06web.zoom.us/j/82129536149">ZOOM LINK: https://us06web.zoom.us/j/82129536149 (Webinar) </a></td>
-							</tr>
-							<tr><td>11:05-12:00</td>
-									<td>
-										<b>Keynote 2:</b><br/>
-										Speaker: <a href="keynotes.html#keynote2">Min-Yen Kan</a> (National University of Singapore) <br/>	
-									</td>								
-									<td><a href="https://us06web.zoom.us/j/82129536149">ZOOM LINK: https://us06web.zoom.us/j/82129536149 (Webinar) </a></td>
-							</tr>	
-							<tr><td>12:00-13:00</td>
-									<td>
-										<b><b>Panel:</b><br/><a href="panel.html">Cooperation &amp; Collaboration: How Can Young Researchers Start an International Research Project?</a>
-									</td>			
-									<td><a href="https://us06web.zoom.us/j/82129536149">ZOOM LINK: https://us06web.zoom.us/j/82129536149 (Webinar) </a></td>					
-							</tr>							
-							<tr class="schedule-coffee"><td>13:00-14:00</td>
-							<td>Break</td><td>&nbsp;</td></tr>	
-							<tr><td>14:00-14:30</td>
-									<td>
-										<b>Graduate Student Sessions: Introduction</b>
-									</td>												
-									<td><a href="https://us06web.zoom.us/j/81228892028">ZOOM LINK: https://us06web.zoom.us/j/81228892028 </a></td>
-							</tr>	
-							<tr><td>14:30-15:30</td>
-									<td>
-										<b>Graduate Student Sessions A1, B1 (Track 2)</b>
-									</td>			
-									<td><a href="https://us02web.zoom.us/j/81029162402">ZOOM LINK: https://us02web.zoom.us/j/81029162402 </a></td>									
-							</tr>								
-							<tr class="schedule-coffee"><td>15:30-15:50</td>
-							<td>Break</td><td>&nbsp;</td></tr>	
-							<tr><td>15:50-16:40</td>
-									<td>
-										<b>Graduate Student Sessions A2, B2 (Track 1)</b>
-									</td>												
-									<td><a href="https://us06web.zoom.us/j/81228892028">ZOOM LINK: https://us06web.zoom.us/j/81228892028 </a></td>
-							</tr>				
-							<tr class="schedule-coffee"><td>16:40-17:00</td>
-							<td>Break</td><td>&nbsp;</td></tr>												
-							<tr><td>17:00-18:00</td>
-									<td>
-										<b>Graduate Student Sessions A3, B3 (Track 2)</b>
-									</td>
-									<td><a href="https://us02web.zoom.us/j/81029162402">ZOOM LINK: https://us02web.zoom.us/j/81029162402 </a></td>			
-							</tr>						
-							<tr><td>18:00-18:30</td>
-									<td>
-										<b>Closing for ICADL and AP-iConference</b>
-									</td>
-									<td><a href="https://us06web.zoom.us/j/81228892028">ZOOM LINK: https://us06web.zoom.us/j/81228892028 </a></td>			
-							</tr>											
-						</table>							
-						</p>
-						</p>
-
-          </section>  
-        <!-- section: PC members -->
-          <section class="dates" id="zoom">
-          	<p itemprop="description" style="border-top-width:20px;padding-top:50px"><h3>ZOOM Instructions</h3>
-							<p>
-								<h4>General:</h4>
-								<ul>
-									<li>•&nbsp;You should keep connected using Zoom, which is the main platform for ICADL 2021.</li>
-									<li>•&nbsp;To ensure the security of conference sessions, passwords for Zoom meetings will be sent to you ONE DAY before the conference.</li>
-									<li>•&nbsp;You can access all conference sessions through the links posted on the conference program section at ICADL 2021 page: <a href="https://icadl.net/icadl2021/index.html#Program">https://icadl.net/icadl2021/index.html#Program</a></li>
-									<li>•&nbsp;If you need any support, please contact us at: <a href="mailto:icadl2021-chairs@ml.cc.tsukuba.ac.jp">icadl2021-chairs@ml.cc.tsukuba.ac.jp</a></li>
-									<li>•&nbsp;“5-MINUTE RULE”: if you encounter any unexpected technical issues,log back into the same zoom room in 5 MINUTES. We will not make any additional announcements.</li>
-								</ul>
-							</p>	
-							<p>
-								<h4>Downloading Zoom:</h4>
-								<ul>
-									<li>•&nbsp;Please download Zoom from <a href="https://www.zoom.us/download#client_4meeting">https://www.zoom.us/download#client_4meeting</a></li>
-									<li>•&nbsp;More Zoom training videos: <a href="https://support.zoom.us/hc/en-us/articles/206618765-Zoom-video-tutorials">https://support.zoom.us/hc/en-us/articles/206618765-Zoom-video-tutorials</a></li>
-									<li>•&nbsp;Zoom privacy and security information: <a href="https://zoom.us/docs/en-us/privacy-and-security.html">https://zoom.us/docs/en-us/privacy-and-security.html</a></li>
-								</ul>
-							</p>				
-							<p>
-								<h4>Additional Information:</h4>
-								<ul>
-									<li>•&nbsp;ZOOM instructions for participants: <a href="download/Instruction to all partcipants 2021.docx">download</a></li>
-									<li>•&nbsp;ZOOM instructions for session chairs: <a href="download/Instructions to session chairs 2021.docx">download</a></li>
-									<li>•&nbsp; ICADL2021 Background: Participants can download and use the ICADL2021 background image for their ZOOM accounts: <a href="download/1280x720_ICADL2021.jpg">1280x720.jpg</a> or <a href="download/1920x1080_ICADL2021.jpg">1920x1080.jpg</a></li>
-								</ul>
-							</p>
-							<p>
-								<h4>Policy:</h4>
-								<p>The organizers of ICADL2020 strongly support the policy against discrimination and harassment as stated in <a href="https://www.acm.org/special-interest-groups/volunteer-resources/officers-manual/policy-against-discrimination-and-harassment" target="_blank">ACM statement</a>.
-								</p>
-							</p>
-						</p>
-
-          </section>            
-        <!-- section: organizers -->
-          <section class="organizers" id="organizers">
-            <!-- <h2 class="section-title">Organizers</h2> -->
-
-						<p itemprop="description" style="border-top-width:0px;padding-top:50px"><h3>Conference Committee</h3></p>
-						
-						<p>
-							<h4>Conference co-chairs:</h4>
-							<ul>
-								<li>Emi Ishita (Kyushu University, Japan)</li>
-								<li>Sueyeon Syn (Catholic University of America, USA)</li>
-							</ul>
-						</p>
-						
-						<p>
-							<h4>Program Committee co-chairs:</h4>
-							<ul>
-								<li>Hao-Ren Ke (NTNU, Taiwan)</li>
-								<li>Chei Sian Lee (Nanyang Technological University, Singapore)</li>
-								<li>Kazunari Sugiyama (Kyoto University, Japan)</li>
-							</ul>
-						</p>
-					
-						<p>
-							<h4>Publicity co-chairs:</h4>
-							<ul>
-								<li>Ricardo Campos (INESC TEC; Ci2 – Smart Cities Research Center, Polytechnic Institute of Tomar, Portugal)</li>
-								<li>Songphan Choemprayong (Chulalongkorn University, Thailand)</li>
-								<li>Akira Maeda (Ritsumeikan University, Japan)</li>
-								<li>Maciej Ogrodniczuk (The Polish Academy of Sciences, Poland)</li>
-								<li>Natalie Pang (NUS, Singapore)</li>
-								<li>Rahmi (Universitas Indonesia, Indonesia)</li>
-								<li>Nguyễn Hoàng Sơn (Vietnam National University, Hanoi)</li>
-								<li>Suppawong Tuarob (Mahidol University, Thailand)</li>
-								<li>Sohaimi Zakaria (Universiti Teknologi MARA)</li>
-								<li>Lihong Zhou (Wuhan University, China)</li>
-							</ul>
-						</p>
-						
-						<p>
-							<h4>Web chairs:</h4>
-							<ul>
-								<li>Shun-Hong Sie (NTNU, Taiwan)</li>
-							</ul>
-						</p>
-						
-						<p>
-							<h4>Session management chair:</h4>
-							<ul>
-								<li>Hiroyoshi Ito (University of Tsukuba, Japan)</li>
-							</ul>
-						</p>
-						<p>
-							<h4>Registration chair:</h4>
-							<ul>
-								<li>Mitsuharu Nagamori (University of Tsukuba, Japan)</li>
-							</ul>
-						</p>						
-						<p>
-							<h4>Doctoral consortium co-chairs:</h4>
-							<ul>
-								<li>Atsuyuki Morishima (University of Tsukuba, Japan)</li>
-								<li>Di Wang (Wuhan University, China)</li>
-							</ul>
-						</p>						
-          </section>
-        <!-- accepted papers -->
-        <section class="accepted" id="accepted">
-        	<p itemprop="description" style="border-top-width:0px;padding-top:50px"><h3>Accepted papers</h3></p>
-						<p/>
-						<h4>Full papers</h4>
-						<table>
-								<tr><td>Diachronic Linguistic Periodization of Temporal Document Collections for Discovering Evolutionary Word Semantics	(Yijun Duan, Adam Jatowt, Masatoshi Yoshikawa, Xin Liu and Akiyoshi Matono)</td></tr>       	
-								<tr><td>A Qualitative Evaluation of User-perceived Satisfaction for Link-based vs. Text-based Wikipedia Article Recommendations	(Malte Ostendorff, Corinna Breitinger and Bela Gipp)</td></tr>
-								<tr><td>Automatic Cause-Effect Relation Extraction from Dental Textbooks Using BERT	(Terapat Chansai, Ruksit Rojpaisarnkit, Teerakarn Boriboonsub, Suppawong Tuarob, Myat Su Yin, Peter Haddawy, Saeed-Ul Hassan and Mihai Pomarlan)</td></tr>       	
-								<tr><td>Narrative Query Graphs for Entity-Interaction-Aware Document Retrieval	(Hermann Kroll, Jan Pirklbauer, Jan-Christoph Kalo, Morris Kunz, Johannes Ruthmann and Wolf-Tilo Balke)</td></tr>								
-								<tr><td>A Novel Approach to Analyze Fashion Digital Library from Humanities	(Satoshi Takahashi, Keiko Yamaguchi and Asuka Watanabe)</td></tr>       	
-								<tr><td>Automating the Choice Between Single or Dual Annotation for Classifier Training	(Satoshi Fukuda, Emi Ishita, Yoichi Tomiura and Douglas Oard)</td></tr>
-								<tr><td>When expertise gone missing: Uncovering the loss of prolific contributors in Wikipedia	(Paramita Das, Bhanu Prakash Reddy Guda, Debajit Chakraborty, Soumya Sarkar and Animesh Mukherjee)</td></tr>       	
-								<tr><td>Multilingual Epidemic Event Extraction	(Stephen Mutuvi, Emanuela Boros, Antoine Doucet, Gaël Lejeune, Adam Jatowt and Moses Odeo)</td></tr>								
-								<tr><td>The Effect of Library Virtual Tour on Library Image Formation: Study in Perpustakaan BPK RI	(Zaidan A. Qois and Luki Wijayanti)</td></tr>       	
-								<tr><td>Modelling archaeological buildings using CIDOC-CRM and its extensions: the case of Fuwairit, Qatar	(Manolis Gergatsoulis, Georgios Papaioannou, Eleftherios Kalogeros, Ioannis Mpismpikopoulos, Katerina Tsiouprou and Robert Carter)</td></tr>
-								<tr><td>Integrating Semantic Space Finetuning and Self-training for Semi-supervised Multi-label Text Classification	(Zhewei Xu and Mizuho Iwaihara)</td></tr>       	
-								<tr><td>Federating Scholarly Infrastructures with GraphQL	(Muhammad Haris, Kheir Eddine Farfar, Markus Stocker and Sören Auer)</td></tr>								
-								<tr><td>Integrating Heterogeneous Data about Quebec Literature into an IFLA LRM Knowledge Base	(Ludovic Font, Dominique Piché, Amal Zouaq and Michel Gagnon)</td></tr>       	
-								<tr><td>Joint Model Using Character and Word Embeddings for Detecting Internet Slang Words	(Yihong Liu and Yohei Seki)</td></tr>
-								<tr><td>PEERAssist: Leveraging on Paper-Review Interactions To Predict Peer Review Decisions	(Prabhat Kumar Bharti, Shashi Ranjan, Tirthankar Ghosal, Asif Ekbal and Mayank Agarwal)</td></tr>       	
-								<tr><td>ContriSci: A BERT-based Multitasking Deep Neural Architecture to Identify Contribution Statements from Research Papers	(Komal Gupta, Ammaar Ahmad, Tirthankar Ghosal and Asif Ekbal)</td></tr>
-								<tr><td>Automated Mining of Leaderboards for Empirical AI Research	(Salomon Kabongo Kabenamualu, Jennifer D'Souza and Sören Auer)</td></tr>
-						</table>		
-						<p/>
-						<h4>Short papers</h4>
-						<table>
-								<tr><td>Evaluating the Robustness of Embedding-based Topic Models to OCR Noise	(Elaine Zosa, Stephen Mutuvi, Antoine Doucet and Mark Granroth-Wilding)</td></tr>       	
-								<tr><td>Towards Approximating Population-Level Mental Health in Thailand Using Large-Scale Social Media Data	(Krittin Chatrinan, Anon Kangpanich, Tanawin Wichit, Thanapon Noraset, Suppawong Tuarob and Tanisa Tawichsri)</td></tr>
-								<tr><td>Exploring the research utility of fan-created data in the Japanese visual media domain	(Senan Kiryakos and Magnus Pfeffer)</td></tr>       	
-								<tr><td>Boosting the strategy of innovation-driven development: Intellectual property services in China’s universities	(Yaqian Song)</td></tr>								
-								<tr><td>Knowledge Discovery from the Digital Library’s Contents: A holistic approach	(Md. Habibur Rahman, Sohaimi Zakaria and Azree Ahmad)</td></tr>       	
-								<tr><td>Pattern-based Acquisition of Scientific Entities from Scholarly Article Titles	(Jennifer D'Souza and Sören Auer)</td></tr>
-								<tr><td>Supervised Learning of Keyphrase Extraction Utilizing Prior Summarization	(Tingyi Liu and Mizuho Iwaihara)</td></tr>       	
-								<tr><td>Bert-based Chinese Medical Keyphrase Extraction Model Enhanced with External Features	(Liangping Ding, Zhixiong Zhang and Yang Zhao)</td></tr>								
-								<tr><td>BookReach-UI: A book-curation interface for school librarians to support inquiry learning	(Shuntaro Yada, Takuma Asaishi and Rei Miyata)</td></tr>       	
-								<tr><td>SmartReviews: Towards Human- and Machine-actionable Representation of Review Articles	(Allard Oelen, Markus Stocker and Sören Auer)</td></tr>
-								<tr><td>Interactive Curation of Semantic Representations in Digital Libraries	(Tim Repke and Ralf Krestel)</td></tr>       	
-								<tr><td>A Consistency Analysis of NLP Approaches for Reviewer-Manuscript Matching	(Nishith Kotak, Anil K. Roy, Sourish Dasgupta and Tirthankar Ghosal)</td></tr>								
-								<tr><td>Named entity recognition architecture combining contextual and global features	(Thi Hong Hanh Tran, Antoine Doucet, Nicolas SidÈre, Jose Moreno and Senja Pollak)</td></tr>       	
-								<tr><td>DataQuest: An Approach To Automatically Extract Dataset Mentions From Scientific Papers	(Sandeep Kumar, Tirthankar Ghosal and Asif Ekbal)</td></tr>
-								<tr><td>Simple DL: A toolkit to create simple digital libraries	(Hussein Suleman)</td></tr>       									
-						</table>
-						<p/>
-						<h4>Practice papers</h4>
-						<table>
-								<tr><td>A Large-scale Collection Reselection Method Oriented by Library Space Rebuilding Based on the Statistics of Zero-borrowing Books	(Lei Huang)</td></tr>       	
-								<tr><td>Embedding transcription and transliteration layers in the Digital Library of Polish and Poland-related News Pamphlets	(Maciej Ogrodniczuk and Włodzimierz Gruszczyński)</td></tr>
-								<tr><td>A Prototype System for Monitoring Emotion and Sentiment Trends towards Nuclear Energy on Twitter using Deep Learning	(Snehameena Arumugam, Likai Peng, Jin-Cheon Na, Guangze Lin, Roopika Ganesh, Xiaoyin Li, Qing Chen, Shirley S. Ho and Erik Cambria)</td></tr>       	
-								<tr><td>Enriching the Metadata of a Digital Collection to Enhance Accessibility: A Case Study at Practice in Kyushu University Library, Japan	(Tetsuya Nakatoh, Hironori Kodama, Yuko Hori and Emi Ishita)</td></tr>								
-								<tr><td>Analysis of Usefulness of Critique Documents on Musical Performance: Toward better Instrcutional Document Format	(Masaki Matsubara, Rina Kagawa, Takeshi Hirano and Isao Tsuji)</td></tr>       									
-						</table>						
-        </section>	
-        <!-- Registration -->
-          <section class="host" id="Registration">
-          	<p itemprop="description" style="border-top-width:0px;padding-top:50px"><h3>Registration</h3></p>
-						<p> Please fill out the form (<a href="https://forms.office.com/r/NYBUVT8zsv">https://forms.office.com/r/NYBUVT8zsv</a>) by <span style="text-decoration:line-through">November 15, 2021</span> <font color='red'> November 25, 2021 (extended)</font>.</p>
-						<p> Note: The conference is free of charge. You will complete your registration by filling the form. We won't send a confirmation mail of the registration. We will send conference information a few days in advance of the conference.</p>
-
-          </section>        
-        <!-- section: PC members -->
-          <section class="host" id="host">
-          	<p itemprop="description" style="border-top-width:0px;padding-top:50px"><h3>Co-hosts:</h3></p>
-						<p>
-						<ul>
-							<li>Kyushu University Library, Japan</li>
-							<li>Catholic University of America, USA</li>
-							<li>ICADL Steering Committee</li><!--
-							<li>In collaboration with Asia-Pacific Chapter of iSchools</li>	-->						
-						</ul>
-						<h4>Collaboration:</h4>
-						<ul>
-							<li>Asia-Pacific Chapter of iSchools</li>
-						</ul>						
-						</p>
-
-          </section>     
-                                             
-        <footer class="footer">
-          
-        </footer>
+   <div id="page-wrapper"> 
+    <div class="global-region top header-bg" id="header"> 
+     <div class="global-region-inner" >
+     <div class="neo-asset text-plugin"  id="asset-1440536241121"> 
+       <div class="neo-asset-inner mCS_destroyed" id="asset-1440536241121-neo-asset-inner" spellcheck="false"> 
+        <h1 class="center-align">International Conference on<br>
+          Asia-Pacific Digital Libraries
+        </h1> 
+       </div> 
       </div>
-    </div>
-    <a href="#welcome" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  </div>
 
-        
-        <!-- JavaScript Libraries -->
 
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script><!---->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <!--<script src="lib/lightbox/js/lightbox.min.js"></script> -->
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/slick/slick.min.js"></script>
+       
+      <div class="neo-asset image-plugin" id="asset-1440538935304" > 
+       <div class="neo-asset-inner"> 
+        <img src="img/branch3.jpg" alt=""/> 
+       </div> 
+      </div> 
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
+     
+      <div class="neo-asset box-plugin"> 
+       <div class="neo-asset-inner bg-nav"> 
+        <div class="neo-asset navigation-2-plugin"id="asset-1440536625554"> 
+         <ul tabindex="0" data-kendo-menu="" data-k-orientation="'horizontal'" class="k-widget k-reset k-header k-menu k-menu-horizontal" data-role="menu" role="menubar"> 
+          <li role="menuitem" class="k-item k-state-default k-first k-state-active ng-scope selected-page k-state-highlight" id="page-3876756-929866427044"><a class="k-link" href="index.html">HOME</a></li> 
+          <li role="menuitem" class="k-item k-state-default" id="page-3876754-248010258123"><a class="k-link" href="events.html">EVENTS</a></li> 
+          <li role="menuitem" class="k-item k-state-default" id="page-3876757-511113948678"><a class="k-link" href="history.html">HISTORY</a></li> 
+          <li role="menuitem" class="k-item k-state-default" id="page-3877571-610731849139"><a class="k-link" href="people.html">PEOPLE</a></li> 
+          <li role="menuitem" class="k-item k-state-default k-last" id="page-3876755-112006395519"><a class="k-link" href="contact.html">CONTACT</a></li> 
+         </ul> 
+        </div> 
+       </div> 
+      </div> 
+      
+     </div> 
+    </div> 
+
+    <div class="global-region center content-bg" id="content"> 
+     <div class="global-region-inner"> 
+      <div class="neo-asset image-plugin" id="asset-1440536406105"> 
+       <div class="neo-asset-inner"> 
+        <img src="img/top_img.png" alt=""/> 
+       </div> 
+
+      </div> 
+      <div class="text-plugin neo-asset ui-draggable-disabled" id="asset-1440539377210" > 
+       <div class="neo-asset-inner mCS_destroyed" id="asset-1440539377210-neo-asset-inner" spellcheck="false"> 
+        <p><span class="title_2020"><a data-link-type="website" target="_blank" href="https://icadl.net/icadl2021/">ICADL 2021</a></span></p> 
+       </div> 
+      </div> 
+
+      <div class="neo-asset text-plugin" id="asset-1440536229089"> 
+       <div class="neo-asset-inner mCS_destroyed" id="asset-1440536229089-neo-asset-inner" spellcheck="false"> 
+        <p>Over the past 20 years, many international and national digital library research projects have been developed by national libraries, public and university libraries, and various research institutions. In addition to significant technological advances, new multimedia digital content, significant cultural repositories, and indigenous knowledge and language assets are being developed and are making a significant impact on knowledge preservation and content delivery in various countries.</p> 
+        <p>Three significant and vibrant international conferences have grown out of this international digital library movement – the Joint Conference on Digital Libraries (JCDL, http://www.jcdl.org) in the US, the Theory and Practice of Digital Libraries (TPDL, http://www.tpdl.eu/), and the International Conference on Asia-Pacific Digital Libraries (ICADL, http://icadl.net). The three conferences help create stimulating and collegial forums for reporting significant digital library research and development activities.</p> 
+        <p>The International Conference on Asia-Pacific Digital Libraries (ICADL), which began in 1998 and has rotated annually among the Asian-Pacific countries, has become one of the premiere meetings in digital libraries. Since its humble beginnings in Hong Kong (ICADL 1998), the meeting has been held in the following locations:</p> 
+       </div> 
+      </div> 
+
+      <div class="text-plugin neo-asset" id="asset-1440540049495"> 
+       <div class="neo-asset-inner mCS_destroyed"id="asset-1440540049495-neo-asset-inner" spellcheck="false"> 
+        <div class="past_site">
+            <ul class="site_list">
+              <li>Taipei, China (ICADL 1999) </li>
+              <li>Seoul, Korea (ICADL 2000) </li>
+              <li>Bangalore, India (ICADL 2001) </li>
+              <li>Singapore (ICADL 2002) </li>
+              <li>Kuala Lumpur, Malaysia (ICADL 2003) </li>
+              <li>Shanghai, China (ICADL 2004) </li>
+              <li>Bangkok, Thailand (ICADL 2005) </li>
+            </ul>
+            <ul class="site_list">
+              <li>Kyoto, Japan (ICADL 2006) </li>
+              <li>Hanoi, Vietnam (ICADL 2007) </li>
+              <li>Bali, Indonesia (ICADL 2008) </li>
+              <li>Gold Coast, Australia (ICADL 2010, with JCDL) </li>
+              <li>Beijing, China (ICADL 2011) </li>
+              <li>Taipei, Taiwan (ICADL 2012)</li>
+              <li>Bangalore, India (ICADL 2013) </li>
+            </ul>
+            <ul class="site_list">
+              <li>Chiang Mai, Thailand (ICADL 2014) </li>
+              <li>Seoul, Korea (ICADL 2015)</li>
+              <li>Tsukuba, Japan (ICADL 2016) </li>
+              <li>Bangkok, Thailand (ICADL 2017)</li>
+              <li>Hamilton, New Zealand (ICADL 2018) </li>
+              <li>Kuala Lumpur, Malaysia (ICADL 2019)</li>
+              <li>Online (ICADL 2020)</li>
+	      <li>Upcoming: Online (ICADL 2021)</li>
+            </ul>
+        </div> 
+       </div> 
+      </div> 
+
+      
+      <div class="text-plugin neo-asset" id="asset-1440540152990"> 
+       <div class="neo-asset-inner mCS_destroyed" id="asset-1440540152990-neo-asset-inner" spellcheck="false"> 
+        <p>The ICADL meetings draw researchers and professionals from library and information science, computer science, social science, information systems, law and policy, education and learning, and various other academic disciplines. Research topics range from digital library technologies and information systems; to content management, service models, and cost and sustainability issues.</p> 
+        <p>The ICADL meetings are planned and facilitated by a group of volunteers, who are experienced in digital library research and international community building; and have contributed significantly to ICADL-related activities.</p> 
+        <p>This website has been designed to facilitate easy access to information regarding past, present and future ICADL activities.</p>
+	<!--<p>To suggest additional content, please contact Ms. Cathy Larson at cal@eller.arizona.edu.</p> -->
+       </div> 
+      </div> 
+      
+     </div> 
+    </div> 
+    <div class="global-region bottom footer-bg" id="footer"> 
+     <div class="global-region-inner">
+      <!--<ul class="icon_list">
+        <li class="social-icons"><a href="http://www.facebook.com/"><img src="http://repository.neo.myregisteredsite.com/custom-images/social-icons/neo-soc_facebook_b.png" alt="Facebook"/></a></li>
+        <li class="social-icons"><a href="http://www.pinterest.com/"><img src="http://repository.neo.myregisteredsite.com/custom-images/social-icons/neo-soc_pinterest_b.png" alt="pinterest"/></a></li>
+        <li class="social-icons"><a href="http://www.youtube.com/"><img src="http://repository.neo.myregisteredsite.com/custom-images/social-icons/neo-soc_youtube_b.png" alt="You Tube"/></a></li>
+        <li class="social-icons"><a href="http://www.twitter.com/"><img src="http://repository.neo.myregisteredsite.com/custom-images/social-icons/neo-soc_twitter_b.png" alt="Twitter"/></a></li>
+      </ul>-->
+     </div> 
+    </div> 
+   </div> 
+   <div class="" id="bottom-area"></div> 
+  </div> 
+  <!--WSP_SC--> 
+  <script type="text/javascript">
+<!--
+document.write('<'+'img style="position:fixed;" src="/http://scorecard.wspisp.net/logger.php'+'?tag=dW5waWQ6MTI5NTY1MDk7MjI%3D&ref='+document.referrer+'&x='+Math.random()+'" '+'width="1" height="1" alt="" '+'>');
+//-->
+</script> 
+  <noscript>
+   <img style="position:fixed;" src="http://scorecard.wspisp.net/logger.php?tag=dW5waWQ6MTI5NTY1MDk7MjI%3D" width="1" height="1" alt=""/>
+  </noscript> 
+  <!--/WSP_SC--> 
  </body>
 </html>
