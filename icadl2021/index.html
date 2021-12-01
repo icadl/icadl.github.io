@@ -36,6 +36,9 @@
 			          var news_list=document.getElementById('news_list').getElementsByTagName('li');
 			          console.log(news_list);
 			          for (var i = news_list.length-1; i >=0; i--) {
+			          	if (news_list[i].id=="stop"){
+			          		continue;
+			          	}
                 	notify(news_list[i].innerHTML,"Info");
             		}
 								
@@ -201,7 +204,8 @@
             <p itemprop="description" style="border-top-width:0px;padding-top:50px"><h3>News</h3></p>
 						<p>
 							<ul id="news_list">
-								 <li>The registration deadline has been extended to <font color='red'>November 25</font></li>
+								 <li>The proceedings is available now. <a href="https://link.springer.com/book/10.1007/978-3-030-91669-5">Cick to View</a></li>
+								 <li id="stop">The registration deadline has been extended to <font color='red'>November 25</font></li>
 								 <li>The registration form is now open. Please <a href="#Registration">register</a>!</li>
 								 <li>The <a href="#Program">program</a> was released!</li>								 
 							</ul>
@@ -338,7 +342,7 @@
 						<table class="schedule-tbl">
 							<tr><th>Time</th><th>Session</th><th>Zoom Link</th></tr>
 							<tr class="schedule-coffee"><td>13:00-13:30</td>
-							<td>Opening</td>
+							<td><b>Opening</b></td>
 							<td><a href="https://us06web.zoom.us/j/87884833614">ZOOM LINK: https://us06web.zoom.us/j/87884833614 </a></td></tr>
 							<tr><td>13:30-15:00</td>
 									<td>
@@ -472,7 +476,7 @@
 								<td>Break</td><td>&nbsp;</td></tr>
 							<tr><td>21:00-22:00</td>
 									<td>
-										<b>Social Event & Introduction to ICADL'22</b>
+										<b><a href="socialevent.html">Social Event & Introduction to ICADL'22</a></b>
 									</td>
 									<td><a href="https://us06web.zoom.us/j/85258614314">ZOOM LINK: https://us06web.zoom.us/j/85258614314 (Webinar) </a></td>			
 							</tr>								
@@ -484,7 +488,7 @@
 							<tr><th>Time</th><th>Session</th><th>Zoom Link</th></tr>
 							<tr><td>11:00</td>
 									<td>
-										Opening for AP-iConference 2021
+										<b>Opening for AP-iConference 2021</b>
 									</td>								
 									<td><a href="https://us06web.zoom.us/j/82129536149">ZOOM LINK: https://us06web.zoom.us/j/82129536149 (Webinar) </a></td>
 							</tr>
@@ -560,27 +564,27 @@
 							<p>
 								<h4>General:</h4>
 								<ul>
-									<li>•&nbsp;You should keep connected using Zoom, which is the main platform for ICADL 2021.</li>
-									<li>•&nbsp;To ensure the security of conference sessions, passwords for Zoom meetings will be sent to you ONE DAY before the conference.</li>
-									<li>•&nbsp;You can access all conference sessions through the links posted on the conference program section at ICADL 2021 page: <a href="https://icadl.net/icadl2021/index.html#Program">https://icadl.net/icadl2021/index.html#Program</a></li>
-									<li>•&nbsp;If you need any support, please contact us at: <a href="mailto:icadl2021-chairs@ml.cc.tsukuba.ac.jp">icadl2021-chairs@ml.cc.tsukuba.ac.jp</a></li>
-									<li>•&nbsp;“5-MINUTE RULE”: if you encounter any unexpected technical issues,log back into the same zoom room in 5 MINUTES. We will not make any additional announcements.</li>
+									<li>&nbsp;You should keep connected using Zoom, which is the main platform for ICADL 2021.</li>
+									<li>&nbsp;To ensure the security of conference sessions, passwords for Zoom meetings will be sent to you ONE DAY before the conference.</li>
+									<li>&nbsp;You can access all conference sessions through the links posted on the conference program section at ICADL 2021 page: <a href="https://icadl.net/icadl2021/index.html#Program">https://icadl.net/icadl2021/index.html#Program</a></li>
+									<li>&nbsp;If you need any support, please contact us at: <a href="mailto:icadl2021-chairs@ml.cc.tsukuba.ac.jp">icadl2021-chairs@ml.cc.tsukuba.ac.jp</a></li>
+									<li>&nbsp;“5-MINUTE RULE”: if you encounter any unexpected technical issues,log back into the same zoom room in 5 MINUTES. We will not make any additional announcements.</li>
 								</ul>
 							</p>	
 							<p>
 								<h4>Downloading Zoom:</h4>
 								<ul>
-									<li>•&nbsp;Please download Zoom from <a href="https://www.zoom.us/download#client_4meeting">https://www.zoom.us/download#client_4meeting</a></li>
-									<li>•&nbsp;More Zoom training videos: <a href="https://support.zoom.us/hc/en-us/articles/206618765-Zoom-video-tutorials">https://support.zoom.us/hc/en-us/articles/206618765-Zoom-video-tutorials</a></li>
-									<li>•&nbsp;Zoom privacy and security information: <a href="https://zoom.us/docs/en-us/privacy-and-security.html">https://zoom.us/docs/en-us/privacy-and-security.html</a></li>
+									<li>&nbsp;Please download Zoom from <a href="https://www.zoom.us/download#client_4meeting">https://www.zoom.us/download#client_4meeting</a></li>
+									<li>&nbsp;More Zoom training videos: <a href="https://support.zoom.us/hc/en-us/articles/206618765-Zoom-video-tutorials">https://support.zoom.us/hc/en-us/articles/206618765-Zoom-video-tutorials</a></li>
+									<li>&nbsp;Zoom privacy and security information: <a href="https://zoom.us/docs/en-us/privacy-and-security.html">https://zoom.us/docs/en-us/privacy-and-security.html</a></li>
 								</ul>
 							</p>				
 							<p>
 								<h4>Additional Information:</h4>
 								<ul>
-									<li>•&nbsp;ZOOM instructions for participants: <a href="download/Instruction to all partcipants 2021.docx">download</a></li>
-									<li>•&nbsp;ZOOM instructions for session chairs: <a href="download/Instructions to session chairs 2021.docx">download</a></li>
-									<li>•&nbsp; ICADL2021 Background: Participants can download and use the ICADL2021 background image for their ZOOM accounts: <a href="download/1280x720_ICADL2021.jpg">1280x720.jpg</a> or <a href="download/1920x1080_ICADL2021.jpg">1920x1080.jpg</a></li>
+									<li>&nbsp;ZOOM instructions for participants: <a href="download/Instruction to all partcipants 2021.docx">download</a></li>
+									<li>&nbsp;ZOOM instructions for session chairs: <a href="download/Instructions to session chairs 2021.docx">download</a></li>
+									<li>&nbsp; ICADL2021 Background: Participants can download and use the ICADL2021 background image for their ZOOM accounts: <a href="download/1280x720_ICADL2021.jpg">1280x720.jpg</a> or <a href="download/1920x1080_ICADL2021.jpg">1920x1080.jpg</a></li>
 								</ul>
 							</p>
 							<p>
