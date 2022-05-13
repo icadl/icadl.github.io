@@ -1944,12 +1944,14 @@
         dropdownItemAll.forEach((item) => {
          
           item.addEventListener("click", function (e) {
+            e.preventDefault();
             let id = e.target.getAttribute("href").split("#")[1];
             if (id) {
               let idD = "#" + id;
               let idSelected = document.querySelector(idD);
-              css(idSelected, {
-                "padding-top": "120px",
+              window.scrollTo({
+                top: idSelected.offsetTop,
+                behavior: 'smooth'
               });
             }
           });
@@ -1957,14 +1959,15 @@
         let navLinkAll = document.querySelectorAll("a.nav-link");
         navLinkAll.forEach((item) => {
           item.addEventListener("click", function (e) {
+            e.preventDefault();
             let id = e.target.getAttribute("href").split("#")[1];
             if (id) {
               let idD = "#" + id;
               let idSelected = document.querySelector(idD);
-              css(idSelected, {
-                "padding-top": "120px",
+              window.scrollTo({
+                top: idSelected.offsetTop,
+                behavior: 'smooth'
               });
-              console.log("Item", item);
             }
           });
         });
