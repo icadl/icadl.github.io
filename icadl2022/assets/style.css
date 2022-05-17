@@ -2049,7 +2049,7 @@ td {
   box-shadow: 0px -3px 8px rgba(0, 0, 0, 0.15);
 }
 
-.footer-logo{
+/*.footer-logo{
   display: flex;
   justify-items:center;
   flex-direction: row;
@@ -2058,6 +2058,15 @@ td {
   justify-content: space-around;
   align-items: center;
  
+}*/
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    gap: 40px 98px;
+    flex-wrap: wrap;
+    background-color: #fff;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .footer-logo .ft-logo-item img{
   height: 80px;
