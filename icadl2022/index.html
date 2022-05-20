@@ -1944,9 +1944,10 @@
         dropdownItemAll.forEach((item) => {
          
           item.addEventListener("click", function (e) {
-            e.preventDefault();
+           
             let id = e.target.getAttribute("href").split("#")[1];
             if (id) {
+              e.preventDefault();
               let idD = "#" + id;
               let idSelected = document.querySelector(idD);
               window.scrollTo({
@@ -1959,9 +1960,10 @@
         let navLinkAll = document.querySelectorAll("a.nav-link");
         navLinkAll.forEach((item) => {
           item.addEventListener("click", function (e) {
-            e.preventDefault();
+          
             let id = e.target.getAttribute("href").split("#")[1];
             if (id) {
+              e.preventDefault();
               let idD = "#" + id;
               let idSelected = document.querySelector(idD);
               window.scrollTo({
