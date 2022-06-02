@@ -56,6 +56,7 @@ h3.title{
   padding-left: 20px;
   padding-right: 20px;
   font-family: "Lora", serif;
+  text-align: justify;
 }
 .text-size-14{
   font-size: 14px!important;
@@ -2762,7 +2763,8 @@ section#Program h4 {
 .sticky {
   position: fixed;
   z-index: 9999;
-  width: 1366px;
+  max-width: 1366px;
+  width: 100%;
   top: 0;
 }
 
