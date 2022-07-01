@@ -1868,6 +1868,97 @@
       /></a>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="modalIntro" tabindex="-1" role="dialog" aria-labelledby="modalIntroTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalIntroTitle">Beautiful Vietnam</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <!-- <span aria-hidden="true">&times;</span> -->
+              <span aria-hidden="true">
+                <img src="./assets/img/ep_close-bold.png" width="32" height="32" alt="">
+              </span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul class="introVN">
+                <li class="inline"><a href="https://www.youtube.com/watch?v=DIgv-e18OzA&t=142s" target="_blank"><img src="./assets/img/intro/intro1.png" alt=""></a></li>
+                <li class="inline"><a><img src="./assets/img/intro/intro2.png" alt=""></a></li>
+                <li><a><img src="./assets/img/intro/intro3.png" alt=""></a></li>
+                <li class="inline"><a><img src="./assets/img/intro/intro4.png" alt=""></a></li>
+                <li class="inline"><a><img src="./assets/img/intro/intro5.png" alt=""></a></li>
+                <li><a> <img src="./assets/img/intro/intro6.png" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      #modalIntro .modal-title{
+        font-family: 'Lora';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        color: #CA0000;
+      }
+      #modalIntro .modal-header{
+        border-bottom: 0;
+        padding-bottom: 0;
+
+      }
+      #modalIntro .modal-dialog{
+        width:450px;
+      }
+      #modalIntro .modal-body{
+      }
+      .introVN{
+        margin:0;
+        padding:0;
+        list-style: none;
+      }
+      .introVN li{
+        display: block;
+        padding-bottom: 6px;
+      }
+      .introVN li.inline{
+        display: table-cell;
+        padding-right: 6px;
+      }
+      .introVN li.inline:nth-child(2){
+        padding-right: 0;
+      }
+      .introVN li.inline:nth-child(5){
+        padding-right: 0;
+      }
+      .introVN li:first-child{
+        padding-top: 0;
+      }
+      .introVN li:last-child{
+        padding-bottom: 0;
+      }
+      .introVN li a{
+        display: block;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .introVN li a img{
+        max-width: 100%;
+        transition: all 0.3s;
+        display: block;
+        width: 100%;
+        height: auto;
+        transform: scale(1);
+        object-fit: cover;
+      }
+      .introVN li:hover img{
+        transform: scale(1.1);
+      }
+
+    </style>
+
     <!-- JavaScript Libraries -->
 
     <script src="./assets/jquery-3.4.1.min.js"></script>
@@ -1904,6 +1995,10 @@
       src="./assets/saved_resource.html"
     ></iframe>
     <script>
+
+
+      $('#modalIntro').modal('show')
+
       function includeHTML() {
         var z, i, elmnt, file, xhttp;
         /*loop through a collection of all HTML elements:*/
