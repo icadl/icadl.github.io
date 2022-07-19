@@ -2038,27 +2038,25 @@
       window.addEventListener("load", (event) => {
         let dropdownItemAll = document.querySelectorAll("a.dropdown-item");
         dropdownItemAll.forEach((item) => {
-         
           item.addEventListener("click", function (e) {
-           
-            let id = e.target.getAttribute("href").split("#")[1];
-            if (id) {
+            let href = e.target.getAttribute("href").split("#");
+            if (href == 1) {
               e.preventDefault();
-              let idD = "#" + id;
+              let idD = "#" + href[1];
               let idSelected = document.querySelector(idD);
               window.scrollTo({
                 top: idSelected.offsetTop,
                 behavior: 'smooth'
               });
+            }else if(href == 2){
+              window.location.href = e.target.getAttribute("href");
             }
           });
         });
         let navLinkAll = document.querySelectorAll("a.nav-link");
         navLinkAll.forEach((item) => {
           item.addEventListener("click", function (e) {
-           
             let href = e.target.getAttribute("href").split("#");
-            console.log(href.length);
             if (href == 1) {
               e.preventDefault();
               let idD = "#" + href[1];
