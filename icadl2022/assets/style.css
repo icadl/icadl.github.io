@@ -2822,6 +2822,19 @@ section#Program h4 {
 
 .list-hotel .card{
   margin-bottom:26px;
+  overflow: hidden;
+}
+.list-hotel .card>a{
+  display: block;
+  overflow: hidden;
+}
+.list-hotel .card a img{
+  transition: all 0.3s;
+  transform: scale(1);
+    object-fit: cover;
+}
+.list-hotel .card a:hover img{
+  transform: scale(1.1);
 }
 .list-hotel .card-body .card-title{
   font-family: 'Lora';
@@ -2873,6 +2886,20 @@ section#Program h4 {
 
 .list-hotel-single .card{
   margin-bottom:26px;
+  overflow: hidden;
+}
+.list-hotel-single .card > a{
+  display: block;
+  overflow: hidden;
+  margin-bottom: -1px;
+}
+.list-hotel-single .card a img{
+  transition: all 0.3s;
+  transform: scale(1);
+    object-fit: cover;
+}
+.list-hotel-single .card a:hover img{
+  transform: scale(1.1);
 }
 .list-hotel-single .card-body{
   background: linear-gradient(180deg, #B80A0A 0%, #CA0000 100%);
