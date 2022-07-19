@@ -2768,6 +2768,134 @@ section#Program h4 {
   top: 0;
 }
 
+
+.breadcrumb{
+  margin-top: 1rem;
+  background-color: #ffffff;
+}
+
+.title-hotel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  border: 1px solid #CA0000;
+  margin-bottom: 1em;
+
+}
+.title-hotel h3{
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  /* identical to box height, or 150% */
+  
+  text-align: center;
+  text-transform: uppercase;
+  
+  /* Primary Color/Đỏ nâu */
+  
+  color: #CA0000;
+  
+
+}
+
+.title-hotel h3::after{
+  content: "";
+  background: #CA0000;
+  width: 170px;
+  height: 2px;
+  display: block;
+  margin: 5px auto;
+}
+
+.hotel-banner{
+  margin-bottom: 1em;
+}
+.hotel-banner img{
+  max-width: 100%;
+}
+
+
+.list-hotel .card{
+  margin-bottom:26px;
+}
+.list-hotel .card-body .card-title{
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #000000;
+}
+.list-hotel .card-body .card-title:hover{
+  color: #CA0000;
+}
+.list-hotel .card-body .card-text{
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  border-bottom: 0.5px solid #666666;
+  padding-bottom: 26px;
+}
+.list-hotel .card-body .card-text::before{
+  top: 7px;
+  content: url(./img/hotel/point.png);
+  width: 18px;
+  height: 22px;
+  padding-right: 10px;
+  position: relative;
+}
+
+.list-hotel .card-body .card-button{
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  text-transform: capitalize;
+  color: #666666;
+  display: block;
+  text-align: center;
+}
+.list-hotel .card-body .card-button:hover{
+  color: #CA0000;
+}
+
+
+
+.list-hotel-single .card{
+  margin-bottom:26px;
+}
+.list-hotel-single .card-body{
+  background: linear-gradient(180deg, #B80A0A 0%, #CA0000 100%);
+  border-radius: 0px 0px 4px 4px;
+  padding:8px;
+}
+.list-hotel-single .card-body .card-title{
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+}
+.list-hotel-single .card-body .card-text{
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+
 @media screen and (max-width:1280px)and (max-height:960px) {
 
 h2.icadl-title {
@@ -2800,6 +2928,10 @@ h2.icadl-title {
 	.text-light.icadl-title{
 		display:none;
 	}
+  .content {
+    position: relative;
+    top: 57px;
+  }
 }
 
 
