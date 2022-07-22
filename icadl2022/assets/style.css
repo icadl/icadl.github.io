@@ -2335,7 +2335,7 @@ section#dates h3,
 section#Program h3,
 section#awards h3,
 section#proceedings h3,
-section#zoom h3 {
+section#zoom h3,section#registration-fee h3 {
   color: #ca0000;
   font-weight: 700;
   font-size: 24px;
