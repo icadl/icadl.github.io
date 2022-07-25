@@ -2922,7 +2922,45 @@ section#Program h4 {
   color: #FFFFFF;
 }
 
-
+h3.hot-news-title{
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #CA0000;
+  margin-top:32px;
+}
+.hot-news-content-page{
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+}
+.desc-hot-news{
+  border:1px solid #666;
+  padding:16px 32px;
+  width: fit-content;
+}
+h3.hot-news-small-title{
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #000000;
+  margin-top:16px;
+}
+ul.list-hot-news > li{
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+}
 @media screen and (max-width:1280px)and (max-height:960px) {
 
 h2.icadl-title {
