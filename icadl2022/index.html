@@ -1887,8 +1887,8 @@
                 <li><a href="news.html" target="_self"> <img src="./assets/img/hot-news-modal.svg" alt=""></a></li>
                 <li><a href="hotel.html" target="_self"> <img src="./assets/img/hotel-modal.svg" alt=""></a></li>
           
-                <li class="inline"><a href="index.html#registration-fee" target="_self"><img src="./assets/img/registration-fee-modal.svg" alt=""></a></li>
-                <li class="inline" style="padding:0;"><a href="index.html#submission" target="_self"><img src="./assets/img/submission-modal.svg" alt=""></a></li>
+                <li class="inline"><a href="index.html#registration-fee" target="_self" class="registration-fee-link"><img src="./assets/img/registration-fee-modal.svg" alt=""></a></li>
+                <li class="inline" style="padding:0;"><a href="index.html#submission" target="_self" class="submission-link"><img src="./assets/img/submission-modal.svg" alt=""></a></li>
                 <li><a href="hotel.html#hotel-banner" target="_self"> <img src="./assets/img/location-map-modal.svg" alt=""></a></li>
                 <!-- <li class="inline"><a href="https://www.youtube.com/watch?v=DIgv-e18OzA&t=142s" target="_blank"><img src="./assets/img/intro/intro2.png" alt=""></a></li>
                 <li class="inline"><a href="https://www.youtube.com/watch?v=UK1TGRgJ7Jo" target="_blank"><img src="./assets/img/intro/intro3.png" alt=""></a></li>
@@ -2006,6 +2006,17 @@
 
 
       $('#modalIntro').modal('show')
+      let submission_link = document.querySelector('.submission-link');
+      let re_link = document.querySelector('.registration-fee-link');
+
+      // console.log(submission_link);
+      // console.log(re_link);
+      submission_link.addEventListener('click',function () {
+        $('#modalIntro').modal('hide')
+      })
+      re_link.addEventListener('click',function () {
+        $('#modalIntro').modal('hide')
+      })
 
       function includeHTML() {
         var z, i, elmnt, file, xhttp;
