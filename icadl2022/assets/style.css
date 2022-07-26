@@ -2818,6 +2818,47 @@ section#Program h4 {
   margin-bottom: 1em;
 
 }
+.center-content-block{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.center-content-block-flex{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.table-responsive.table-custom > table tr th{
+  color:#fff;
+  background: linear-gradient(180deg, #D92626 0%, #CA0000 100%);
+  border:0 !important;
+}
+.table-responsive.table-custom > table tr {
+  background: #F2F2F2 !important;
+  text-align: center;
+}
+.table td, .table th{
+  border-top: 1px solid #ccc;
+  color: #000000;
+}
+table {
+   border: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.table td {
+  border-top: 1px solid rgb(204, 204, 204);
+  color: rgb(0, 0, 0);
+  border-left: 1px solid rgb(204, 204, 204);
+  border-bottom: 1px solid rgb(204, 204, 204);
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+ 
+}
+.table tr td:last-child{
+   border-right: 1px solid rgb(204, 204, 204);
+}
 .list-hotel.list-beautiful-vn .card{
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px 0px 8px 8px;

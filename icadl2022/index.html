@@ -2091,6 +2091,43 @@
         window.onscroll = function () {
           myFunction();
         };
+        let link_cfp = document.querySelector('.id-cfp');
+        let content_cfp = document.querySelector('#cfp')
+        link_cfp.addEventListener('click',function (e) {
+          console.log("Hello")
+          e.preventDefault();
+          window.scrollTo({
+            top: content_cfp.offsetTop - 10,
+            behavior: 'smooth'
+          })
+        })
+        let link_sub = document.querySelector('.id-sub');
+        let submission_link = document.querySelector('.submission-link');
+        let content_sub =document.querySelector("#submission")
+        link_sub.addEventListener('click',function (e) {
+          e.preventDefault();
+          window.scrollTo({
+            top: content_sub.offsetTop - 10,
+            behavior: 'smooth'
+          })
+        })
+        submission_link.addEventListener('click',function (e) {
+          e.preventDefault();
+          window.scrollTo({
+            top: content_sub.offsetTop - 10,
+            behavior: 'smooth'
+          })
+        })
+        let registration_fee_link = document.querySelector('.registration-fee-link');
+        let content_re_fee = document.querySelector("#registration-fee");
+
+        registration_fee_link.addEventListener('click',function (e) {
+          e.preventDefault();
+          window.scrollTo({
+            top: content_re_fee.offsetTop - 10,
+            behavior: 'smooth'
+          })
+        })
 
         var navbar = document.querySelector(".nav-bar");
         // console.log("navbar", navbar);
