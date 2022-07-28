@@ -2054,7 +2054,7 @@
       function css(element, style) {
         for (const property in style) element.style[property] = style[property];
       }
-      window.addEventListener("load", (event) => {
+     document.addEventListener("DOMContentLoaded", (event) => {
         let dropdownItemAll = document.querySelectorAll("a.dropdown-item");
         dropdownItemAll.forEach((item) => {
           item.addEventListener("click", function (e) {
