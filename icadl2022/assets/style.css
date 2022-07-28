@@ -2856,6 +2856,25 @@ table {
   vertical-align: middle;
  
 }
+.vnu-lic-hotel > h3{
+  font-family: 'Lora';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 30px;
+color: #CA0000;
+
+}
+.vnu-lic-hotel >p {
+  color:#000;
+}
+.vnu-lic-hotel .desc p{
+  color:#000;
+}
+.vnu-lic-hotel .desc p.title{
+  font-size:20px;
+  
+}
 .table tr td:last-child{
    border-right: 1px solid rgb(204, 204, 204);
 }
