@@ -1883,14 +1883,17 @@
           </div>
           <div class="modal-body">
             <ul class="introVN">
+                <li><a href="news.html" target="_self"> <img src="./assets/img/hot-news-modal.svg" alt=""></a></li>
+                <li><a href="index.html#dates" target="_self" class="dates-link"><img src="./assets/img/important-date.svg" alt=""></a></li>
                 <!-- <li><a href="#" target="_self"> <img src="./assets/img/intro/intro7.png" alt=""></a></li> -->   
                 <li><a href="https://easychair.org/account/signin#%7Bfr:KckUVDh0ZT4h" target="_blank" class="submission-linkx"><img src="./assets/img/submission-modal.svg" alt=""></a></li>
-                <li><a href="news.html" target="_self"> <img src="./assets/img/hot-news-modal.svg" alt=""></a></li>
+                <li><a href="index.html#registration-fee" target="_self" class="registration-fee-link"><img src="./assets/img/registration-fee-modal.svg" alt=""></a></li>
                 <li><a href="hotel.html" target="_self"> <img src="./assets/img/hotel-modal.svg" alt=""></a></li>
           
-                <li><a href="index.html#registration-fee" target="_self" class="registration-fee-link"><img src="./assets/img/registration-fee-modal.svg" alt=""></a></li>
+               
              
-                <li><a href="hotel.html#hotel-banner" target="_self"> <img src="./assets/img/hotel/hotel1.png" alt=""></a></li>
+                <!-- <li><a href="hotel.html#hotel-banner" target="_self"> <img src="./assets/img/hotel/hotel1.png" alt=""></a></li> -->
+                <li><a href="beautiful-vn.html" target="_self"> <img src="./assets/img/beau-vn.svg" alt=""></a></li>
                 <!-- <li class="inline"><a href="https://www.youtube.com/watch?v=DIgv-e18OzA&t=142s" target="_blank"><img src="./assets/img/intro/intro2.png" alt=""></a></li>
                 <li class="inline"><a href="https://www.youtube.com/watch?v=UK1TGRgJ7Jo" target="_blank"><img src="./assets/img/intro/intro3.png" alt=""></a></li>
                 <li><a href="https://www.youtube.com/watch?v=FUKqs1efCgE" target="_blank"><img src="./assets/img/intro/intro4.png" alt=""></a></li>
@@ -2009,6 +2012,26 @@
       $('#modalIntro').modal('show')
       let submission_link = document.querySelector('.submission-link');
       let re_link = document.querySelector('.registration-fee-link');
+      let dates_link = document.querySelector('.dates-link');
+      if(dates_link != null){
+        dates_link.addEventListener('click',function (e) {
+          $('#modalIntro').modal('hide');
+          
+          let href = this.getAttribute("href").split("#");
+          console.log(href.length);
+            if (href.length == 2) {
+              e.preventDefault();
+              let idD = "#" + href[1];
+              let idSelected = document.querySelector(idD);
+              window.scrollTo({
+                top: idSelected.offsetTop - 20,
+                behavior: 'smooth'
+              });
+            }else if(href == 1){
+              window.location.href = this.getAttribute("href");
+            }
+        })
+      }
       if(submission_link != null){
         submission_link.addEventListener('click',function () {
           $('#modalIntro').modal('hide')
@@ -2133,7 +2156,6 @@
         
         let registration_fee_link = document.querySelector('.registration-fee-link');
         let content_re_fee = document.querySelector("#registration-fee");
-
         registration_fee_link.addEventListener('click',function (e) {
           if(content_re_fee !== undefined){
              e.preventDefault();
