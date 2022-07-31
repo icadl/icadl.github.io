@@ -1884,7 +1884,7 @@
           <div class="modal-body">
             <ul class="introVN">
                 <!-- <li><a href="#" target="_self"> <img src="./assets/img/intro/intro7.png" alt=""></a></li> -->   
-                <li><a href="index.html#submission" target="_self" class="submission-link"><img src="./assets/img/submission-modal.svg" alt=""></a></li>
+                <li><a href="https://easychair.org/account/signin#%7Bfr:KckUVDh0ZT4h" target="_blank" class="submission-linkx"><img src="./assets/img/submission-modal.svg" alt=""></a></li>
                 <li><a href="news.html" target="_self"> <img src="./assets/img/hot-news-modal.svg" alt=""></a></li>
                 <li><a href="hotel.html" target="_self"> <img src="./assets/img/hotel-modal.svg" alt=""></a></li>
           
@@ -2009,15 +2009,16 @@
       $('#modalIntro').modal('show')
       let submission_link = document.querySelector('.submission-link');
       let re_link = document.querySelector('.registration-fee-link');
-
-      // console.log(submission_link);
-      // console.log(re_link);
-      submission_link.addEventListener('click',function () {
-        $('#modalIntro').modal('hide')
-      })
-      re_link.addEventListener('click',function () {
-        $('#modalIntro').modal('hide')
-      })
+      if(submission_link != null){
+        submission_link.addEventListener('click',function () {
+          $('#modalIntro').modal('hide')
+        })
+      }
+      if(re_link != null){
+        re_link.addEventListener('click',function () {
+          $('#modalIntro').modal('hide')
+        })
+      }
 
       function includeHTML() {
         var z, i, elmnt, file, xhttp;
@@ -2117,16 +2118,19 @@
           }
          
         })
-        submission_link.addEventListener('click',function (e) {
-          if(content_sub !==undefined){
-             e.preventDefault();
-            window.scrollTo({
-              top: content_sub.offsetTop - 10,
-              behavior: 'smooth'
-            })
-          }
-         
-        })
+        if(submission_link != null){
+          submission_link.addEventListener('click',function (e) {
+            if(content_sub !==undefined){
+              e.preventDefault();
+              window.scrollTo({
+                top: content_sub.offsetTop - 10,
+                behavior: 'smooth'
+              })
+            }
+          
+          })
+        }
+        
         let registration_fee_link = document.querySelector('.registration-fee-link');
         let content_re_fee = document.querySelector("#registration-fee");
 
