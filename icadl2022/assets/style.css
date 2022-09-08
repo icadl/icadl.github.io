@@ -2259,6 +2259,9 @@ td {
     margin: 5px 0;
     text-align: center;
   }
+  .footer-logo{
+    gap:40px !important
+  }
 }
 
 /* CUSTOM CSS*/
@@ -3128,6 +3131,17 @@ h2.icadl-title {
   }
 }
 
-
-
+@media (max-width: 768px) {
+  .footer .copyright p,
+  .footer .copyright .col-md-6:last-child p {
+    margin: 5px 0;
+    text-align: center;
+  }
+  
+}
+@media (max-width:575.98px) {
+  .footer-logo{
+    gap:40px !important
+  }
+}
 
