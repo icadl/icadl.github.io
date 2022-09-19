@@ -61,7 +61,10 @@ h3.title{
 .text-size-14{
   font-size: 14px!important;
 }
-
+section#accepted table,section#accepted td, section#accepted td,section#accepted th{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
 .back-to-top {
   position: fixed;
   display: none;

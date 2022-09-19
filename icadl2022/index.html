@@ -2167,6 +2167,21 @@
          
         })
 
+        let accepted_link = document.querySelector('.id-accepted');
+        let content_accepted= document.querySelector("#accepted");
+        accepted_link.addEventListener('click',function (e) {
+          if(content_accepted !== undefined){
+             e.preventDefault();
+            window.scrollTo({
+              top: content_accepted.offsetTop - 10,
+              behavior: 'smooth'
+            })
+          }
+         
+        })
+
+
+
         var navbar = document.querySelector(".nav-bar");
         // console.log("navbar", navbar);
         var sticky = navbar.offsetTop;
