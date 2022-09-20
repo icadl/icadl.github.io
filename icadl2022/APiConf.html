@@ -1975,7 +1975,11 @@
         window.onscroll = function () {
           myFunction();
         };
-
+       
+        let autoClickCallFor = document.querySelector('.autoClickCallFor');
+        console.log('autoClick',autoClickCallFor);
+        autoClickCallFor.click();
+        
         var navbar = document.querySelector(".nav-bar");
         // console.log("navbar", navbar);
         var sticky = navbar.offsetTop;
