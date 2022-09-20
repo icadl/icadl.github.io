@@ -2958,7 +2958,8 @@ color: #CA0000;
 .list-hotel .card a img{
   transition: all 0.3s;
   transform: scale(1);
-    object-fit: cover;
+  object-fit: cover;
+  height:320px;
 }
 .list-hotel .card a:hover img{
   transform: scale(1.1);
