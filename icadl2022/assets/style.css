@@ -451,6 +451,9 @@ section#accepted table,section#accepted td, section#accepted td,section#accepted
   width: 100%;
   margin-bottom: 45px;
 }
+ol.list-question li p{
+  margin-bottom: 0;
+}
 
 .section-header p {
   color: #fdbe33;
