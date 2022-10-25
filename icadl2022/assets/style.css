@@ -292,7 +292,7 @@ section#accepted table,section#accepted td, section#accepted td,section#accepted
   }
 }
 .header {
-  background-image: url("./img/banner.png");
+  background-image: url("./img/banner2.png");
   /*background-color: #2b2b2b;*/
   background-repeat: no-repeat;
   background-position: center top;
@@ -315,7 +315,11 @@ section#accepted table,section#accepted td, section#accepted td,section#accepted
   display: block;
 }
 .header .links #link2{
-  width: 300px;
+  width: 200px;
+  display: block;
+}
+.header .links #link3{
+  width: 222px;
   display: block;
 }
 @media (max-width: 900.98px) {
@@ -2076,7 +2080,7 @@ td {
 .footer-logo {
     display: flex;
     justify-content: center;
-    gap: 40px 98px;
+    gap: 40px 65px;
     flex-wrap: wrap;
     background-color: #fff;
     justify-content: space-evenly;
