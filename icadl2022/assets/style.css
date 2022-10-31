@@ -3140,7 +3140,13 @@ h2.icadl-title {
 	}
   .content {
     position: relative;
-    top: 57px;
+  }
+  .line-break::before{
+    content: "\a";
+    white-space: pre;
+  }
+  #padding-icon{
+    padding-top: 10px;
   }
 }
 
