@@ -61,6 +61,10 @@ h3.title{
 .text-size-14{
   font-size: 14px!important;
 }
+section#Program table,section#Program td, section#Program td,section#Program th{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
 section#accepted table,section#accepted td, section#accepted td,section#accepted th{
   border: 1px solid black;
   border-collapse: collapse;
