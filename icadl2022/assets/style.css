@@ -2869,8 +2869,16 @@ table {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
- 
 }
+.set-width{
+  width: 13%;
+}
+/* .set-width-col3{
+  width: 29%;
+}
+.set-width-col2{
+  width: 43%;
+} */
 .vnu-lic-hotel > h3{
   font-family: 'Lora';
 font-style: normal;
