@@ -1869,7 +1869,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="modalIntro" tabindex="-1" role="dialog" aria-labelledby="modalIntroTitle" aria-hidden="true">
+    <div class="modal fade" id="modalIntro" tabindex="-1" role="dialog" aria-labelledby="modalIntroTitle" aria-hidden="true" style="display: none;">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -2015,14 +2015,13 @@
     ></iframe>
     <script>
 
-
-      $('#modalIntro').modal('show')
-      let submission_link = document.querySelector('.submission-link');
+      let submission_link = document.querySelector('.submission');
       let re_link = document.querySelector('.registration-fee-link');
       let dates_link = document.querySelector('.dates-link');
-      let accepted_pages_link = document.querySelector('.accepted-pages-link');
+      let accepted_pages_link = document.querySelector('.accepted');
+      console.log(accepted_pages_link)
       let content_accepted_home = document.querySelector('#cfp');
-     // console.log(content_accepted_home)
+     console.log(content_accepted_home)
       if(dates_link != null){
         dates_link.addEventListener('click',function (e) {
           $('#modalIntro').modal('hide');
@@ -2076,7 +2075,7 @@
           $('#modalIntro').modal('hide')
         })
       }
-
+   
       function includeHTML() {
         var z, i, elmnt, file, xhttp;
         /*loop through a collection of all HTML elements:*/
@@ -2108,11 +2107,29 @@
           }
         }
       }
+     
       includeHTML();
       function css(element, style) {
         for (const property in style) element.style[property] = style[property];
       }
      window.addEventListener("load", (event) => {
+        let flex_href = window.location.href.split("#")
+        if(flex_href.length == 1 || flex_href[1] == "welcome"){
+          console.log(flex_href)
+          $('#modalIntro').modal('show')
+        }
+        else if(flex_href.length != 1){ 
+          console.log(flex_href)
+          $('#modalIntro').modal('hide')
+          let link = document.querySelector(`#${flex_href[1]}`)
+          event.preventDefault();
+          if(link && link.offsetTop){
+            window.scrollTo({
+                top: link.offsetTop - 10,
+                behavior: 'smooth'
+              })
+          }
+        }
         let dropdownItemAll = document.querySelectorAll("a.dropdown-item");
         dropdownItemAll.forEach((item) => {
           item.addEventListener("click", function (e) {
@@ -2161,6 +2178,17 @@
             })
           }
           
+        })
+        let program_link = document.querySelector('.program-link');
+        let program_content = document.querySelector('#Program') 
+        program_link.addEventListener('click',function (e) {
+          if(program_content !== undefined){
+            e.preventDefault();
+             window.scrollTo({
+              top: program_content.offsetTop - 10,
+              behavior: 'smooth'
+            })
+          }
         })
         let link_sub = document.querySelector('.id-sub');
         let submission_link = document.querySelector('.submission-link');
@@ -2214,9 +2242,7 @@
          
         })
 
-        
-
-
+ 
         let ap_callforpage = document.querySelector('.ap-callforpage-link');
        
         ap_callforpage.addEventListener('click',function (e) {

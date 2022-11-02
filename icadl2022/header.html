@@ -121,7 +121,7 @@
               >Program</a
             >
             <div class="dropdown-menu">
-              <a href="index.html#Program" class="dropdown-item">Program</a>
+              <a href="index.html#Program" target="_self" class="dropdown-item program-link autoClickCallFor">Program</a>
               <a href="keynotes.html" class="dropdown-item">Keynotes</a>
               <a href="index.html#welcome" class="dropdown-item">Panel</a>
               <a href="index.html#welcome" class="dropdown-item">Social event</a>
@@ -195,3 +195,26 @@
     </nav>
   </div>
 </div>
+<script>
+  let program = document.querySelector("#program-link")
+  console.log(program)
+  if(program!= null){
+        program.addEventListener('click',function (e) {
+          $('#modalIntro').modal('hide');
+          
+          let href = this.getAttribute("href").split("#");
+          console.log(href.length);
+            if (href.length == 2) {
+              e.preventDefault();
+              let idD = "#" + href[1];
+              let idSelected = document.querySelector(idD);
+              window.scrollTo({
+                top: idSelected.offsetTop - 20,
+                behavior: 'smooth'
+              });
+            }else if(href == 1){
+              window.location.href = this.getAttribute("href");
+            }
+        })
+      }
+</script>
