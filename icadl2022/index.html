@@ -2014,7 +2014,8 @@
       src="./assets/saved_resource.html"
     ></iframe>
     <script>
-
+    $('#modalIntro').modal('show')
+   
       let submission_link = document.querySelector('.submission');
       let re_link = document.querySelector('.registration-fee-link');
       let dates_link = document.querySelector('.dates-link');
@@ -2112,8 +2113,17 @@
       function css(element, style) {
         for (const property in style) element.style[property] = style[property];
       }
+    
      window.addEventListener("load", (event) => {
-        let flex_href = window.location.href.split("#")
+      window.onload = function() {
+      if(!window.location.hash) {
+        window.location = window.location + '#';
+        console.log(window.location)
+        window.location.reload(true);
+      }
+    }
+      
+      let flex_href = window.location.href.split("#")
         if(flex_href.length == 1 || flex_href[1] == "welcome"){
           console.log(flex_href)
           $('#modalIntro').modal('show')
@@ -2122,13 +2132,17 @@
           console.log(flex_href)
           $('#modalIntro').modal('hide')
           let link = document.querySelector(`#${flex_href[1]}`)
+          console.log(link)
+          
+         
           if(link && link.offsetTop){
-            window.scrollTo({
+            console.log(link.offsetTop)
+             window.scrollTo({
                 top: link.offsetTop - 10,
                 behavior: 'smooth'
               })
           }
-        }
+        }   
      
         let dropdownItemAll = document.querySelectorAll("a.dropdown-item");
         dropdownItemAll.forEach((item) => {
