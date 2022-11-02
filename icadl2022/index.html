@@ -2122,7 +2122,6 @@
           console.log(flex_href)
           $('#modalIntro').modal('hide')
           let link = document.querySelector(`#${flex_href[1]}`)
-          event.preventDefault();
           if(link && link.offsetTop){
             window.scrollTo({
                 top: link.offsetTop - 10,
@@ -2130,18 +2129,24 @@
               })
           }
         }
+     
         let dropdownItemAll = document.querySelectorAll("a.dropdown-item");
         dropdownItemAll.forEach((item) => {
           item.addEventListener("click", function (e) {
             let href = e.target.getAttribute("href").split("#");
             if (href == 1) {
               e.preventDefault();
+              
+              
               let idD = "#" + href[1];
               let idSelected = document.querySelector(idD);
-              window.scrollTo({
+              if(idSelected.offsetTop){
+                window.scrollTo({
                 top: idSelected.offsetTop,
                 behavior: 'smooth'
               });
+              }
+              
             }else if(href == 2){
               window.location.href = e.target.getAttribute("href");
             }
@@ -2153,12 +2158,17 @@
             let href = e.target.getAttribute("href").split("#");
             if (href == 1) {
               e.preventDefault();
+              
+              
               let idD = "#" + href[1];
               let idSelected = document.querySelector(idD);
-              window.scrollTo({
+              if(idSelected.offsetTop){
+                window.scrollTo({
                 top: idSelected.offsetTop,
                 behavior: 'smooth'
               });
+              }
+              
             }else if(href == 2){
               window.location.href = e.target.getAttribute("href");
             }
@@ -2170,8 +2180,11 @@
         let link_cfp = document.querySelector('.id-cfp');
         let content_cfp = document.querySelector('#cfp')
         link_cfp.addEventListener('click',function (e) {
-          if(content_cfp !== undefined){
+          if(content_cfp !== undefined && content_cfp.offsetTop){
+            
             e.preventDefault();
+            
+            
             window.scrollTo({
               top: content_cfp.offsetTop - 10,
               behavior: 'smooth'
@@ -2182,8 +2195,10 @@
         let program_link = document.querySelector('.program-link');
         let program_content = document.querySelector('#Program') 
         program_link.addEventListener('click',function (e) {
-          if(program_content !== undefined){
+          if(program_content !== undefined && program_content.offsetTop){
             e.preventDefault();
+            
+            
              window.scrollTo({
               top: program_content.offsetTop - 10,
               behavior: 'smooth'
@@ -2194,8 +2209,10 @@
         let submission_link = document.querySelector('.submission-link');
         let content_sub =document.querySelector("#submission")
         link_sub.addEventListener('click',function (e) {
-          if(content_sub !== undefined){
-             e.preventDefault();
+          if(content_sub !== undefined && content_sub.offsetTop){
+            e.preventDefault();
+           
+             
             window.scrollTo({
               top: content_sub.offsetTop - 10,
               behavior: 'smooth'
@@ -2205,8 +2222,10 @@
         })
         if(submission_link != null){
           submission_link.addEventListener('click',function (e) {
-            if(content_sub !==undefined){
+            if(content_sub !==undefined && content_sub.offsetTop){
               e.preventDefault();
+            
+              
               window.scrollTo({
                 top: content_sub.offsetTop - 10,
                 behavior: 'smooth'
@@ -2219,8 +2238,10 @@
         let registration_fee_link = document.querySelector('.registration-fee-link');
         let content_re_fee = document.querySelector("#registration-fee");
         registration_fee_link.addEventListener('click',function (e) {
-          if(content_re_fee !== undefined){
-             e.preventDefault();
+          if(content_re_fee !== undefined && content_re_fee.offsetTop){ 
+            e.preventDefault();
+            
+             
             window.scrollTo({
               top: content_re_fee.offsetTop - 10,
               behavior: 'smooth'
@@ -2232,8 +2253,10 @@
         let accepted_link = document.querySelector('.id-accepted');
         let content_accepted= document.querySelector("#accepted");
         accepted_link.addEventListener('click',function (e) {
-          if(content_accepted !== undefined){
-             e.preventDefault();
+          if(content_accepted !== undefined && content_accepted.offsetTop){
+            e.preventDefault();
+           
+             
             window.scrollTo({
               top: content_accepted.offsetTop - 10,
               behavior: 'smooth'
