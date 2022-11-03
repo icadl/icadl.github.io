@@ -1860,7 +1860,7 @@
           <!--END FOOTER-->
         </div>
       </div>
-      <a href="/index.html#welcome" class="back-to-top" style="display: none"
+      <a href="index.html#welcome" class="back-to-top" style="display: none"
         ><img
           src="./assets/img/arrow-up.png"
           alt=""
@@ -2114,11 +2114,8 @@
         for (const property in style) element.style[property] = style[property];
       }
      
-     const flex_href = window.location.href.split("#")
+     let flex_href = window.location.href.split("#")
      console.log(flex_href)
-     
-     window.addEventListener("load", (event) => {
-       console.log(flex_href)
        if(flex_href[1] === "submission"){
          console.log(flex_href[1])
               // $('#modalIntro').modal('hide')
@@ -2129,9 +2126,7 @@
               })
              
             }
-       
-     
-      if(flex_href[1] === "accepted"){
+            if(flex_href[1] === "accepted"){
               $('#modalIntro').modal('hide')
               // window.scrollTo(0,4187)
               window.scrollTo({
@@ -2170,6 +2165,12 @@
              })
              console.log(true)
            }
+       
+     window.addEventListener("load", (event) => {
+       console.log(flex_href)
+     
+     
+      
       // let link = document.querySelector(`#${flex_href[1]}`)
       // if (link == null){
       //       console.log(null)
