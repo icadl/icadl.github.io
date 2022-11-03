@@ -1691,16 +1691,16 @@
         }
       }
     </style>
-    <script
+    <!-- <script
       type="text/javascript"
       src="chrome-extension://aggiiclaiamajehmlfpkjmlbadmkledi/popup.js"
       async=""
-    ></script>
-    <script
+    ></script> -->
+    <!-- <script
       type="text/javascript"
       src="chrome-extension://aggiiclaiamajehmlfpkjmlbadmkledi/tat_popup.js"
       async=""
-    ></script>
+    ></script> -->
     <style>
       .glot-sub-active {
         color: #1296ba !important;
@@ -1993,7 +1993,7 @@
     <script src="./assets/slick.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="./assets/main.js"></script>
+    <!-- <script src="./assets/main.js"></script> -->
 
     <div
       id="eJOY__extension_root"
@@ -2113,61 +2113,72 @@
       function css(element, style) {
         for (const property in style) element.style[property] = style[property];
       }
-    
+     
+     const flex_href = window.location.href.split("#")
+     console.log(flex_href)
+     
      window.addEventListener("load", (event) => {
-      
-      
-      let flex_href = window.location.href.split("#")
-        if(flex_href.length == 1 || flex_href[1] == "welcome"){
-          console.log(flex_href)
-          $('#modalIntro').modal('show')
-        }
-        else if(flex_href.length != 1){ 
-          console.log(flex_href)
-          
-          let link = document.querySelector(`#${flex_href[1]}`)
-
-          if (link == null){
-            console.log(null)
-            console.log(flex_href[1])
-          
-            if(flex_href[1] == 'submission'){
-              $('#modalIntro').modal('hide')
-              window.scrollTo(0,3319)
-              // console.log(flex_href)
-              // console.log(document.querySelector(`${window.location.hash}`))
-              // window.scrollTo({
-              //   top: 3343,
-              //   behavior:'smooth'
-              // })
-              console.log(true)
-              
-            }
-            if(flex_href[1] == 'accepted'){
-              
-              $('#modalIntro').modal('hide')
-              window.scrollTo(0,4187)
-              console.log(true)
-            }
-            if(flex_href[1] == 'cfp'){
+       console.log(flex_href)
+       if(flex_href[1] === "submission"){
+         console.log(flex_href[1])
+              // $('#modalIntro').modal('hide')
+              // window.scrollTo(0,3319)
+              window.scrollTo({
+                top: 3319 - 10,
+                behavior: 'smooth'
+              })
              
+            }
+       
+     
+      if(flex_href[1] === "accepted"){
               $('#modalIntro').modal('hide')
-              window.scrollTo(0,1272)
-               console.log(true)
-            } 
-            if(flex_href[1] == 'organizers'){
-              
-              $('#modalIntro').modal('hide')
-              window.scrollTo(0,7147)
+              // window.scrollTo(0,4187)
+              window.scrollTo({
+                top: 4187 - 10,
+                behavior: 'smooth'
+              })
               console.log(true)
             }
-            if(flex_href[1] == 'host'){
-              
-              $('#modalIntro').modal('hide')
-              window.scrollTo(0,7726)
+            if(flex_href[1] === 'cfp'){
+             
+             $('#modalIntro').modal('hide')
+             // window.scrollTo(0,1272)
+             window.scrollTo({
+               top: 1272 - 10,
+               behavior: 'smooth'
+             })
               console.log(true)
-            }
-          }
+           } 
+             if(flex_href[1] === "organizers"){
+             
+             $('#modalIntro').modal('hide')
+             // window.scrollTo(0,7147)
+             window.scrollTo({
+               top: 7147 - 10,
+               behavior: 'smooth'
+             })
+             console.log(true)
+           }
+          if(flex_href[1] === "host"){
+             
+             $('#modalIntro').modal('hide')
+             // window.scrollTo(0,7726)
+             window.scrollTo({
+               top: 7726 - 10,
+               behavior: 'smooth'
+             })
+             console.log(true)
+           }
+      // let link = document.querySelector(`#${flex_href[1]}`)
+      // if (link == null){
+      //       console.log(null)
+      //       console.log(flex_href[1])
+          
+            
+           
+            
+      //     }
           // window.onload = function() {
           // if(!window.location.hash) {
           //   window.location = window.location + '#';
@@ -2176,13 +2187,22 @@
           //  }
           // }
           
-          else if(link && link.offsetTop){
-            console.log(link.offsetTop)
-             window.scrollTo({
-                top: link.offsetTop - 10,
-                behavior: 'smooth'
-              })
-          }
+          // else if(link && link.offsetTop){
+          //   $('#modalIntro').modal('hide')
+          //   console.log(link.offsetTop)
+          //    window.scrollTo({
+          //       top: link.offsetTop - 10,
+          //       behavior: 'smooth'
+          //     })
+          // }
+      
+        if(flex_href.length == 1 || flex_href[1] == "welcome"){
+          console.log(flex_href)
+          $('#modalIntro').modal('show')
+        }
+        else if(flex_href.length != 1){ 
+          console.log(flex_href)
+
         }   
      
         let dropdownItemAll = document.querySelectorAll("a.dropdown-item");
@@ -2229,12 +2249,13 @@
             }
           });
         });
-        window.onscroll = function () {
-          myFunction();
-        };
+        // window.onscroll = function () {
+        //   myFunction();
+        // };
         let link_cfp = document.querySelector('.id-cfp');
         let content_cfp = document.querySelector('#cfp')
-        link_cfp.addEventListener('click',function (e) {
+        if(link_cfp){
+          link_cfp.addEventListener('click',function (e) {
           if(content_cfp !== undefined && content_cfp.offsetTop){
             
             e.preventDefault();
@@ -2247,9 +2268,12 @@
           }
           
         })
+        }
+        
         let program_link = document.querySelector('.program-link');
         let program_content = document.querySelector('#Program') 
-        program_link.addEventListener('click',function (e) {
+        if(program_link){
+           program_link.addEventListener('click',function (e) {
           if(program_content !== undefined && program_content.offsetTop){
             e.preventDefault();
             
@@ -2260,9 +2284,12 @@
             })
           }
         })
+        }
+       
         let link_sub = document.querySelector('.id-sub');
         let submission_link = document.querySelector('.submission-link');
-        let content_sub =document.querySelector("#submission")
+        if(link_sub){
+          let content_sub =document.querySelector("#submission")
         link_sub.addEventListener('click',function (e) {
           if(content_sub !== undefined && content_sub.offsetTop){
             e.preventDefault();
@@ -2275,6 +2302,8 @@
           }
          
         })
+        }
+        
         if(submission_link != null){
           submission_link.addEventListener('click',function (e) {
             if(content_sub !==undefined && content_sub.offsetTop){
@@ -2292,7 +2321,8 @@
         
         let registration_fee_link = document.querySelector('.registration-fee-link');
         let content_re_fee = document.querySelector("#registration-fee");
-        registration_fee_link.addEventListener('click',function (e) {
+        if(registration_fee_link){
+          registration_fee_link.addEventListener('click',function (e) {
           if(content_re_fee !== undefined && content_re_fee.offsetTop){ 
             e.preventDefault();
             
@@ -2304,10 +2334,13 @@
           }
          
         })
+        }
+        
 
         let accepted_link = document.querySelector('.id-accepted');
         let content_accepted= document.querySelector("#accepted");
-        accepted_link.addEventListener('click',function (e) {
+        if(accepted_link){
+          accepted_link.addEventListener('click',function (e) {
           if(content_accepted !== undefined && content_accepted.offsetTop){
             e.preventDefault();
            
@@ -2319,11 +2352,13 @@
           }
          
         })
+        }
+        
 
  
         let ap_callforpage = document.querySelector('.ap-callforpage-link');
-       
-        ap_callforpage.addEventListener('click',function (e) {
+        if(ap_callforpage){
+          ap_callforpage.addEventListener('click',function (e) {
           
             e.preventDefault();
             window.location.href = 'APiConf.html';
@@ -2334,6 +2369,9 @@
             // })
         }
       )
+        }
+       
+        
 
 
 

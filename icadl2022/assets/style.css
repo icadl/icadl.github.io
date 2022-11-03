@@ -477,7 +477,7 @@ ol.list-question li p{
   font-weight: 700;
 }
 section a {
-  background: url(../img/ex_link.gif) right 60% no-repeat;
+  /* background: url(../img/ex_link.gif) right 60% no-repeat; */
   color: #000099;
   padding-right: 11px;
   margin-right: 2px;
