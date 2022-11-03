@@ -2115,13 +2115,7 @@
       }
     
      window.addEventListener("load", (event) => {
-      window.onload = function() {
-      if(!window.location.hash) {
-        window.location = window.location + '#';
-        console.log(window.location)
-        window.location.reload(true);
-      }
-    }
+      
       
       let flex_href = window.location.href.split("#")
         if(flex_href.length == 1 || flex_href[1] == "welcome"){
@@ -2133,7 +2127,15 @@
           $('#modalIntro').modal('hide')
           let link = document.querySelector(`#${flex_href[1]}`)
           console.log(link)
-          
+          console.log(window.location.hash)
+          console.log(!window.location.hash)
+          window.onload = function() {
+          if(!window.location.hash) {
+            window.location = window.location + '#';
+            console.log(window.location)
+            window.location.reload(true);
+           }
+          }
          
           if(link && link.offsetTop){
             console.log(link.offsetTop)
