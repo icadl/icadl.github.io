@@ -2116,6 +2116,10 @@
      
      let flex_href = window.location.href.split("#")
      console.log(flex_href)
+      
+       
+     window.addEventListener("load", (event) => {
+       console.log(flex_href)
        if(flex_href[1] === "submission"){
          console.log(flex_href[1])
               // $('#modalIntro').modal('hide')
@@ -2127,7 +2131,7 @@
              
             }
             if(flex_href[1] === "accepted"){
-              $('#modalIntro').modal('hide')
+              // $('#modalIntro').modal('hide')
               // window.scrollTo(0,4187)
               window.scrollTo({
                 top: 4187 - 10,
@@ -2137,7 +2141,7 @@
             }
             if(flex_href[1] === 'cfp'){
              
-             $('#modalIntro').modal('hide')
+            //  $('#modalIntro').modal('hide')
              // window.scrollTo(0,1272)
              window.scrollTo({
                top: 1272 - 10,
@@ -2147,7 +2151,7 @@
            } 
              if(flex_href[1] === "organizers"){
              
-             $('#modalIntro').modal('hide')
+            //  $('#modalIntro').modal('hide')
              // window.scrollTo(0,7147)
              window.scrollTo({
                top: 7147 - 10,
@@ -2157,7 +2161,7 @@
            }
           if(flex_href[1] === "host"){
              
-             $('#modalIntro').modal('hide')
+            //  $('#modalIntro').modal('hide')
              // window.scrollTo(0,7726)
              window.scrollTo({
                top: 7726 - 10,
@@ -2165,13 +2169,9 @@
              })
              console.log(true)
            }
-       
-     window.addEventListener("load", (event) => {
-       console.log(flex_href)
-     
      
       
-      // let link = document.querySelector(`#${flex_href[1]}`)
+      let link = document.querySelector(`#${flex_href[1]}`)
       // if (link == null){
       //       console.log(null)
       //       console.log(flex_href[1])
@@ -2188,14 +2188,14 @@
           //  }
           // }
           
-          // else if(link && link.offsetTop){
-          //   $('#modalIntro').modal('hide')
-          //   console.log(link.offsetTop)
-          //    window.scrollTo({
-          //       top: link.offsetTop - 10,
-          //       behavior: 'smooth'
-          //     })
-          // }
+           if(link && link.offsetTop){
+            $('#modalIntro').modal('hide')
+            console.log(link.offsetTop)
+             window.scrollTo({
+                top: link.offsetTop - 10,
+                behavior: 'smooth'
+              })
+          }
       
         if(flex_href.length == 1 || flex_href[1] == "welcome"){
           console.log(flex_href)
