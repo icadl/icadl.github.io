@@ -2014,7 +2014,7 @@
       src="./assets/saved_resource.html"
     ></iframe>
     <script>
-    $('#modalIntro').modal('show')
+    // $('#modalIntro').modal('show')
    
       let submission_link = document.querySelector('.submission');
       let re_link = document.querySelector('.registration-fee-link');
@@ -2124,20 +2124,59 @@
         }
         else if(flex_href.length != 1){ 
           console.log(flex_href)
-          $('#modalIntro').modal('hide')
+          
           let link = document.querySelector(`#${flex_href[1]}`)
-          console.log(link)
-          console.log(window.location.hash)
-          console.log(!window.location.hash)
-          window.onload = function() {
-          if(!window.location.hash) {
-            window.location = window.location + '#';
-            console.log(window.location)
-            window.location.reload(true);
-           }
+
+          if (link == null){
+            console.log(null)
+            console.log(flex_href[1])
+          
+            if(flex_href[1] == 'submission'){
+              $('#modalIntro').modal('hide')
+              window.scrollTo(0,3319)
+              // console.log(flex_href)
+              // console.log(document.querySelector(`${window.location.hash}`))
+              // window.scrollTo({
+              //   top: 3343,
+              //   behavior:'smooth'
+              // })
+              console.log(true)
+              
+            }
+            if(flex_href[1] == 'accepted'){
+              
+              $('#modalIntro').modal('hide')
+              window.scrollTo(0,4187)
+              console.log(true)
+            }
+            if(flex_href[1] == 'cfp'){
+             
+              $('#modalIntro').modal('hide')
+              window.scrollTo(0,1272)
+               console.log(true)
+            } 
+            if(flex_href[1] == 'organizers'){
+              
+              $('#modalIntro').modal('hide')
+              window.scrollTo(0,7147)
+              console.log(true)
+            }
+            if(flex_href[1] == 'host'){
+              
+              $('#modalIntro').modal('hide')
+              window.scrollTo(0,7726)
+              console.log(true)
+            }
           }
-         
-          if(link && link.offsetTop){
+          // window.onload = function() {
+          // if(!window.location.hash) {
+          //   window.location = window.location + '#';
+          //   console.log(window.location)
+          //   window.location.reload(true);
+          //  }
+          // }
+          
+          else if(link && link.offsetTop){
             console.log(link.offsetTop)
              window.scrollTo({
                 top: link.offsetTop - 10,
