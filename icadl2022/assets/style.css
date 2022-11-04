@@ -2472,7 +2472,7 @@ h1.title-keynotes span {
 }
 h1.title-keynotes span::after {
   content: "";
-  width: 170px;
+  width: 410px;
   height: 2px;
   background: #ca0000;
   position: absolute;
