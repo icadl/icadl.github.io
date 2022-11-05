@@ -2511,6 +2511,32 @@ h1.title-keynotes span {
 }
 h1.title-keynotes span::after {
   content: "";
+  width: 172px;
+  height: 2px;
+  background: #ca0000;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+}
+h1.title-welcome {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  padding-top: 16px;
+  padding-bottom: 26px;
+
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid #ca0000;
+  color: #ca0000;
+}
+h1.title-welcome span {
+  position: relative;
+}
+h1.title-welcome span::after {
+  content: "";
   width: 410px;
   height: 2px;
   background: #ca0000;
@@ -2518,10 +2544,36 @@ h1.title-keynotes span::after {
   bottom: -8px;
   left: 0;
 }
-h1.title-keynotes span.title-panel::after {
+h1.title-inter {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  padding-top: 16px;
+  padding-bottom: 26px;
+
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid #ca0000;
+  color: #ca0000;
+}
+h1.title-inter span {
+  position: relative;
+}
+h1.title-inter span::after {
+  content: "";
+  width: 365px;
+  height: 2px;
+  background: #ca0000;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+}
+h1.title-inter span.title-panel::after {
   left: -28%;
 }
-h1.title-keynotes span.title-social-events::after {
+h1.title-inter span.title-social-events::after {
   left: 35%;
 }
 .key-notes-infor {
