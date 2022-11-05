@@ -2717,8 +2717,9 @@
           </div>
           <div class="modal-body">
             <ul class="introVN">
-                <li><a href="news.html" target="_self"> <img src="./assets/img/hot-news-modal.svg" alt=""></a></li>
+                <li><a href="index.html#program2" onclick="hide_modal()" target="_self"> <img src="./assets/img/Program.svg" alt=""></a></li>
                 <li><a href="news.html" target="_self"> <img src="./assets/img/q-and-a-news.svg" alt=""></a></li>
+                
                 <!-- <li><a href="index.html#dates" target="_self" class="dates-link"><img src="./assets/img/important-date.svg" alt=""></a></li> -->
                 <li><a href="register.html" target="_self" class="dateszz-link"><img src="./assets/img/new-popup-registration.svg" alt=""></a></li>
                 <li><a href="freebus-registration.html" target="_self" class="dateszz-link"><img src="./assets/img/free-bus.svg" alt=""></a></li>
@@ -2849,7 +2850,9 @@
     ></iframe>
     <script>
     $('#modalIntro').modal('show')
-   
+      function hide_modal(){
+        $('#modalIntro').modal('hide')
+      }
       let submission_link = document.querySelector('.submission');
       let re_link = document.querySelector('.registration-fee-link');
       let dates_link = document.querySelector('.dates-link');
