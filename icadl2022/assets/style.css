@@ -65,6 +65,10 @@ section#Program table,section#Program td, section#Program td,section#Program th{
   border: 1px solid black;
   border-collapse: collapse;
 }
+section#program2 table,section#program2 td, section#program2 td,section#program2 th{
+  border: 1px solid white;
+  border-collapse: collapse;
+}
 section#accepted table,section#accepted td, section#accepted td,section#accepted th{
   border: 1px solid black;
   border-collapse: collapse;
@@ -505,6 +509,7 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
   background: #fff;
 }
+
 td {
   vertical-align: middle;
   height: 30px;
@@ -2350,6 +2355,7 @@ section#cfp h3,
 section#submission h3,
 section#dates h3,
 section#Program h3,
+section#program2 h3,
 section#awards h3,
 section#proceedings h3,
 section#zoom h3,section#registration-fee h3,section#vnu-lic h3 {
@@ -2428,10 +2434,43 @@ section#dates ul {
 
 table.schedule-tbl {
   font-family: "Lora", serif;
+  font-size: 16px;
 }
 table.schedule-tbl tbody tr:first-child th {
   background: #ae1725 !important;
   color: #fff;
+}
+.schedule-tbl {
+  padding: 20px;
+}
+.schedule-tbl table {
+  border-collapse: collapse;
+
+}
+.schedule-tbl td,
+.schedule-tbl th {
+  position: relative;
+  padding: 20px 30px;
+  
+  line-height: 1.4em;
+  text-align: left;
+}
+
+.schedule-tbl th {
+  padding: 5px 30px;
+  color: #2b2b2b;
+
+  font-weight: bolder;
+}
+
+.schedule-tbl tbody tr:hover {
+  background: #fffde1;
+}
+.schedule-coffee,
+.schedule-closing,
+.schedule-lunch,
+.schedule-other {
+  color: #214f87;
 }
 ul.link-key-notes {
   list-style-type: none;
