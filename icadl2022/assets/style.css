@@ -88,7 +88,9 @@ section#accepted table,section#accepted td, section#accepted td,section#accepted
   transition: background 0.5s;
   z-index: 9;
 }
-
+.session-1{
+  display: none;
+}
 .back-to-top:hover {
   color: #fdbe33;
   background: #121518;
@@ -231,7 +233,18 @@ section#accepted table,section#accepted td, section#accepted td,section#accepted
   border-radius: 0;
   background: #f8f9fa;
 }
-
+.dropdown-menu.dropdown-menu-interactive{
+  top:0;
+  left:100%;
+ 
+  min-width: 210px;
+}
+.dropdown-menu-interactive li a{
+  padding: 0.25rem 1.5rem;
+}
+li.list-interactive:hover > .dropdown-menu{
+  display: block !important;
+}
 .nav-bar .btn {
   font-family: "Lora", serif;
   font-style: normal;
@@ -280,6 +293,7 @@ section#accepted table,section#accepted td, section#accepted td,section#accepted
 
     color: #ffffff;
   }
+
 }
 
 @media (max-width: 991.98px) {
@@ -297,6 +311,10 @@ section#accepted table,section#accepted td, section#accepted td,section#accepted
 
   .nav-bar .btn {
     display: none;
+  }
+  .session-1{
+    display: block !important;
+    margin-left: 60px;
   }
 }
 .header {
@@ -364,6 +382,7 @@ section#accepted table,section#accepted td, section#accepted td,section#accepted
     font-weight: 400;
     letter-spacing: 0;
   }
+
 }
 
 .carousel .animated {
@@ -3264,5 +3283,6 @@ h2.icadl-title {
   .footer-logo{
     gap:40px !important
   }
+
 }
 
