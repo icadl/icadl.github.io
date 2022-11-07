@@ -2339,7 +2339,7 @@ h2.icadl-title {
   margin-bottom: 0;
 }
 .navbar-nav.ml-auto {
-  gap: 0 5px;
+  gap: 0 20px;
 }
 h2.title-24th-international {
   font-family: "Lora", serif;
@@ -2554,7 +2554,7 @@ h1.title-welcome {
 h1.title-welcome span {
   position: relative;
 }
-h1.title-welcome span::after {
+/* h1.title-welcome span::after {
   content: "";
   width: 410px;
   height: 2px;
@@ -2562,7 +2562,33 @@ h1.title-welcome span::after {
   position: absolute;
   bottom: -8px;
   left: 0;
+} */
+h1.title-papers {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  padding-top: 16px;
+  padding-bottom: 26px;
+
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid #ca0000;
+  color: #ca0000;
 }
+h1.title-papers span {
+  position: relative;
+}
+/* h1.title-papers span::after {
+  content: "";
+  width: 123px;
+  height: 2px;
+  background: #ca0000;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+} */
 h1.title-inter {
   font-family: "Lora";
   font-style: normal;
@@ -2580,7 +2606,7 @@ h1.title-inter {
 h1.title-inter span {
   position: relative;
 }
-h1.title-inter span::after {
+/* h1.title-inter span::after {
   content: "";
   width: 365px;
   height: 2px;
@@ -2588,7 +2614,7 @@ h1.title-inter span::after {
   position: absolute;
   bottom: -8px;
   left: 0;
-}
+} */
 h1.title-inter span.title-panel::after {
   left: -28%;
 }

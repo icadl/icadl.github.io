@@ -4,19 +4,19 @@
     <div class="row align-items-center">
       <div class="col-lg-12 col-md-12 d-lg-block">
         <div class="row py-2 px-5">
-          <div class="col-3 div_center">
+          <!-- <div class="col-3 div_center">
             <div class="top-bar-item">
               <div class="top-bar-icon">
                 <img src="./assets/img/icon1.png" alt="" />
               </div>
               <div class="top-bar-text">
                 <a href="https://easychair.org/conferences/?conf=icadl2022"><h3>Submission</h3></a>
-                <!-- <p>Nov. 10, 2022</p> -->
+                
               </div>
               
             </div>
-          </div>
-          <div class="col-3 div_center">
+          </div> -->
+          <div class="col-4 div_center">
             <div class="top-bar-item">
               <div class="top-bar-icon">
                 <img src="./assets/img/icon-keynotes.png" alt="" style="width: 26px;height: 26px;"/>
@@ -31,7 +31,7 @@
             </div>
           </div>
 
-          <div class="col-3 div_center">
+          <div class="col-4 div_center">
             <div class="top-bar-item">
               <div class="top-bar-icon">
                 <img src="./assets/img/icon2.png" alt="" id="padding-icon" style="height: auto;"/>
@@ -42,7 +42,7 @@
               </div>
             </div>
           </div>
-          <div class="col-3 div_center">
+          <div class="col-4 div_center">
             <div class="top-bar-item" style="align-items: center;">
               <div class="top-bar-icon">
                 <img src="./assets/img/icon3.png" alt="" />
@@ -89,7 +89,7 @@
             >Welcome</a
           >
           <a href="news.html" title="News" class="nav-link">Hot News</a>
-          <div class="nav-item dropdown">
+          <div class="nav-item dropdown" style="display:none;">
             <a
               href="#"
               class="nav-link dropdown-toggle"
@@ -121,7 +121,12 @@
               >Program</a
             >
             <ul class="dropdown-menu">
-              <li><a href="index.html#program2" target="_self" class="dropdown-item program-link">Program</a></li>
+              <li style="position: relative;" class="list-interactive"><a href="index.html#program2" target="_self" class="dropdown-item program-link">Program</a>
+                <ul class="dropdown-menu dropdown-menu-interactive">
+                  <li><a href="overview-program.html">Overview Program</a></li>
+                  <li><a href="program-details.html">Program Details</a></li>   
+                </ul>
+              </li>
               <li><a href="keynotes.html" class="dropdown-item">Keynotes</a></li>
               <li style="position: relative;" class="list-interactive">
                   <a href="interactive-session.html" class="dropdown-item d-block">
@@ -146,11 +151,11 @@
               class="nav-link dropdown-toggle"
               data-toggle="dropdown"
               aria-expanded="false"
-              >Accepted papers</a
+              >Accepted Papers</a
             >
             <div class="dropdown-menu">
-              <a href="index.html#accepted" class="dropdown-item id-accepted"
-                >Accepted papers</a
+              <a href="papers.html" class="dropdown-item"
+                >Accepted Papers</a
               >
               <a href="index.html#proceedings" class="dropdown-item"
                 >Proceedings</a
@@ -158,7 +163,7 @@
               <a href="index.html#welcome" class="dropdown-item">Awards</a>
             </div>
           </div>
-          <div class="nav-item dropdown">
+          <!-- <div class="nav-item dropdown">
             <a
               href="#"
               class="nav-link dropdown-toggle"
@@ -166,13 +171,15 @@
               aria-expanded="false"
               >Organizers</a
             >
-            <div class="dropdown-menu">
-              <a href="index.html#organizers" class="dropdown-item"
+            <div class="">
+              <a href="organizers.html" class="dropdown-item"
                 >Organizers</a
               >
               <a href="index.html#host" class="dropdown-item">Host</a>
             </div>
-          </div>
+          </div>  -->
+          <a href="organizers.html" title="News" class="nav-link">Organizers</a>
+
           <div class="nav-item dropdown">
             <a
               href="#"
