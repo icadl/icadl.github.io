@@ -3003,7 +3003,7 @@ table {
   border-left: 1px solid rgb(204, 204, 204);
   border-bottom: 1px solid rgb(204, 204, 204);
   display: table-cell;
-  text-align: center;
+  /* text-align: center; */
   vertical-align: middle;
 }
 .set-width{
