@@ -9,11 +9,17 @@
     Libraries</title>
 
   <style>
-    .zxcvb {
-      
-    }
+    .zxcvb {}
   </style>
 
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+
+
+
+
+
+
+  </script>
 
 </head>
 
@@ -24,26 +30,33 @@
         box-shadow: 0 4px 8px 0 rgb(53 105 128 / 30%), 0 6px 20px 0 rgb(165 200 213 / 41%);
         padding: 30px;max-width:800px;margin:0 auto;margin-top:30px;
     ">
- <div  class="zxcvb" id="my_form"></div>
+    <div class="zxcvb" id="my_form"></div>
 
   </div>
 
- 
 
-  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-  <script>
 
-setTimeout((
-  hbspt.forms.create({
-      region: "na1",
-      portalId: "22707734",
-      formId: "dc68f3d9-99cb-4c04-a49b-fb9cf6c3e454",
-      target: '#my_form',
-    })
-), 0)
-  
-  </script>
+
 
 </body>
+<footer>
+  <script>
+
+    function myGreeting() {
+
+      hbspt.forms.create({
+        region: "na1",
+        portalId: "22707734",
+        formId: "dc68f3d9-99cb-4c04-a49b-fb9cf6c3e454",
+        target: '#my_form',
+      })
+    }
+
+    setTimeout(myGreeting, 500);
+
+  </script>
+
+
+</footer>
 
 </html>
