@@ -9,7 +9,8 @@
     Libraries</title>
 
   <style>
-    .zxcvb {
+    .hidden {
+      display: none;
     }
   </style>
 
@@ -29,9 +30,9 @@
   style="
         background: #fff;
         box-shadow: 0 4px 8px 0 rgb(53 105 128 / 30%), 0 6px 20px 0 rgb(165 200 213 / 41%);
-        padding: 30px;max-width:800px;margin:0 auto;margin-top:30px;transition: .5s;
+        padding: 30px;max-width:800px;margin:0 auto;margin-top:30px;
     ">
-    <div class="zxcvb" id="my_form"></div>
+    <div class="hidden" id="my_form"></div>
 
   </div>
 
@@ -54,23 +55,14 @@
     }
 
     setTimeout(myGreeting, 500);
-//     window.onload = function() {
-//       if (window.location.href.indexOf('reload')==-1) {
-//      window.location.replace(window.location.href+'?reload');
-// }
-// }
 
-   
-
-  
-
-window.onload = function() {
-  
-    document.querySelector(".p").style.padding = "31px";
-
+function removeHidden() {
+  const el = document.querySelector('#my_form');
+  el.classList.remove("hidden");
 }
 
- 
+setTimeout(removeHidden,1000);
+
   </script>
 
 
