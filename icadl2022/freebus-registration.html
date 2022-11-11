@@ -9,7 +9,8 @@
     Libraries</title>
 
   <style>
-    .zxcvb {}
+    .zxcvb {
+    }
   </style>
 
   <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
@@ -24,11 +25,11 @@
 </head>
 
 <body>
-
-  <div style="
+  <div class="p"
+  style="
         background: #fff;
         box-shadow: 0 4px 8px 0 rgb(53 105 128 / 30%), 0 6px 20px 0 rgb(165 200 213 / 41%);
-        padding: 30px;max-width:800px;margin:0 auto;margin-top:30px;
+        padding: 30px;max-width:800px;margin:0 auto;margin-top:30px;transition: .5s;
     ">
     <div class="zxcvb" id="my_form"></div>
 
@@ -53,7 +54,23 @@
     }
 
     setTimeout(myGreeting, 500);
+//     window.onload = function() {
+//       if (window.location.href.indexOf('reload')==-1) {
+//      window.location.replace(window.location.href+'?reload');
+// }
+// }
 
+   
+
+  
+
+window.onload = function() {
+  
+    document.querySelector(".p").style.padding = "31px";
+
+}
+
+ 
   </script>
 
 
