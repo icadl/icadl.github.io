@@ -33,6 +33,9 @@ a:focus {
 .btn:focus {
   box-shadow: none;
 }
+img{
+  image-rendering: -webkit-optimize-contrast;
+}
 
 h3.title{
   color: #ca0000;
