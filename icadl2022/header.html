@@ -205,6 +205,7 @@
               <!-- <a href="excursion-information.html" class="dropdown-item">Excursion Information</a> -->
               <a href="transportation.html" class="dropdown-item">Transportation options</a>
               <a href="beautiful-vn.html" class="dropdown-item">Beautiful Vietnam</a>
+              <a href="#" class="dropdown-item" id="menu" onclick="showMenu()">Menu</a>
             </div>
           </div>
           <a
@@ -221,6 +222,45 @@
     </nav>
   </div>
 </div>
+<div class="modal fade" id="modalMenu" tabindex="-1" role="dialog" aria-labelledby="modalIntroTitle" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="content">
+      <div class="text-right">
+        <button type="button" class="but-close" data-dismiss="modal" aria-label="Close"> 
+           <span aria-hidden="true">
+          <img src="./assets/img/ep_close-bold.png" width="32" height="32" alt="">
+        </span></button>
+      </div>
+      <div class="modal-body">
+        <ul class="introVN">
+          <div class="menu" id="menu">
+            <ul class="text-center">
+              <img src="./assets/img/menu.jpg" alt="" style="width: 100%; height:auto;">
+            </ul>
+        </div>
+        </ul>
+        
+    </div>
+    
+  </div>
+</div>
+</div>
+<style>
+  @media (min-width: 576px){
+      .modal-dialog {
+    max-width: 650px;
+    margin: 1.75rem auto;
+  }
+  }
+  .content{
+    pointer-events: auto;
+  }
+  .but-close{
+    border: none;
+    background: none;
+  }
+  
+</style>
 <script>
   
 </script>

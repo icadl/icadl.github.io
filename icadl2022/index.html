@@ -2128,7 +2128,7 @@
           style="width: 100%; margin-top: 10px"
       /></a>
     </div>
-
+    
     <!-- Modal -->
     <div class="modal fade" id="modalIntro" tabindex="-1" role="dialog" aria-labelledby="modalIntroTitle" aria-hidden="true" style="display: none;">
       <div class="modal-dialog modal-dialog-centered" role="document">
@@ -2148,15 +2148,16 @@
                 <li><a href="program-details.html" onclick="hide_modal()" target="_self"> <img src="./assets/img/Program.jpg" alt=""></a></li>
                
                 <li><a href="news.html" target="_self"> <img src="./assets/img/qna.jpg" alt=""></a></li>
+                <li><a href="#" onclick="showMenu()" target="_self"> <img src="./assets/img/menu-popup.jpg" alt=""></a></li>
                 
                 <!-- <li><a href="index.html#dates" target="_self" class="dates-link"><img src="./assets/img/important-date.svg" alt=""></a></li> -->
                 
                 <li><a href="register.html" target="_self" class="dateszz-link"><img src="./assets/img/registration-form.png" alt=""></a></li>
                 <li><a href="freebus-registration.html" target="_self" class="dateszz-link"><img src="./assets/img/freebus-regis.jpg" alt=""target="_blank"></a></li>
-                <li><a href="APiConf.html#cfp" target="_self" class="ap-callforpage-link"><img src="./assets/img/api.jpg" alt=""></a></li>
+                <!-- <li><a href="APiConf.html#cfp" target="_self" class="ap-callforpage-link"><img src="./assets/img/api.jpg" alt=""></a></li> -->
                 <!-- <li><a href="#" target="_self"> <img src="./assets/img/intro/intro7.png" alt=""></a></li> -->   
                 <!-- <li><a href="https://easychair.org/account/signin#%7Bfr:KckUVDh0ZT4h" target="_blank" class="submission-linkx"><img src="./assets/img/submission-modal.svg" alt=""></a></li> -->
-                <li><a href="beautiful-vn.html" target="_self" class=""><img src="./assets/img/beauti-vn.jpg" alt=""></a></li>
+                <!-- <li><a href="beautiful-vn.html" target="_self" class=""><img src="./assets/img/beauti-vn.jpg" alt=""></a></li> -->
                 <!-- <li><a href="index.html#accepted" target="_self" class="accepted-pages-link"><img src="./assets/img/accepted-pages.svg" alt=""></a></li> -->
                 <li><a href="venue2.html" target="_self" class="accepted-pagessssslink"><img src="./assets/img/welcome-icadl.jpg" alt=""></a></li>
                 <li class="d-none"><a href="excursion-information.html" target="_self" class="excursion-pagessssslink"><img src="./assets/img/excursion.jpg" alt=""></a></li>
@@ -2172,11 +2173,15 @@
                 <li class="inline"><a href="https://www.youtube.com/watch?v=04Kf_0kppPM&ab_channel=VietnamTourismBoard" target="_blank"><img src="./assets/img/intro/intro5.png" alt=""></a></li>
                 <li class="inline"><a href="https://www.youtube.com/watch?v=Mck2fNPRWpE&ab_channel=VietNT" target="_blank"><img src="./assets/img/intro/intro6.png" alt=""></a></li> -->
             </ul>
-          </div>
+            
         </div>
+        
       </div>
     </div>
+        
+   
 
+    
     <style>
       #modalIntro .modal-title{
         font-family: 'Lora';
@@ -2196,6 +2201,7 @@
       }
       #modalIntro .modal-body{
       }
+    
       .introVN{
         margin:0;
         padding:0;
@@ -2279,10 +2285,16 @@
       src="./assets/saved_resource.html"
     ></iframe>
     <script>
+     
     $('#modalIntro').modal('show')
       function hide_modal(){
         $('#modalIntro').modal('hide')
       }
+
+      function showMenu(){
+      $('#modalIntro').modal('hide')
+      $('#modalMenu').modal('show')
+    } 
       let submission_link = document.querySelector('.submission');
       let re_link = document.querySelector('.registration-fee-link');
       let dates_link = document.querySelector('.dates-link');
