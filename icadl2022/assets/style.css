@@ -72,6 +72,11 @@ section#program2 table,section#program2 td, section#program2 td,section#program2
   border: 1px solid white;
   border-collapse: collapse;
 }
+section#program2 table.table-day-3,section#program2 table.table-day-3 td,section#program2 table.table-day-3 th{
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
 section#accepted table,section#accepted td, section#accepted td,section#accepted th{
   border: 1px solid black;
   border-collapse: collapse;
@@ -2487,6 +2492,9 @@ table.schedule-tbl tbody tr:first-child th {
 
 .schedule-tbl tbody tr:hover {
   background: #fffde1;
+}
+.schedule-tbl tbody tr.noti:hover {
+  background: #fff;
 }
 .schedule-coffee,
 .schedule-closing,
