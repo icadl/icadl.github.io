@@ -2300,10 +2300,11 @@
       function hide_modal(){
         $('#modalIntro').modal('hide')
       }
-      function backClick(){
-       $('#modalIntro').modal('show')
-       document.querySelector('#modalZoom').style.display = 'none'
-       document.querySelector('.modal-backdrop').style.position = 'relative'
+      function backClick(id){
+        console.log(id)
+        $('#modalIntro').modal('show')
+        id.style.display = 'none'
+        document.querySelector('.modal-backdrop').style.position = 'relative'
     }
 
       function showMenu(){
