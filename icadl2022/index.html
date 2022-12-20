@@ -2115,9 +2115,10 @@
           <!--SOCIAL EVENT-->
           <!---<div w3-include-html="./socialevent.html"></div>-->
           <!--SOCIAL EVENT END-->
-
+          <div w3-include-html="./zoom-popup.html"></div>
           <!--FOOTER-->
           <div w3-include-html="./footer.html"></div>
+
           <!--END FOOTER-->
         </div>
       </div>
@@ -2144,6 +2145,8 @@
           </div>
           <div class="modal-body">
             <ul class="introVN">
+              <li><a href="#" onclick="showZoom()" target="_self"> <img src="./assets/img/zoom-ins.jpg" alt=""></a></li>
+
               <li><a href="https://drive.google.com/drive/folders/1awKPZ_npF-Ui1uVKEmtJvv6C2s5DAI5I" target="_blank"><img src="./assets/img/best-momentss.jpg" alt=""></a></li>
               <li><a href="https://drive.google.com/drive/u/2/folders/140VXZC_zYS0rLeDFJuFktsuczLXI-UkW" target="_blank"><img src="./assets/img/vtv.jpg" alt=""></a></li>
               <li><a href="https://link.springer.com/book/10.1007/978-3-031-21756-2" target="_blank"><img src="./assets/img/Proceeding.jpg" alt=""></a></li>
@@ -2297,10 +2300,21 @@
       function hide_modal(){
         $('#modalIntro').modal('hide')
       }
+      function backClick(){
+       $('#modalIntro').modal('show')
+       document.querySelector('#modalZoom').style.display = 'none'
+       document.querySelector('.modal-backdrop').style.position = 'relative'
+    }
 
       function showMenu(){
       $('#modalIntro').modal('hide')
       $('#modalMenu').modal('show')
+    } 
+    function showZoom(){
+      document.querySelector('#modalZoom').style.display = 'block'
+      document.querySelector('.modal-backdrop').style.position = 'fixed'
+      $('#modalIntro').modal('hide')
+      $('#modalZoom').modal('show')
     } 
       let submission_link = document.querySelector('.submission');
       let re_link = document.querySelector('.registration-fee-link');
