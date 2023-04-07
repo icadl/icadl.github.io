@@ -118,7 +118,8 @@ a:focus {
 a:active,
 a:focus {
     color: #ffffff;
-    outline: none;
+    //outline: none;
+    outline-style: double;
     text-decoration: none;
 }
 
