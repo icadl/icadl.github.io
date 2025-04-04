@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>ICADL 2024 - The 26th International Conference on Asia-Pacific Digital Libraries</title>
+  			<meta charset="utf-8">
+  			<meta name="description" content="The 25th International Conference on Asia-Pacific Digital Libraries (ICADL 2024)"/>
+  			<meta name="keywords" content="Information Technologies, Data Science &amp; Applications, Knowledge discovery,digital library,Semantic Web, linked data,metadata technologies,Cultural Information,Digital Humanities,Community Informatics,Access and usage of Web Archives,Data analytics for social networks,Intellectual property issues,Information behavior analysis with digital libraries, ICADL"/>
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <!--<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">-->
+        <link href="lib/slick/slick.css" rel="stylesheet">
+        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        
+        <!-- toast notify -->
+				<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+				<script type="text/javascript" src="js/toaster/toastr.min.js"></script>
+				<link href="js/toaster/toastr.css" rel="stylesheet" type="text/css" />
+				<script language="javascript" type="text/javascript">
+					/*
+					function getState(){
+			          //do getdata 
+			          var news_list=document.getElementById('news_list').getElementsByTagName('li');
+			          console.log(news_list);
+			          for (var i = news_list.length-1; i >=0; i--) {
+			          	if (news_list[i].id=="stop"){
+			          		continue;
+			          	}
+                	notify(news_list[i].innerHTML,"Info");
+            		}
+								
+			         // setTimeout('getState();',1000); //100ms
+					}	
+				  function notify(name,sdate) {
+				    	toastr.success(name,sdate,{positionClass: "toast-top-right"});
+				    	toastr.options.closeButton = false;
+				    	//toastr.options.closeMethod = 'fadeOut';
+				    	//toastr.options.closeDuration = 300;
+				    	//toastr.options.closeEasing = 'swing';
+				    	toastr.options.debug=false;
+				//    	toastr.options.newestOnTop=true;
+				    	toastr.options.progressBar=true;
+				    	//toastr.options.positionClass="toast-top-full-width";
+				    	//toastr.options.preventDuplicates=false;
+				    	toastr.options.onclick=null;
+				    	toastr.options.showDuration=500;
+				    	toastr.options.hideDuration=300;
+				    	toastr.options.timeOut=10000;
+				    	toastr.options.extendedTimeOut=1000;
+				    	toastr.options.showEasing="swing";
+				    	toastr.options.hideEasing="linear";
+				    	toastr.options.showMethod="fadeIn";
+				    	toastr.options.hideMethod="fadeOut";
+				    	toastr.options.closeMethod = "slideUp";
+				  }*/
+				</script>        
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Top Bar Start -->
+            <div class="top-bar">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <h1>ICADL 2024</h1>
+                                    <!-- <img src="img/logo.jpg" alt="Logo"> -->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-7 d-none d-lg-block">
+                            <div class="row">  
+                                <div class="col-4">
+                                    <div class="top-bar-item">
+                                        <div class="top-bar-icon">
+                                            <i class="flaticon-address"></i>
+                                        </div>
+                                        <div class="top-bar-text">
+                                            <!-- <h3><a href="https://a-liep.org" target="_blank">ALIEP</a></h3>*/ -->
+                                            <h3><a href="https://icadl.net/icadl2024/APiConf.html" target="_blank">AP-iConference</a></h3>
+                                        </div>
+                                    </div>
+                                </div>                            	                            
+                                <div class="col-4">
+                                    <div class="top-bar-item">
+                                        <div class="top-bar-icon">
+                                            <i class="flaticon-calendar"></i>
+                                        </div>
+                                        <div class="top-bar-text">
+                                            <h3><a href="https://shop.monash.edu/icadl-2024.html" target="_blank"> Registration</a></h3>
+                                                                                       
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="top-bar-item">
+                                        <div class="top-bar-icon">
+                                            <i class="flaticon-send-mail"></i>
+                                        </div>
+                                        <div class="top-bar-text">
+                                            <h3>Email Us</h3>
+                                            <p>Gillian.Oliver@monash.edu</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Top Bar End -->
+
+            <!-- Nav Bar Start -->
+            <div class="nav-bar">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                        <a href="#" class="navbar-brand">MENU</a>
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                            <div class="navbar-nav mr-auto">
+    
+
+                   <div class="nav-item dropdown">
+                                   <a href="index.html#welcome" class="nav-link" >Welcome</a>
+    
+				   <!--<div class="dropdown-menu">
+				        <a href="index.html#welcome" title="Welcome" class="dropdown-item">Welcome</a>
+				   	<a href="index.html#Registration" class="dropdown-item">Registration</a>
+				   </div>-->
+				      </div>
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Submission</a>
+                                   <div class="dropdown-menu">
+                                        <a href="index.html#cfp" class="dropdown-item">Call for Papers</a>                                    	
+                                        <a href="index.html#submission" class="dropdown-item">Submission</a>
+                                        <a href="index.html#dates" class="dropdown-item">Important Dates</a>					    
+                                    </div>
+                                </div>		
+                             <!--<div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Accepted papers</a>
+                                  <div class="dropdown-menu">
+                                        <a href="index.html#accepted" class="dropdown-item">Accepted papers</a>					
+                                    </div>
+                                </div>   -->			
+			        <a href="index.html#proceedings" title="Welcome" class="nav-link">Proceedings</a>
+				
+                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Program</a>
+                                    <div class="dropdown-menu">
+                                        <a href="https://easychair.org/smart-program/ICADL2024/" class="dropdown-item">ICADL 2024 Program</a>
+                                        <a href="https://icadl.github.io/icadl2024/img/guidelines.pdf" class="dropdown-item">Poster and Presentation Guidelines</a>
+                                        <a href="https://icadl.github.io/icadl2024/img/ICADL_speakers_poster.png" class="dropdown-item">Keynote speakers</a>
+                                    </div>
+
+                                </div>
+				<div class="nav-item dropdown">
+                                    <a href="index.html#organizers" class="nav-link">Organizers</a>
+                                </div>
+                                		
+				<div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Travel Information</a>
+                                    <div class="dropdown-menu">
+                                        <a href="index.html#hotels" class="dropdown-item">Accommodation &amp; Conference Venues</a>
+                                        <a href="index.html#cars" class="dropdown-item">Transportation</a>
+                                        <a href="index.html#others" class="dropdown-item">Visa and Other information</a>
+                                        
+                                    </div>
+                                
+                                </div>                                								        <a href="APiConf.html" class="nav-link">AP-iConference</a> 		                                        
+                        </div>
+                           
+
+                            <div class="ml-auto">                            		
+                                <a class="btn" href="index.html#Registration">Registration</a>
+                            </div>                            
+                        </div>                        
+                    </nav>
+                </div>
+            </div>
+            <!-- Nav Bar End -->	                                                         
+    <div class="content" id="content">   	
+      <div class="wrapper">
+		   	<div class="header">		
+				    <h1 class="logo-name">
+				      <a class="logo-link" href="#welcome" title="" itemprop="name"></a><!-- don't show banner word-->
+				    </h1>					
+				</div>      									
+        <!-- section: welcome -->
+          <section class="welcome" id="welcome"><!--
+            <h2 class="section-title">Welcome</h2> -->
+
+							<p itemprop="description" style="border-top-width:0px;padding-top:30px">
+                                <center>
+                                    <h2><font color="red"> <a href="https://easychair.org/smart-program/ICADL2024/">ICADL 2024 Program</a> are now available!
+                                    </font></h2>
+
+                                    </center></p>
+                                    <p itemprop="description" style="border-top-width:0px;padding-top:30px">
+                                <center>
+                                    <h2><font color="blue"> Early bird registration is extended to 10 November 2024</font></h2><br/>
+                                    </center></p>
+
+                            <p itemprop="description" style="border-top-width:0px;padding-top:50px">
+								<center>
+									<h2>The 26<sup>th</sup> International Conference on Asia-Pacific Digital Libraries (ICADL 2024)</h2><br/>
+									<h3>December 4 - 6, 2024. Bandar Sunway, Malaysia<b></b> </h3></center></p>
+							
+							<p itemprop="description"><h4><center>“Sustainability and Empowerment”</center></h4></p>
+							
+							
+							<p itemprop="description"><a href="https://icadl.net/">The International Conference on Asia-Pacific Digital Libraries (ICADL)</a>, which started in Hong Kong in 1998 and over the years traveled many countries in the Asia-Pacific region, is a major digital library conference. Along with JCDL and TPDL, ICADL is held annually as one of the three top venues for connecting digital library, computer science, and library and information science communities. This year, ICADL 2024 will be held from December 4th to 7th, 2024 at the Monash University, Malaysia as an onsite face-to-face conference; however, for those who cannot attend, ICADL 2024 will allow them to present their papers online and join sessions.</p>
+							
+							<p>ICADL 2024 will be co-located with the annual meeting of Asia-Pacific chapter of iSchools (AP-iSchools; <a href="https://ischools.org/" target="_blank">https://ischools.org/</a>). ICADL 2024 will provide an excellent international forum for researchers from not only Asia-Pacific regions but also all over the world to meet people with different backgrounds but common research interests to exchange their cutting-edge knowledge, experience and practices in various relevant issues in digital libraries, Library and Information Science (LIS), and other related fields.</p>
+							<p>The theme for ICADL 2024 is "<b>Sustainability and Empowerment</b>". Implementations of digital libraries and digital archives are no longer novelties, but familiar and accepted components of the information landscape providing a rich environment for evaluation of their actual and potential impact. This conference welcomes papers that explore the contribution that digital libraries and archives make to the sustainability and empowerment of communities, organisations and individuals, including the risks and barriers to achieving sustainability and empowerment goals.</p>
+							<p>Proceedings of ICADL 2024 are going to be published by Springer as an LNCS volume, which is indexed by Scopus. This year, we have the following four submission categories: full papers, short papers, practice papers, and demo/poster papers.</p>
+							<p>The Best Paper and the Best Student Paper will be awarded by the Program Committee and selected among the accepted full papers. Candidates for the Best Student Paper award should have students as first authors.</p>
+				
+			<div class="section-header">
+                        <h2>Workshops</h2>                        
+                    </div>
+                    <h3>Rich Semantics Workshop</h3>. 
+                    <p>This workshop will examine the intersection and complementary use of semantic modeling, knowledge graphs, social media mining, and generative AI technologies. More information: <a href="https://richsemantics.org/" target="_blank">https://richsemantics.org/</a><p/>				
+          </section> 
+
+                
+        <!-- section cfp -->
+          <section class="faqs" id="cfp">
+            <div class="section-header" style="border-top-width:20px;padding-top:50px">
+              <h2>Call for Papers</h2>
+            </div>
+                        <p>Call for paper and submission link are available at the conference’s EasyChair submission system (<a href="https://easychair.org/cfp/icadl2024" target="_blank">https://easychair.org/cfp/icadl2024</a>)</p>
+                        <p>Proceedings of ICADL 2024 are going to be published by Springer as an LNCS volume, which is indexed by Scopus. This year, we have the following four submission categories: full papers, short papers, practice papers, and demo/poster papers. </p>
+												<p>If there is any interest for organizing workshops, tutorial, and panel sessions with ICADL 2024, we will consider them on request. Please contact conference organizers (To: Prof. Gillian Oliver (<a href="mailto:gillian.oliver@monash.edu">monash.edu</a>)) with your proposal. The information about the accepted events will put on the conference website and we will encourage attendees to join the events.</p>
+												<p>The review for practice paper submissions will put less emphasis on the novelty and more on real world practices and applications of DL technologies in institutions or companies.</p>				
+												
+                   <div class="section-header">
+                        <h3>Topics</h3>                        
+                    </div>
+                    We invite submissions on diverse topics related to digital libraries and related fields including (but not limited to):<p/>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div id="accordion-1">
+                                <div class="card wow fadeInLeft" data-wow-delay="0.1s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne">
+                                            Information Technologies, Data Science &amp; Applications
+                                        </a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse" data-parent="#accordion-1">
+                                        <div class="card-body">
+																					<ul>
+																						<li>Information retrieval and access technologies to digital collections</li>
+																						<li>Data mining and information extraction</li>
+																						<li>IoT and digital libraries</li>
+																						<li>AI for digital libraries</li>
+																						<li>Natural language processing techniques in digital collections</li>
+																						<li>Knowledge discovery from digital libraries content</li>
+																						<li>Recommender systems for digital libraries content</li>
+																						<li>Infrastructures &amp; development of Web Archives</li>
+																						<li>Data science techniques</li>
+																						<li>Semantic Web, linked data, and metadata technologies</li>
+																						<li>Ontologies and knowledge organization systems</li>
+																						<li>Applications and quality assurance of digital libraries</li>
+																						<li>Research data and open access</li>
+																						<li>Visualization, user interface, and user experience</li>
+																						<li>Social networking and collaborative interfaces in digital libraries</li>
+																						<li>Personal information management and personal digital libraries</li>
+																						<li>Information service technologies in digital libraries</li>
+																						<li>Bibliometrics and scholarly communication in digital libraries</li>
+																						<li>Curation and preservation technologies in digital libraries</li>
+																						<li>Information organization support</li>
+																						<li>Novel applications for digital libraries</li>
+																						<li>Pretrained language models and digital libraries</li>
+																						<li>Generating prompts for large language models</li>
+																						<li>Detecting content created by generative AI</li>
+																					</ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card wow fadeInLeft" data-wow-delay="0.2s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseTwo">
+																					Cultural Information, Digital Humanities &amp; Scholarly Data Analysis
+                                        </a>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" data-parent="#accordion-1">
+                                        <div class="card-body">
+																						<ul>
+																							<li>Cultural heritage access and analysis</li>
+																							<li>Dealing with history, literature, music in digital libraries</li>
+																							<li>Scholarly data analysis</li>
+																							<li>Scientometrics</li>
+																							<li>Access and usage of Web Archives</li>
+																							<li>Community Informatics</li>
+																							<li>Cultural heritage and museum informatics</li>
+																							<li>Collaborations among archives, libraries, and museums</li>
+																							<li>Collection development and discovery</li>
+																							<li>Digital cultural memory initiatives</li>
+																							<li>Memory organizations in the digital space</li>
+																							<li>Digital preservation and digital curation</li>
+																							<li>Digital library/digital archive infrastructures</li>
+																							<li>Digital library education and digital literacy</li>
+																							<li>Higher education uses of digital collections</li>
+																							<li>Research data infrastructures, management and use</li>
+																							<li>Information policies</li>
+																							<li>Participatory cultural heritage</li>
+																						</ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div id="accordion-2">
+                                <div class="card wow fadeInRight" data-wow-delay="0.1s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseSix">
+                                            Social Informatics and Socio-technological Issues in Digital Libraries
+                                        </a>
+                                    </div>
+                                    <div id="collapseSix" class="collapse" data-parent="#accordion-2">
+                                        <div class="card-body">
+																						<ul>
+																							<li>Data analytics for social networks</li>
+																							<li>Socio-technical aspects of digital libraries</li>
+																							<li>Sustainability of digital libraries</li>
+																							<li>Research methods for digital libraries during social isolation times</li>
+																							<li>Roles of digital libraries for isolated societies</li>
+																							<li>Digital libraries for learning, collaboration, and organization in the networked environment</li>
+																							<li>Societal and cultural issues in knowledge, information, and data</li>
+																							<li>Intellectual freedom, censorship, misinformation</li>
+																							<li>Intellectual property issues</li>
+																							<li>Policy, legal, and ethical concerns for digital libraries</li>
+																							<li>Social, legal, ethical, financial issues of Web Archives</li>
+																							<li>Social policy issues on digital libraries</li>
+																							<li>Information behavior analysis</li>
+																							<li>Social sciences and digital libraries</li>
+																							<li>Crowdsourcing and user-generated content</li>
+																							<li>Information work and digital libraries</li>
+																							<li>Information economics and digital libraries</li>
+																							<li>Education with digital libraries</li>
+																							<li>Participatory cultures and digital libraries</li>
+																							<li>Digital scholarship and services</li>
+																							<li>Open data initiatives and utilization</li>
+																							<li>Misinformation and disinformation</li>
+																							<li>Impact of generative AI on digital library policy and practice</li>
+																							<li>Generative AI and the digital library user experience</li>
+																						</ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+          </section>
+        <!-- section: submission -->
+          <section class="submission" id="submission">
+            <div class="section-header"style="border-top-width:20px;padding-top:50px">
+              <h2>Submission</h2>
+            </div>						
+						<p>All submissions must be in English, in PDF format. Papers should follow <a href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" target="_blank">Springer Computer Science Proceedings guidelines (https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines)</a>.
+							All papers are to be submitted via the conference’s EasyChair submission system (<a href="https://easychair.org/cfp/icadl2024" target="_blank">https://easychair.org/cfp/icadl2024</a>).</p>
+						<p><h4>Formatting &amp; Submission Lengths</h4></p>
+						<p>The lengths of submissions should be as follows:</p>						
+						<p>
+							<ul>
+								<li>Full papers: 12-14 pages + references</li>
+								<li>Short papers: 6-8 pages + references</li>
+								<li>Practice papers: 6-8 pages + references</li>
+								<li>Demo/poster papers: 4-6 pages + references</li>
+							</ul>
+						</p>	
+						<p>The review process is double-blind. At least 3 Program Committee members will review each submission. The review for practice paper submissions will put less emphasis on the novelty and more on real world practices and applications of DL technologies in institutions or companies. Sufficient time will be given to the oral presentation for accepted papers in all submission categories either in-person or using an online presentation platform to be chosen later (e.g., WebEx). Each accepted paper must be presented by at least one of the co-authors. </p>					
+          </section>
+        <!-- section: dates  -->
+          <section class="dates" id="dates">
+          	<div class="section-header"style="border-top-width:20px;padding-top:50px">
+              <h2>Important Dates</h2>
+            </div>		
+						<h2> <!--shown below. All the dates are Anywhere on GMT+8 time zone:</p> -->
+						<p>
+								<ul>
+									<li>Full, Short Research and Practice Papers Submission: July 29, 2024 (Extended) </li>
+									<li>Demo/Poster Papers Submission:  July 29, 2024</li>
+									<li>Acceptance Notification (All paper categories):September 8, 2024</li>
+									<li>Camera Ready Copy of Papers: September 29, 2024</li>
+									<li>Conference: December 4 - December 6, 2024</li>								
+								</ul>
+						</h2>
+
+          </section>
+                   
+        <!-- section: organizers -->
+          <section class="faqs" id="organizers">
+                    <div class="section-header" class="section-header"style="border-top-width:20px;padding-top:50px">
+                        <h2>Conference Committee</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div id="accordion-1">
+                                <div class="card wow fadeInLeft" data-wow-delay="0.1s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne">
+                                            Conference Chair
+                                        </a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse" data-parent="#accordion-1">
+                                        <div class="card-body">
+																					<ul>
+																						<li>Gillian Oliver (Monash Australia)</li>
+																					</ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card wow fadeInLeft" data-wow-delay="0.2s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseTwo">
+																					Program Committee co-chairs
+                                        </a>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" data-parent="#accordion-1">
+                                        <div class="card-body">
+																						<ul>
+																							<li>Taro Tezuka (University of Tsukuba)</li>
+																							<li>Tina Du (Charles Sturt University)</li>
+																							<li>Viviane Hessami (Monash Australia)</li>
+																						</ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div id="accordion-2">
+                                <div class="card wow fadeInRight" data-wow-delay="0.3s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseThree">
+                                          Publicity co-chairs
+                                        </a>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" data-parent="#accordion-1">
+                                        <div class="card-body">
+                                            <ul>
+                                                                                            <li>Misita Anwar (Monash Australia)</li>
+                                                                                            <li>Ellie Sayyad Abdi (Curtin University)</li>
+                                                                                            <li>Vi Truong (Charles Sturt University)</li>
+                                                                                            
+                                                                                        </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card wow fadeInRight" data-wow-delay="0.4s">
+                                    <div class="card-header">
+                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseFour">
+                                          Local Arrangement Co-chairs
+                                        </a>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" data-parent="#accordion-1">
+                                        <div class="card-body">
+                                            <ul>
+                                                                                            <li>Ridoan Karim (Monash Malaysia)</li>
+                                                                                            <li>Khalid Hossain (Monash Australia)</li>
+                                                                                            <li>Nordiana Mohd Nordin (UITM)
+</li>
+                                                                                        </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div> 
+                    <p/>
+                        <h4>Host</h4>                        
+                        <ul>
+                        	<li>Co-hosted by the Information Empowered Communities Lab, Faculty of IT, Monash Australia and the School of Business, Monash University Malaysia 
+</li>
+													<li>In collaboration with Asia-Pacific Chapter of iSchools (AP-iSchools)</li>
+													
+                        </ul>
+          </section>
+        <!-- accepted papers 
+        <section class="accepted" id="accepted">
+        	<p itemprop="description" style="border-top-width:0px;padding-top:50px"><h3>Accepted papers</h3></p>
+						<p/>
+						<h4>Full papers</h4>
+						<table>
+								<tr><td>Line Detection in Historical Index Tables: Baseline Evaluations on a New Image Dataset	(Guillaume Bernard, Casey Wall, Mélodie Boillet, Mickaël Coustaty, Christopher Kermorvant and Antoine Doucet)</td></tr>       	
+								<tr><td>Benchmarking NAS for Article Separation in Historical Newspapers (Nancy Girdhar, Mickael Coustaty and Antoine Doucet)</td></tr>
+								<tr><td>STRAS: A Semantic Textual-cues Leveraged Rule-based Approach for Article Separation in Historical Newspapers	(Nancy Girdhar, Mickael Coustaty and Antoine Doucet)</td></tr>       	
+								<tr><td>Enhancing Learning of Chinese Poem Creation through Auto-Generation and Evaluation System	(Yan Cong and Masao Takaku)</td></tr>								
+								<tr><td>SLHCat: Mapping Wikipedia Categories and Lists to DBpedia by Leveraging Semantic, Lexical, and Hierarchical Features	(Zhaoyi Wang, Zhenyang Zhang and Mizuho Iwaihara)</td></tr>       	
+								<tr><td>Web Page Evaluation and Opinion Formation on Controversial Search Topics	(Ryo Hagiwara and Takehiro Yamamoto)</td></tr>
+								<tr><td>An Empirical Analysis of Newcomers’ Contributions to Software-Engineering Conferences	(Rand Alchokr, Jacob Krüger, Yusra Shakeel, Gunter Saake and Thomas Leich)</td></tr>       	
+								<tr><td>Personalized Treasure Hunt Game for Proactive Museum Appreciation by Analyzing Guide App Operation Log	(Jinsong Yu, Shio Takidaira, Tsukasa Sawaura, Yoshiyuki Shoji, Takehiro Yamamoto, Yusuke Yamamoto, Hiroaki Ohshima, Kenro Aihara and Noriko Kando)</td></tr>								
+								<tr><td>Aspect-Based Sentiment Analysis of Racial Issues in Singapore: Enhancing Model Performance using ChatGPT	(Manoj Reddy Tudi, Jin-Cheon Na, Meky Liu, Hongjin Chen, Yiqing Dai and Li Yang)</td></tr>       	
+								<tr><td>Creating Digital LAM Content for Schools: Modelling User Involvement in Multi-Organisational Context	(Riitta Peltonen and Marko Nieminen)</td></tr>
+								<tr><td>Unveiling Archive Users: Understanding their Characteristics and Motivations	(Luana Ponte, Inês Koch and Carla Teixeira Lopes)</td></tr>       	
+								<tr><td>The openness of digital archives in Japanese universities and its opportunities	(Widiatmoko Adi Putranto, Regina Dwi Shalsa Mayzana and Emi Ishita)</td></tr>								
+								<tr><td>Leveraging MRC Framework for Research Contribution Patterns Identification in Citation Sentences	(Yang Zhao, Zhixiong Zhang and Yue Xiao)</td></tr>       	
+								<tr><td>Cited But Not Archived: Analyzing the Status of Code References in Scholarly Articles	(Emily Escamilla, Martin Klein, Talya Cooper, Vicky Rampin, Michele Weigle and Michael Nelson)</td></tr>
+								<tr><td>Towards Leveraging Multi-Perspective Peer Review Summaries for Scientific Document Summarization	(Sandeep Kumar, Guneet Singh Kohli, Tirthankar Ghosal and Asif Ekbal)</td></tr>       	
+						</table>		
+						<p/>
+						<h4>Short papers</h4>
+						<table>
+								<tr><td>Structured Explanations for Dynamic Systems Using Causal Schemas	(Robert Allen)</td></tr>       	
+								<tr><td>Cultural Research Trends of Taiwan’s Indigenous Peoples, 2000–2021: Bibliometrics and Content Analysis	(Chao-Chen Chen, Yun-Fang Tu, Yi-Chin Chen, Aciang Iku-Silan and Fang-Ya Chen)</td></tr>
+								<tr><td>Evaluating the Use of Generative LLMs for Intralingual Diachronic Translation of Middle-Polish Texts into Contemporary Polish	(Cezary Klamra, Katarzyna Kryńska and Maciej Ogrodniczuk)</td></tr>       	
+								<tr><td>ReviVal: Towards Automatically Evaluating the Informativeness of Peer Reviews	(Rajeev Verma, Tirthankar Ghosal, Saprativa Bhattacharjee, Asif Ekbal and Pushpak Bhattacharyya)</td></tr>								
+								<tr><td>Integration between humanities and technology: Using digital humanities technology to read the Gospel of Matthew	(Fang-Ya Chen, Chao-Chen Chen, Yun-Fang Tu and Hsiu-Ling Huang)</td></tr>       	
+								<tr><td>Emerging Trends in Content Management Systems (CMSs) for Library Websites: A Study of Selected Academic Libraries in the Philippines	(Marvin Factor, Josephine Maghari, Yugosto Balbas and April Manabat)</td></tr>
+								<tr><td>Increasing Reproducibility in Science by Interlinking Semantic Artifact Descriptions in a Knowledge Graph	(Hassan Hussein, Kheir Eddine Farfar, Allard Oelen, Oliver Karras and Sören Auer)</td></tr>       	
+								<tr><td>Comparative Analysis of iPusnas User Experience Among Students, Workers, and Housewives	(Aditia Aditia, Rahmi Rahmi and Harry Susianto)</td></tr>								
+								<tr><td>Quantitative Analysis of Scholarly References on YouTube: Focusing on their Research Fields and Contributors	(Jiro Kikkawa, Masao Takaku and Fuyuki Yoshikane)</td></tr>       	
+								<tr><td>The Pivotal Role of Preprint Platforms in Disseminating COVID-19 Research: A Global Investigation of Country-Level Activities	(Hiroyuki Tsunoda, Yuan Sun, Masaki Nishizawa, Xiaomin Liu, Kou Amano and Rie Kominami)</td></tr>
+								<tr><td>The semantic mapping of RiC-CM to CIDOC-CRM	(Lina Bountouri, Matthew Damigos, Markella Drakiou, Manolis Gergatsoulis and Eleftherios Kalogeros)</td></tr>       	
+								<tr><td>An End-to-End Table Structure Analysis Method Using Graph Attention Networks	(Manabu Ohta, Hiroyuki Aoyagi, Fumito Uwano, Teruhito Kanazawa and Atsuhiro Takasu)</td></tr>								
+								<tr><td>Co-attention-based Pairwise Learning for Author Name Disambiguation	(Shenghui Wang, Qiuke Li and Rob Koopman)</td></tr>       	
+								<tr><td>A privacy-preserving technique to identify the useful content of documents owned by multiple institutes	(Rina Kagawa, Akira Imakura and Masaki Matsubara)</td></tr>
+								<tr><td>Identifying Influential References in Scholarly Papers Using Citation Contexts	(Tomoki Ikoma and Shigeki Matsubara)</td></tr>       									
+								<tr><td>Advantages of Data Reuse Based on Disciplinary Diversity and Citation Count	(Emi Ishita, Yosuke Miyata and Keiko Kurata)</td></tr>       									
+								<tr><td>Scholarly Knowledge Graph Construction from Published Software Packages	(Muhammad Haris, Sören Auer and Markus Stocker)</td></tr>       									
+								<tr><td>Health Information Encountering: Topic Modelling and Sentiment Analysis of Pre- and Current-Covid-19 Tweets	(Hamzah Osop, Wong Jie Yang, Shwe Waddy Lwin and Lee Chei Sian)</td></tr>       									
+						</table>
+						<p/>
+						<h4>Practice papers</h4>
+						<table>
+								<tr><td>Toward Semantic Publishing in Non-Invasive Brain Stimulation: A Comprehensive Analysis of rTMS Studies	(Swathi Anil and Jennifer D'Souza)</td></tr>       	
+								<tr><td>Development of the Polyglot Asian Medicine Knowledge Graph System	(Christopher S.G. Khoo, Michael Stanley-Baker, Faizah Binte Zakaria, Jinju Chen, Shaun Q.R. Ang and Bo Huang)</td></tr>
+						</table>	
+						<p/>
+						<h4>Poster papers</h4>
+						<table>
+								<tr><td>Appraisal of Paradise: A Sentiment Analysis Dataset of French Tourists’ Experiences in French Polynesia	(Bryan Dallest, Sébastien Chabrier, Alban Gabillon and Pierre Ghewy)</td></tr>       	
+								<tr><td>Analyzing Web search queries of before and after purchase on e-commerce site	(Yuka Kawada, Takehiro Yamamoto, Hiroaki Ohshima, Yuki Yanagida, Makoto P. Kato and Sumio Fujita)</td></tr>
+								<tr><td>HistoChatbot: Educating History by Generating Quizzes in Social Network Services	(Yasunobu Sumikawa and Adam Jatowt)</td></tr>       	
+								<tr><td>Examining Digital Humanities Tools Used by Taiwanese Historians with the Digital Visitors and Residents Framework	(Tien-I Tsai)</td></tr>
+								<tr><td>Applying a Vector Search Method in Reference Service Question-Answer Retrieval Systems	(Te-Lun Yang and Guan-Lun Huang)</td></tr>       	
+								<tr><td>Navigating the Political Economy Landscape: Transforming Higher Education Digital Libraries in Indonesia	(Luki Wijayanti, Nina Mayesti, Indira Irawati and Anson Huang)</td></tr>
+								<tr><td>Automatically Detecting References from the Scholarly Literature to Records in Archives	(Tokinori Suzuki, Douglas Oard, Emi Ishita and Yoichi Tomiura)</td></tr>       	
+								<tr><td>QRDP: A System that Facilitates the Selection of English Materials for Translator Education	(Takeshi Abekawa, Rei Miyata and Kyo Kageura)</td></tr>
+								<tr><td>Investigation of ChatGPT Use in Research Data Retrieval	(Motokazu Yamasaki, Yoichi Tomiura and Toshiyuki Shimizu)</td></tr>       	
+								<tr><td>Gen Z Transitions to University: A Preliminary Study on Everyday Information-Seeking Practices	(Chei Sian Lee, Rachel Qing Yu Yeo, Shutian Zhang, Dion Goh, Pei-Hui Rebecca Ang and Betsy Ling Ling Ng)</td></tr>
+								<tr><td>TweetVi: a Tweet Visualisation Dashboard for Automatic Topic Classification and Sentiment Analysis	(Matthew Graham, Huilan Zhu, Hamzah Osop, Basem Suleiman, Yixuan Zhang, Ruoxia Wang and Xiaoyu Xu)</td></tr>       	
+								<tr><td>Review of In-App Nudges Towards User Decision Behavior: A Topic Modeling Approach	(Kok Khiang Lim and Chei Sian Lee)</td></tr>
+								<tr><td>Using Information System Success Model to Explore Graduate Students’ Satisfaction and Individual Impact toward the use of National Digital Library of Theses and Dissertations in Taiwan	(Wei-Hsiang Hung, Yi-Shan Hsieh, Chin-Cheng Lin, Bing-Yi Chen and Hao-Ren Ke)</td></tr>       	
+						</table>											
+        </section> -->       
+        <!-- section: proceedings -->
+          <section class="dates" id="proceedings">
+          	 <div class="section-header" style="border-top-width:20px;padding-top:50px">
+            	<div class="section-header">
+              	<h2>Proceedings</h2>
+            	</div>           	 			
+							
+								<b>The conference proceedings will be available for downloading after the conference at: </b>
+                                <p><a href="https://link.springer.com/book/9789819608645" target="_blank">Part I: https://link.springer.com/book/9789819608645</a> </p>
+                                <p><a href="https://link.springer.com/book/9789819608676" target="_blank">Part II: https://link.springer.com/book/9789819608676</a> </p>
+							
+						</div>
+
+          </section>	      
+        <!-- Hotels -->
+          <section class="host" id="hotels">
+            <div class="section-header" style="border-top-width:20px;padding-top:50px">
+	              <h2>Accommodation &amp; Conference Venues</h2>
+  	        </div>
+              <h4>Conference Venue</h4>              
+	          	
+	               <p>The conference will be held at <strong> the Monash University Campus, Malaysia.</strong>  Jalan Lagoon Selatan, Bandar Sunway, 47500 Subang Jaya, Selangor. <a href="https://www.monash.edu.my/"> https://www.monash.edu.my/</a>
+                   
+                   <br>　<br><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.111002661102!2d101.6009426!3d3.0649887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4eb079376a33%3A0xd9226112d1ae5b9d!2sMonash%20University%20Malaysia!5e0!3m2!1sen!2sau!4v1727165172438!5m2!1sen!2sau" width="1200" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br>&nbsp;
+                   </p>
+                <br/>
+
+                  
+			  <h4>Accommodation nearby</h4>
+              <p>All delegates are required to cover their own accommodation expenses. Suggestions on hotels around the conference venue are listed below for your convenience. </p> 
+									<ul>								
+										<li> <a href="https://www.booking.com/hotel/my/blue-lagoon-at-bandar-sunway.en-gb.html">Blue Lagoon at Bandar Sunway </a></li>
+										<li> <a href="https://www.booking.com/hotel/my/gm-grand-moments.en-gb.html?aid=356980&label=gog235jc-1FCAsooQFCEGdtLWdyYW5kLW1vbWVudHNIM1gDaA-IAQGYAQm4AQfIAQzYAQHoAQH4AQyIAgGoAgO4AtTcybcGwAIB0gIkMjU0ZjhhM2UtMjQ2Yi00YjljLWFkNjYtOGJlYjI4NWFmNzA32AIG4AIB&sid=3333c62fa27d0fbadc2cd906cb4e19ea&all_sr_blocks=188658504_387843155_0_2_0;checkin=2024-12-04;checkout=2024-12-07;dest_id=-2403013;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=188658504_387843155_0_2_0;hpos=1;matching_block_id=188658504_387843155_0_2_0;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=188658504_387843155_0_2_0__65997;srepoch=1727164066;srpvid=14f836cccc680315;type=total;ucfs=1&">Grand Moments Bandar Sunway</a></li>
+										<li><a href="https://www.booking.com/hotel/my/double-queen-suite-sunway-geo.en-gb.html">Geo Suite - Sunway Pyramid & Sunway Lagoon</a></li>
+										<li><a href="https://www.resortsuites.com.my/en/">Resort Suites at Bandar Sunway. </a>
+</li>
+									</ul>
+								<br/>
+		
+								     	
+
+          </section>
+          <section class="host" id="cars">
+            <div class="section-header"style="border-top-width:20px;padding-top:50px">
+            	<div class="section-header">
+              	<h2>Transportation</h2>
+            	</div>              
+             
+                        Please arrange your transportation from the airport to the hotel. The easiest way to reach the conference venue from the airport is by taking a taxi or using Grab (similar to UBER services). Alternatively, you can take the ERL train from the airport to Kuala Lumpur Sentral. From there, you can use Grab to get to Monash University Malaysia. <a href="https://www.kliaekspres.com/schedule/">https://www.kliaekspres.com/schedule/</a>
+                        
+                        <br/><br/>
+                        If you need further information regarding the transportation, upon arrival please download this application. <a href="https://moovitapp.com/index/en/public_transit-Malaysia">https://moovitapp.com/index/en/public_transit-Malaysia </a> </p>
+
+            </div>       	
+
+          </section>   
+                 
+
+        </section>
+          <section class="host" id="others">
+            <div class="section-header"style="border-top-width:20px;padding-top:50px">
+                <div class="section-header">
+                <h2>Visa and Other Infomation</h2>
+                </div>              
+                    <h4>Visa</h4>
+
+                        All participants entering Malaysia must have own a valid passport, for at least 6 months after the intended date of departure. No Visa is required for all ASEAN countries including Japan and Korea into Malaysia.
+
+                        Further information, please refer here. <a href="https://www.malaysia.gov.my/portal/content/28905">https://www.malaysia.gov.my/portal/content/28905</a>
+
+                        <br/><br/>
+
+                        <h4>Climate</h4>
+                        Malaysia has a tropical climate with a hot and humid temperature throughout the year with two rainy seasons – one from March to April and another between October and December. All that matters here is your personal comfort. Hence, it is advisable that you pack some light cotton or linen clothes which are also easy to dry during rainy weather. Malaysia accepts a casual and a cool clothing all-round the year. You can expect a temperature of 31° / 24°. 
+                        <br/><br/>
+
+                        <h4>Currency</h4>
+                        The official currency in Malaysia is the Malaysian Ringgit, which is issued and overseen by the Bank Negara Malaysia. If you're buying your travel money online you may also see the official code being shown - MYR. In stores and restaurants, Malaysian Ringgit prices are likely to use the currency symbol RM. Most major credit cards are accepted with Visa and MasterCard being the most widely so, but many shops and banks charge a transaction fee of between 2-4%. AmEx is also accepted in a few places in the major tourist areas but will not be quite as useful. 
+                        <a href="https://wise.com/gb/travel-money/malaysian-currency">https://wise.com/gb/travel-money/malaysian-currency </a>
+                        <br/><br/>
+
+                    <h4>Secretariat</h4>
+
+                    If you have any questions about local arrangement, below are the conference secretariat contacts:
+                    <ul>                                
+                        <li> Mdm Nordiana Mohd Nordin [Email: ndiana@uitm.edu.my] [Phone: +60 10-4026042]</li>
+                        <li> Dr Hazila Timan [Email: hazila@uitm.edu.my] [Phone: +60 12-308 7463]</li>
+                        <li> Mdm Marlia Idrus[Email: marlia945@uitm.edu.my] [Phone: +60 17-424 9248]</li>
+                </ul>
+                </div>
+          </section>  
+        <!-- Registration -->
+          <section class="host" id="Registration">
+            <div class="section-header"style="border-top-width:20px;padding-top:50px">
+              <h2>Registration</h2>
+            </div>	          	
+						<h4>To register, please visit this link: <a href="https://shop.monash.edu/icadl-2024.html">ICADL 2024 Registration</a>. The registration fee includes entry to ICADL 2024 and AP-iConference and workshops sessions.  </h4>
+          </section>            
+                                             
+        <footer class="footer">
+          
+        </footer>
+      </div>
+    </div>
+    <a href="#welcome" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  </div>
+
+        
+        <!-- JavaScript Libraries -->
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script><!---->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <!--<script src="lib/lightbox/js/lightbox.min.js"></script> -->
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+ </body>
+</html>
