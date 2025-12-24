@@ -14,7 +14,7 @@ p,li{
     position: relative;
     margin: 0px auto;
     height: 170px;
-    width: 962px;"
+    width: 1024px;"
 }
 
 .top > .global-region-inner > .text-plugin{
@@ -220,7 +220,7 @@ p,li{
     position: relative; 
     margin: 0px auto; 
     /*height: 893px; */
-    width: 962px;
+    width: 1024px;
 }
 
 .center > .global-region-inner > .img-and-text-box{
@@ -457,7 +457,7 @@ ul.site_list li{
 #footer > .global-region-inner{
     position: relative; 
     margin: 0px auto; 
-    width: 962px;
+    width: 1024px;
     padding-top: 95px;
 }
 
