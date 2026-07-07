@@ -1212,3 +1212,11 @@ html, body {
     text-overflow: ellipsis;
   }
 }
+
+/* add code css */
+.navbar-nav .nav-link {
+    font-size: 14px;
+    padding-left: 8px;
+    padding-right: 8px;
+    white-space: nowrap;
+}
