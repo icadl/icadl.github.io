@@ -234,7 +234,7 @@ section{
   top:30px;
   left:-130px;
   width:360px;
-  height:360px;
+  height:260px;
   background:radial-gradient(circle, rgba(91,35,134,.08) 0%, rgba(91,35,134,0) 72%);
   pointer-events:none;
 }
@@ -245,7 +245,7 @@ section{
   right:-120px;
   bottom:0;
   width:360px;
-  height:360px;
+  height:260px;
   background:radial-gradient(circle, rgba(243,178,22,.08) 0%, rgba(243,178,22,0) 72%);
   pointer-events:none;
 }
