@@ -1220,3 +1220,8 @@ html, body {
     padding-right: 8px;
     white-space: nowrap;
 }
+
+.title1{
+    color: #FFD700;      /* สีเหลืองทอง */
+    font-weight: bold;   /* ตัวหนา */
+}
