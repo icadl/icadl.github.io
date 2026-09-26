@@ -603,69 +603,96 @@ A premium hotel offering spacious rooms, meeting facilities, and a wide range of
         </div>
       </div>
   Registration for ICADL 2026 will be conducted jointly between ICADL2026 and AP-iConference, allowing participants to attend both conferences. Registration will open in October 2026. Details regarding registration fees are as follows:
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
-.registration-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-}
+        .registration-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+        }
 
-.registration-table th,
-.registration-table td {
-    border: 1px solid #777;
-    padding: 5px 8px;
-    text-align: left;
-    vertical-align: middle;
-}
+        .registration-table th,
+        .registration-table td {
+            border: 1px solid #777;
+            padding: 6px 8px;
+            vertical-align: middle;
+        }
 
-.registration-table th {
-    font-weight: bold;
-}
+        /* หัวตารางอยู่ตรงกลาง */
+        .registration-table th {
+            text-align: center;
+            font-weight: bold;
+        }
 
-.registration-table th:first-child {
-    width: 34%;
-}
+        /* ข้อมูลในตารางชิดซ้าย */
+        .registration-table td {
+            text-align: left;
+        }
 
-.registration-table th:nth-child(2),
-.registration-table th:nth-child(3) {
-    width: 33%;
-}
-</style>
+        /* กำหนดความกว้างของคอลัมน์ */
+        .registration-table th:nth-child(1),
+        .registration-table td:nth-child(1) {
+            width: 34%;
+        }
 
-<table class="registration-table">
-    <thead>
-        <tr>
-            <th>Participant Category</th>
-            <th>
-                Early Registration<br>
-                by 31 October 2026
-            </th>
-            <th>
-                Late Registration<br>
-                after 31 October 2026
-            </th>
-        </tr>
-    </thead>
+        .registration-table th:nth-child(2),
+        .registration-table td:nth-child(2) {
+            width: 33%;
+        }
 
-    <tbody>
-        <tr>
-            <td>General Participant (International)</td>
-            <td>USD 300</td>
-            <td>USD 400</td>
-        </tr>
-        <tr>
-            <td>General Participant (Thai)</td>
-            <td>THB 8,000</td>
-            <td>THB 9,000</td>
-        </tr>
-        <tr>
-            <td>Student</td>
-            <td>USD 150</td>
-            <td>USD 150</td>
-        </tr>
-    </tbody>
-</table>
+        .registration-table th:nth-child(3),
+        .registration-table td:nth-child(3) {
+            width: 33%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table class="registration-table">
+        <thead>
+            <tr>
+                <th>Participant Category</th>
+                <th>
+                    Early Registration<br>
+                    by 31 October 2026
+                </th>
+                <th>
+                    Late Registration<br>
+                    after 31 October 2026
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>General Participant (International)</td>
+                <td>USD 300</td>
+                <td>USD 400</td>
+            </tr>
+
+            <tr>
+                <td>General Participant (Thai)</td>
+                <td>THB 8,000</td>
+                <td>THB 9,000</td>
+            </tr>
+
+            <tr>
+                <td>Student</td>
+                <td>USD 150</td>
+                <td>USD 150</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
           
       <!-- /Nearby Hotel -->
     </div>
