@@ -1227,3 +1227,16 @@ html, body {
     color:#FFD700;      /* สีเหลืองทอง */
     font-weight: bold;   /* ตัวหนา */
 }
+
+/*ิี button click */
+/* ===== เพิ่มใหม่: แก้ dropdown เมนู ===== */
+.topbar,
+.topbar .container-fluid,
+#mainMenu { overflow: visible !important; }
+
+#mainMenu .dropdown-menu { z-index: 1060; border-radius: 8px; }
+#mainMenu .dropdown-menu.show { display: block; }
+#mainMenu .dropdown-item:active { background-color: #17365d; }
+
+/* กันหัวข้อ section ถูก navbar (fixed-top) บังเวลาคลิกเมนู */
+section[id] { scroll-margin-top: 80px; }

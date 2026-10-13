@@ -102,6 +102,7 @@
 </div>
 
      <!-- End newMenu -->
+      </div> <!-- ปิด container-fluid (ตัวเดิมถูก comment ไปพร้อมเมนูเก่า) -->
   </nav>
 
 <section class="hero-full">
@@ -600,7 +601,7 @@ practice papers, and demo/poster papers.</p>
     </div>
   </section>
 <!-- payment -->
- Registration for ICADL 2026 will be conducted jointly between ICADL2026 and AP-iConference, allowing participants to attend both conferences. Registration will open in October 2026. Details regarding registration fees are as follows:
+ <!-- Registration for ICADL 2026 will be conducted jointly between ICADL2026 and AP-iConference, allowing participants to attend both conferences. Registration will open in October 2026. Details regarding registration fees are as follows:
     <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -693,7 +694,7 @@ practice papers, and demo/poster papers.</p>
 </html>
 
 
-<!-- Registration Payment Information -->
+</*Registration Payment Information */>
 <div style="margin-top: 20px; padding: 15px 20px; border: 1px solid #d9e2f0; border-radius: 6px; background-color: #f5f8fc; font-family: Arial, sans-serif;">
 
     <h3 style="margin-top: 0; margin-bottom: 10px; color: #17365d;">
@@ -719,8 +720,60 @@ practice papers, and demo/poster papers.</p>
         Proceed to Payment
     </a>
 
-</div>
+</div> -->
+<!-- ===== Register ===== -->
+<section id="register" class="section-white">
+  <div class="container-fluid container-narrow">
+    <h2 class="section-title" style="color:var(--orange)">REGISTRATION</h2>
 
+    <p>
+      Registration for ICADL 2026 will be conducted jointly between ICADL2026 and AP-iConference,
+      allowing participants to attend both conferences. Registration will open in October 2026.
+      Details regarding registration fees are as follows:
+    </p>
+
+    <style>
+      .registration-table { width:100%; border-collapse:collapse; font-size:15px; }
+      .registration-table th,
+      .registration-table td { border:1px solid #777; padding:6px 8px; vertical-align:middle; width:33%; }
+      .registration-table th { text-align:center; font-weight:bold; }
+      .registration-table td { text-align:left; }
+      .registration-table th:first-child,
+      .registration-table td:first-child { width:34%; }
+    </style>
+
+    <div class="table-responsive">
+      <table class="registration-table">
+        <thead>
+          <tr>
+            <th>Participant Category</th>
+            <th>Early Registration<br>by 31 October 2026</th>
+            <th>Late Registration<br>after 31 October 2026</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>General Participant (International)</td><td>USD 300</td><td>USD 400</td></tr>
+          <tr><td>General Participant (Thai)</td><td>THB 8,000</td><td>THB 9,000</td></tr>
+          <tr><td>Student</td><td>USD 150</td><td>USD 150</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top:20px; padding:15px 20px; border:1px solid #d9e2f0; border-radius:6px; background-color:#f5f8fc;">
+      <h3 style="margin-top:0; margin-bottom:10px; color:#17365d;">Registration Payment</h3>
+      <p style="margin-bottom:15px; color:#333; line-height:1.6;">
+        Participants are required to complete their registration fee payment through the official
+        online payment system. For payment details and instructions, please visit the link below.
+      </p>
+      <a href="https://icadl2026-payment.sc.kku.ac.th/" target="_blank" rel="noopener noreferrer"
+         style="display:inline-block; padding:10px 20px; background-color:#17365d; color:#fff;
+                text-decoration:none; border-radius:4px; font-weight:bold;">
+        Proceed to Payment
+      </a>
+    </div>
+  </div>
+</section>
+<!-- ===== /Register ===== -->
 
 <!-- payment -->
 <section id="venue" class="section-soft venue-section">
@@ -820,5 +873,21 @@ A premium hotel offering spacious rooms, meeting facilities, and a wide range of
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ปิดเมนูอัตโนมัติบนมือถือ -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- เพิ่มใหม่: บนมือถือ คลิกเมนูแล้วให้เมนูพับเก็บ -->
+  <script>
+    document.querySelectorAll('#mainMenu a:not(.dropdown-toggle)').forEach(function (link) {
+      link.addEventListener('click', function () {
+        var menu = document.getElementById('mainMenu');
+        if (menu.classList.contains('show')) {
+          bootstrap.Collapse.getOrCreateInstance(menu).hide();
+        }
+      });
+    });
+  </script>
+</body>
 </body>
 </html>
