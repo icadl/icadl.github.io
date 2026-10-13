@@ -1240,3 +1240,6 @@ html, body {
 
 /* กันหัวข้อ section ถูก navbar (fixed-top) บังเวลาคลิกเมนู */
 section[id] { scroll-margin-top: 80px; }
+@media (max-width: 991.98px){
+  .topbar .container-narrow { flex-wrap: wrap; }
+}
