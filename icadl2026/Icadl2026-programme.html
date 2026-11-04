@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Programme – ICADL 2026</title>
+  <meta name="description" content="ICADL 2026 Programme" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="workshops.css" rel="stylesheet">
+
+  <!-- Programme page styles -->
+  <style>
+    html { scroll-behavior: smooth; }
+    .programme-section { padding: 2rem 0 3rem; font-family: 'Prompt', sans-serif; }
+    .programme-section .day-block, #programme-top { scroll-margin-top: 16px; }
+
+    /* Intro note */
+    .prog-note { background: #eef4fb; border-left: 4px solid #0d3b66; padding: .9rem 1.1rem; border-radius: 6px; font-size: .92rem; margin-bottom: 1.4rem; }
+    .prog-note p { margin: 0 0 .25rem; }
+    .prog-note p:last-child { margin: 0; }
+
+    /* Day buttons */
+    .day-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; margin: .5rem 0 2rem; }
+    .day-btn { display: inline-block; background: #1f6fb2; color: #fff; text-decoration: none; padding: .55rem 1.2rem; border-radius: 6px; font-weight: 500; font-size: .95rem; border: 1px solid #1a5f9a; transition: background .15s, transform .15s; }
+    .day-btn small { display: block; font-weight: 400; font-size: .78rem; opacity: .95; }
+    .day-btn:hover, .day-btn:focus { background: #0d3b66; color: #fff; transform: translateY(-1px); }
+
+    /* Day block */
+    .day-block { margin-bottom: 2.5rem; border: 1px solid #0d3b66; border-radius: 6px; overflow: hidden; }
+    .day-header { background: #0d3b66; color: #fff; text-align: center; padding: .9rem 1rem; }
+    .day-title { font-size: 1.25rem; font-weight: 600; }
+    .day-sub { font-size: .95rem; opacity: .9; }
+    .day-rooms { font-size: .9rem; margin-top: .45rem; }
+    .day-rooms-note { font-size: .8rem; opacity: .85; margin-top: .15rem; }
+
+    /* Table */
+    .prog-table { width: 100%; border-collapse: collapse; margin: 0; font-size: .9rem; }
+    .prog-table th { background: #e8f0fa; text-align: center; padding: .55rem; border: 1px solid #ddd; font-weight: 600; }
+    .prog-table td { border: 1px solid #ddd; padding: .7rem .8rem; vertical-align: top; }
+    .prog-table .col-time { width: 120px; text-align: center; vertical-align: middle; white-space: nowrap; font-weight: 500; }
+    .prog-table th.col-room { width: 38%; font-weight: 500; font-size: .85rem; line-height: 1.5; }
+    .prog-table th.col-room .room-tag { font-size: .8rem; }
+    .link-item { margin: .35rem 0; }
+    .link-item + .link-item { border-top: 1px dashed #ddd; padding-top: .6rem; }
+    .link-item .room-tag { margin-bottom: .25rem; }
+    .prog-table .col-link { width: 120px; text-align: center; vertical-align: middle; }
+    .row-break td { background: #fafafa; color: #666; }
+    .row-plenary .plen-title { font-weight: 600; color: #0d3b66; }
+    .row-break .plen-title { font-weight: 400; color: #666; }
+
+    /* Session content */
+    .room-tag { display: inline-block; font-size: .72rem; font-weight: 600; padding: .1rem .5rem; border-radius: 4px; color: #fff; letter-spacing: .3px; }
+    .room-a { background: #0d3b66; }
+    .room-b { background: #4a7fb5; }
+    .day-header .room-tag { border: 1px solid rgba(255,255,255,.6); }
+    .session-title { font-weight: 600; color: #0d3b66; margin-top: .35rem; }
+    .session-meta { font-size: .8rem; color: #666; margin: .1rem 0 .4rem; }
+    .paper-list { margin: 0; padding-left: 1.3rem; }
+    .paper-list li { margin-bottom: .45rem; }
+    .paper-list li.free { color: #888; font-style: italic; list-style: none; margin-left: -1.3rem; }
+    .p-time { font-size: .8rem; color: #555; font-weight: 500; }
+    .p-id { font-size: .8rem; color: #888; }
+    .p-type { display: inline-block; font-size: .7rem; font-weight: 600; padding: 0 .4rem; border-radius: 3px; }
+    .t-F { background: #dbe7f5; color: #0d3b66; }
+    .t-S { background: #e3f0fb; color: #1f5f99; }
+    .t-P { background: #e6f4ea; color: #2d6a3e; }
+    .online { font-size: .75rem; color: #1f6fb2; font-weight: 500; }
+    .p-title { color: #1a5fa8; }
+
+    /* Link column */
+    .coming-soon { display: inline-block; font-size: .8rem; font-weight: 600; color: #1f6fb2; background: #eaf3fc; border: 1px dashed #8db8e3; border-radius: 4px; padding: .2rem .5rem; }
+    .prog-link { display: inline-block; font-size: .85rem; font-weight: 600; color: #fff; background: #0d3b66; border-radius: 4px; padding: .25rem .7rem; text-decoration: none; }
+    .prog-link:hover { background: #1f4f7a; color: #fff; }
+
+    .back-top { text-align: right; padding: .4rem .8rem; font-size: .82rem; background: #fafafa; border-top: 1px solid #ddd; }
+    .back-top a { text-decoration: none; }
+
+    .table-responsive > .prog-table { min-width: 760px; }
+
+    /* Fallbacks only — zero specificity, so workshops.css always wins when present */
+    :where(.page-header) { background: linear-gradient(135deg,#0d3b66,#1f6fb2); color: #fff; padding: 2rem 0 1.5rem; }
+    :where(.page-header h1) { margin: 0; font-family: 'Prompt', sans-serif; font-weight: 600; }
+
+    @media (max-width: 576px) {
+      .prog-table .col-time { width: 78px; white-space: normal; }
+      .prog-table .col-link { width: 86px; }
+      .prog-table td { padding: .55rem .5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container container-narrow">
+    <h1>Programme</h1>
+  </div>
+</div>
+
+<!-- PROGRAMME CONTENT -->
+<section class="programme-section">
+  <div class="container container-narrow" id="programme-top">
+
+    <!-- Notice -->
+    <div class="notice-box">
+      <p>Programme Details · ICADL 2026, Khon Kaen</p>
+    </div>
+
+    <div class="prog-note">
+      <p><strong>2–3 December 2026, Khon Kaen</strong> · all times Thailand time (UTC+7)</p>
+      <p><span class="p-type t-F">F</span> Full (20 min) &nbsp; <span class="p-type t-S">S</span> Short and <span class="p-type t-P">P</span> Practice (15 min), each including Q&amp;A and speaker change &nbsp;·&nbsp; <span class="online">◇</span> = presented online</p>
+    </div>
+
+    <!-- Day buttons: click to scroll to each day -->
+    <div class="day-nav">
+      <a class="day-btn" href="#day1">Day 1 <small>Wed 2 Dec</small></a>
+      <a class="day-btn" href="#day2">Day 2 <small>Thu 3 Dec</small></a>
+      <a class="day-btn" href="#day3">Day 3 <small>Fri 4 Dec</small></a>
+    </div>
+
+    <!-- Day 1: Wednesday, 2 December 2026 -->
+    <div class="day-block" id="day1">
+      <div class="day-header">
+        <div class="day-title">Day 1 (Wednesday, 2 December 2026)</div>
+        <div class="day-sub">Khon Kaen · Thailand time (UTC+7)</div>
+      </div>
+      <div class="table-responsive">
+        <table class="prog-table">
+          <thead><tr><th class="col-time">Time</th>
+            <th class="col-room"><span class="room-tag room-a">Room A</span><br>Human and library studies (hybrid)</th>
+            <th class="col-room"><span class="room-tag room-b">Room B</span><br>Computing and information systems</th>
+            <th class="col-link">Link</th></tr></thead>
+          <tbody>
+            <tr class="row-plenary">
+              <td class="col-time">09:00–10:30</td>
+              <td class="col-agenda" colspan="2"><div class="plen-title">Opening ceremony and keynote</div></td>
+              <td class="col-link"><span class="coming-soon">Coming soon!</span>
+                <!-- <a class="prog-link" href="https://" target="_blank" rel="noopener noreferrer">Link</a> --></td>
+            </tr>
+            <tr class="row-break">
+              <td class="col-time">10:30–10:50</td>
+              <td class="col-agenda" colspan="2"><div class="plen-title">Coffee and move to paper rooms</div></td>
+              <td class="col-link"></td>
+            </tr>
+            <tr class="row-session">
+              <td class="col-time">10:50–12:05</td>
+              <td class="col-agenda col-room"><div class="session-title">A1 — Inclusive information access and learning</div>
+<div class="session-meta">1F / 3S · 10:50–12:05 &nbsp;|&nbsp; Free time: 10 min &nbsp;|&nbsp; Chair: [to be confirmed]</div>
+<ol class="paper-list"><li><span class="p-time">10:50–11:05</span> <span class="p-id">#15</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">Navigating Information Barriers: Information Literacy and Information-Seeking Experiences of Rohingya Refugees in Bangladesh</span></li><li><span class="p-time">11:05–11:25</span> <span class="p-id">#22</span> <span class="p-type t-F" title="Full">F</span><br><span class="p-title">Packing Web Search Results into 40-Character Lines: A Lightweight SERP Transformation Pipeline for Refreshable Braille Displays</span></li><li><span class="p-time">11:25–11:40</span> <span class="p-id">#34</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">Web Accessibility in Local E-Government: A WCAG 2.2 Audit of a Provincial Digital Library Service in East Java, Indonesia</span></li><li><span class="p-time">11:40–11:55</span> <span class="p-id">#85</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">Navigating Online Learning: Understanding the Barriers and Strategies of Neurodivergent Learners</span></li><li class="free">Free time — 10 min</li></ol></td>
+              <td class="col-agenda col-room"><div class="session-title">B1 — Historical document processing</div>
+<div class="session-meta">2F / 2S · 10:50–12:05 &nbsp;|&nbsp; Free time: 5 min &nbsp;|&nbsp; Chair: [to be confirmed]</div>
+<ol class="paper-list"><li><span class="p-time">10:50–11:10</span> <span class="p-id">#3</span> <span class="p-type t-F" title="Full">F</span><br><span class="p-title">Metadata as Prompt Context for Historical OCR Post-Correction</span></li><li><span class="p-time">11:10–11:30</span> <span class="p-id">#78</span> <span class="p-type t-F" title="Full">F</span><br><span class="p-title">From Ephemeral Art Exhibitions to Reliable Digital Corpora: A Reproducible Adaptive OCR Workflow for Heterogeneous Archival Collections</span></li><li><span class="p-time">11:30–11:45</span> <span class="p-id">#54</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">From Traceability to Verifiability: Selective Quality Routing and IIIF-Compatible Evidence for Historical Document Restoration</span></li><li><span class="p-time">11:45–12:00</span> <span class="p-id">#104</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">CAFE: Confidence-Aware Framework for Entity Enrichment in Historical Digitised Documents</span></li><li class="free">Free time — 5 min</li></ol></td>
+              <td class="col-link">
+                <div class="link-item"><span class="room-tag room-a">Room A</span><br>
+                <span class="coming-soon">Coming soon!</span>
+                <!-- <a class="prog-link" href="https://" target="_blank" rel="noopener noreferrer">Link</a> -->
+                </div>
+                <div class="link-item"><span class="room-tag room-b">Room B</span><br>
+                <span class="coming-soon">Coming soon!</span>
+                <!-- <a class="prog-link" href="https://" target="_blank" rel="noopener noreferrer">Link</a> -->
+                </div>
+              </td>
+            </tr>
+            <tr class="row-break">
+              <td class="col-time">12:05–13:05</td>
+              <td class="col-agenda" colspan="2"><div class="plen-title">Lunch</div></td>
+              <td class="col-link"></td>
+            </tr>
+            <tr class="row-session">
+              <td class="col-time">13:05–14:35</td>
+              <td class="col-agenda col-room"><div class="session-title">A2 — User experience, engagement and reader services</div>
+<div class="session-meta">2F / 3S · 13:05–14:35 &nbsp;|&nbsp; Free time: 5 min &nbsp;|&nbsp; Chair: [to be confirmed]</div>
+<ol class="paper-list"><li><span class="p-time">13:05–13:25</span> <span class="p-id">#6</span> <span class="p-type t-F" title="Full">F</span><br><span class="p-title">Exploratory Access to Game Archives through Visual Semantic Search: A User Study of Package Image Retrieval</span></li><li><span class="p-time">13:25–13:40</span> <span class="p-id">#26</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">Information System Quality and User Continuance Intention in Digital Cultural Heritage Platforms: The Roles of Visualization Experience, Perceived Usefulness, and Cultural Identity</span></li><li><span class="p-time">13:40–13:55</span> <span class="p-id">#60</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">Comparing Four User-Facing Messages for Reducing Harmful-Content Engagement: An Exploratory Randomized Experiment</span></li><li><span class="p-time">13:55–14:10</span> <span class="p-id">#29</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">Next-Generation User Experiences in AI-Driven Digital Libraries: A Systematic Review of Intelligent Interaction and Interface Design (2022–2026)</span></li><li><span class="p-time">14:10–14:30</span> <span class="p-id">#70</span> <span class="p-type t-F" title="Full">F</span><br><span class="p-title">Understanding the Target Reader Levels of Books: An Empirical Study on Librarians’ Judgements</span></li><li class="free">Free time — 5 min</li></ol></td>
+              <td class="col-agenda col-room"><div class="session-title">B2 — Language-model methods: reliability and communication</div>
+<div class="session-meta">2F / 2S · 13:05–14:35 &nbsp;|&nbsp; Free time: 20 min &nbsp;|&nbsp; Chair: [to be confirmed]</div>
+<ol class="paper-list"><li><span class="p-time">13:05–13:25</span> <span class="p-id">#2</span> <span class="p-type t-F" title="Full">F</span><br><span class="p-title">Detecting Generative AI Content in Digital Libraries: A Hybrid Framework for Information Integrity in Southeast Asian Cultural Heritage Collections</span></li><li><span class="p-time">13:25–13:40</span> <span class="p-id">#84</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">MITI-Based Evaluation of Motivational Interviewing Dialogues Using LLM-as-a-Judge</span></li><li><span class="p-time">13:40–13:55</span> <span class="p-id">#131</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">More Claims, Less Evidence: Bounded Verification of AI-Generated Digital Knowledge Artifacts</span></li><li><span class="p-time">13:55–14:15</span> <span class="p-id">#105</span> <span class="p-type t-F" title="Full">F</span><br><span class="p-title">Compressing Inter-Model Communication: Transferring Each Sentence as a Single Hidden-State Vector</span></li><li class="free">Free time — 20 min</li></ol></td>
+              <td class="col-link">
+                <div class="link-item"><span class="room-tag room-a">Room A</span><br>
+                <span class="coming-soon">Coming soon!</span>
+                <!-- <a class="prog-link" href="https://" target="_blank" rel="noopener noreferrer">Link</a> -->
+                </div>
+                <div class="link-item"><span class="room-tag room-b">Room B</span><br>
+                <span class="coming-soon">Coming soon!</span>
+                <!-- <a class="prog-link" href="https://" target="_blank" rel="noopener noreferrer">Link</a> -->
+                </div>
+              </td>
+            </tr>
+            <tr class="row-break">
+              <td class="col-time">14:35–14:55</td>
+              <td class="col-agenda" colspan="2"><div class="plen-title">Coffee and room change</div></td>
+              <td class="col-link"></td>
+            </tr>
+            <tr class="row-session">
+              <td class="col-time">14:55–16:05</td>
+              <td class="col-agenda col-room"><div class="session-title">A3 — Knowledge organisation and heritage metadata</div>
+<div class="session-meta">2F / 1S · 14:55–16:05 &nbsp;|&nbsp; Free time: 15 min &nbsp;|&nbsp; Chair: [to be confirmed]</div>
+<ol class="paper-list"><li><span class="p-time">14:55–15:15</span> <span class="p-id">#59</span> <span class="p-type t-F" title="Full">F</span><br><span class="p-title">Semantic Modeling of Traditional Wooden Boatbuilding Knowledge Using CIDOC CRM</span></li><li><span class="p-time">15:15–15:30</span> <span class="p-id">#81</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">Cultural Semantic Spans for Low-Resource Heritage Metadata: Evidence from Japanese–Chinese Ukiyo-e Titles</span></li><li><span class="p-time">15:30–15:50</span> <span class="p-id">#95</span> <span class="p-type t-F" title="Full">F</span><br><span class="p-title">A Multi-layer Context Metadata Model for Environmental Sound Archives: Initial Implementation of Weather Metadata</span></li><li class="free">Free time — 15 min</li></ol></td>
+              <td class="col-agenda col-room"><div class="session-title">B3 — Scholarly metadata extraction; infrastructure spotlight</div>
+<div class="session-meta">1F / 3S · 14:55–16:05 &nbsp;|&nbsp; Free time: 5 min &nbsp;|&nbsp; Chair: [to be confirmed]</div>
+<ol class="paper-list"><li><span class="p-time">14:55–15:10</span> <span class="p-id">#97</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">Exploring README Files as Sources of Research Data Metadata</span></li><li><span class="p-time">15:10–15:25</span> <span class="p-id">#103</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">Where Are Research Data Published? Identifying Their Publication URLs in Scholarly Papers</span></li><li><span class="p-time">15:25–15:40</span> <span class="p-id">#120</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">Evaluation of Large Language Models for Japanese Bibliographic Reference Parsing across Diverse Citation Styles</span></li><li><span class="p-time">15:40–16:00</span> <span class="p-id">#93</span> <span class="p-type t-F" title="Full">F</span><br><span class="p-title">When Faster Primitives Yield Lower Throughput: A Diagnostic Case Study of Post-Quantum TLS 1.3 Performance</span></li><li class="free">Free time — 5 min</li></ol></td>
+              <td class="col-link">
+                <div class="link-item"><span class="room-tag room-a">Room A</span><br>
+                <span class="coming-soon">Coming soon!</span>
+                <!-- <a class="prog-link" href="https://" target="_blank" rel="noopener noreferrer">Link</a> -->
+                </div>
+                <div class="link-item"><span class="room-tag room-b">Room B</span><br>
+                <span class="coming-soon">Coming soon!</span>
+                <!-- <a class="prog-link" href="https://" target="_blank" rel="noopener noreferrer">Link</a> -->
+                </div>
+              </td>
+            </tr>
+            <tr class="row-break">
+              <td class="col-time">16:05–16:25</td>
+              <td class="col-agenda" colspan="2"><div class="plen-title">Coffee and room change</div></td>
+              <td class="col-link"></td>
+            </tr>
+            <tr class="row-session">
+              <td class="col-time">16:25–17:25</td>
+              <td class="col-agenda col-room"><div class="session-title">A4 — AI literacy among students</div>
+<div class="session-meta">2S · 16:25–17:25 &nbsp;|&nbsp; Free time: 30 min &nbsp;|&nbsp; Chair: [to be confirmed]</div>
+<ol class="paper-list"><li><span class="p-time">16:25–16:40</span> <span class="p-id">#115</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">Investigating Information and AI Literacy Among Generation Z Students: Associations with Environmental and Individual Factors</span></li><li><span class="p-time">16:40–16:55</span> <span class="p-id">#149</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">Comparing Local and International Students&#x27; Generative AI Perception, Use, and Preferred University Support</span></li><li class="free">Free time — 30 min</li></ol></td>
+              <td class="col-agenda col-room"><div class="session-title">B4 — Visual and audiovisual information processing</div>
+<div class="session-meta">2F / 1S · 16:25–17:25 &nbsp;|&nbsp; Free time: 5 min &nbsp;|&nbsp; Chair: [to be confirmed]</div>
+<ol class="paper-list"><li><span class="p-time">16:25–16:45</span> <span class="p-id">#8</span> <span class="p-type t-F" title="Full">F</span><br><span class="p-title">Retrieving Instance Segmentation Models using Local Image Features via Transformer Encoder</span></li><li><span class="p-time">16:45–17:05</span> <span class="p-id">#119</span> <span class="p-type t-F" title="Full">F</span><br><span class="p-title">Multimodal Topic Segmentation of Japanese Television News for Digital Archives</span></li><li><span class="p-time">17:05–17:20</span> <span class="p-id">#139</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">Background Diversification for Improved Object Detection in Illustrated Images</span></li><li class="free">Free time — 5 min</li></ol></td>
+              <td class="col-link">
+                <div class="link-item"><span class="room-tag room-a">Room A</span><br>
+                <span class="coming-soon">Coming soon!</span>
+                <!-- <a class="prog-link" href="https://" target="_blank" rel="noopener noreferrer">Link</a> -->
+                </div>
+                <div class="link-item"><span class="room-tag room-b">Room B</span><br>
+                <span class="coming-soon">Coming soon!</span>
+                <!-- <a class="prog-link" href="https://" target="_blank" rel="noopener noreferrer">Link</a> -->
+                </div>
+              </td>
+            </tr>
+            <tr class="row-plenary">
+              <td class="col-time">Evening</td>
+              <td class="col-agenda" colspan="2"><div class="plen-title">Official banquet (time and venue to be confirmed by the local team)</div></td>
+              <td class="col-link"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="back-top"><a href="#programme-top">▲ Back to top</a></div>
+    </div>
+
+    <!-- Day 2: Thursday, 3 December 2026 -->
+    <div class="day-block" id="day2">
+      <div class="day-header">
+        <div class="day-title">Day 2 (Thursday, 3 December 2026)</div>
+        <div class="day-sub">Khon Kaen · Thailand time (UTC+7)</div>
+      </div>
+      <div class="table-responsive">
+        <table class="prog-table">
+          <thead><tr><th class="col-time">Time</th>
+            <th class="col-room"><span class="room-tag room-a">Room A</span><br>Human and library studies (hybrid)</th>
+            <th class="col-room"><span class="room-tag room-b">Room B</span><br>Computing and information systems</th>
+            <th class="col-link">Link</th></tr></thead>
+          <tbody>
+            <tr class="row-plenary">
+              <td class="col-time">09:00–10:30</td>
+              <td class="col-agenda" colspan="2"><div class="plen-title">Keynote/plenary — being arranged (if the block stays free, A4/B4 can move here)</div></td>
+              <td class="col-link"><span class="coming-soon">Coming soon!</span>
+                <!-- <a class="prog-link" href="https://" target="_blank" rel="noopener noreferrer">Link</a> --></td>
+            </tr>
+            <tr class="row-break">
+              <td class="col-time">10:30–10:50</td>
+              <td class="col-agenda" colspan="2"><div class="plen-title">Coffee and move to paper rooms</div></td>
+              <td class="col-link"></td>
+            </tr>
+            <tr class="row-session">
+              <td class="col-time">10:50–12:20</td>
+              <td class="col-agenda col-room"><div class="session-title">A5 — Open science and research data: availability, description and curation</div>
+<div class="session-meta">2F / 2S / 1P · 10:50–12:20 &nbsp;|&nbsp; Free time: 5 min &nbsp;|&nbsp; Chair: [to be confirmed]</div>
+<ol class="paper-list"><li><span class="p-time">10:50–11:10</span> <span class="p-id">#28</span> <span class="p-type t-F" title="Full">F</span> <span class="online" title="Presented online">◇ online</span><br><span class="p-title">The Relative Importance of Data Availability Statements Among Predictors of Citation Impact</span></li><li><span class="p-time">11:10–11:30</span> <span class="p-id">#68</span> <span class="p-type t-F" title="Full">F</span><br><span class="p-title">How Open Access Improves the Disruption Index: Evidence from Chinese LIS Publications</span></li><li><span class="p-time">11:30–11:45</span> <span class="p-id">#111</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">The Comprehensiveness of Dataset Descriptions: A Preliminary Content Analysis of Zenodo Records</span></li><li><span class="p-time">11:45–12:00</span> <span class="p-id">#113</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">Characterizing Dataset Mentions in Publications Reusing BioLINCC Datasets</span></li><li><span class="p-time">12:00–12:15</span> <span class="p-id">#9</span> <span class="p-type t-P" title="Practice">P</span><br><span class="p-title">Sustainable Curation and Data Services for Long-Term Polar Observation Data: A Case Study of Southern Ocean Zooplankton Records</span></li><li class="free">Free time — 5 min</li></ol></td>
+              <td class="col-agenda col-room"><div class="session-title">B5 — Corpus construction and computational text analysis</div>
+<div class="session-meta">4F · 10:50–12:20 &nbsp;|&nbsp; Free time: 10 min &nbsp;|&nbsp; Chair: [to be confirmed]</div>
+<ol class="paper-list"><li><span class="p-time">10:50–11:10</span> <span class="p-id">#17</span> <span class="p-type t-F" title="Full">F</span><br><span class="p-title">IADICO: Internet Archive-based DIachronic COrpus for Document- and Timeline-oriented Studies</span></li><li><span class="p-time">11:10–11:30</span> <span class="p-id">#71</span> <span class="p-type t-F" title="Full">F</span><br><span class="p-title">Leveraging Large Language Models to Induce Pattern-Matching Rules to Diagnose Grammatical Difficulty of Documents</span></li><li><span class="p-time">11:30–11:50</span> <span class="p-id">#77</span> <span class="p-type t-F" title="Full">F</span><br><span class="p-title">CASPER: Character-Anchored Salient Passage Extraction for Character Profile Generation from Long-Form Fiction</span></li><li><span class="p-time">11:50–12:10</span> <span class="p-id">#98</span> <span class="p-type t-F" title="Full">F</span><br><span class="p-title">Analyzing the Relations between Seed Terms and Retrieved Web Content: Towards Enhancing Seed-Based Term Crawling</span></li><li class="free">Free time — 10 min</li></ol></td>
+              <td class="col-link">
+                <div class="link-item"><span class="room-tag room-a">Room A</span><br>
+                <span class="coming-soon">Coming soon!</span>
+                <!-- <a class="prog-link" href="https://" target="_blank" rel="noopener noreferrer">Link</a> -->
+                </div>
+                <div class="link-item"><span class="room-tag room-b">Room B</span><br>
+                <span class="coming-soon">Coming soon!</span>
+                <!-- <a class="prog-link" href="https://" target="_blank" rel="noopener noreferrer">Link</a> -->
+                </div>
+              </td>
+            </tr>
+            <tr class="row-break">
+              <td class="col-time">12:20–13:20</td>
+              <td class="col-agenda" colspan="2"><div class="plen-title">Lunch</div></td>
+              <td class="col-link"></td>
+            </tr>
+            <tr class="row-session">
+              <td class="col-time">13:20–14:30</td>
+              <td class="col-agenda col-room"><div class="session-title">A6 — Generative AI governance and professional frameworks</div>
+<div class="session-meta">2F / 1S · 13:20–14:30 &nbsp;|&nbsp; Free time: 15 min &nbsp;|&nbsp; Chair: [to be confirmed]</div>
+<ol class="paper-list"><li><span class="p-time">13:20–13:40</span> <span class="p-id">#21</span> <span class="p-type t-F" title="Full">F</span> <span class="online" title="Presented online">◇ online</span><br><span class="p-title">Academic Libraries in University Generative AI Governance: A Cross-Method Analysis of Southeast Asian Public Guidance</span></li><li><span class="p-time">13:40–13:55</span> <span class="p-id">#112</span> <span class="p-type t-S" title="Short">S</span> <span class="online" title="Presented online">◇ online</span><br><span class="p-title">AI Literacy Frameworks for Library Professionals: A Comparative Analysis and Proposed Five-Component Model</span></li><li><span class="p-time">13:55–14:15</span> <span class="p-id">#134</span> <span class="p-type t-F" title="Full">F</span><br><span class="p-title">Rethinking Information Literacy in the Age of Generative AI: An ACRL Framework-Based Approach to AI for Research Training in an Academic Library</span></li><li class="free">Free time — 15 min</li></ol></td>
+              <td class="col-agenda col-room"><div class="session-title">B6 — Semantic search and query interfaces</div>
+<div class="session-meta">1F / 2S / 1P · 13:20–14:30 &nbsp;|&nbsp; Free time: 5 min &nbsp;|&nbsp; Chair: [to be confirmed]</div>
+<ol class="paper-list"><li><span class="p-time">13:20–13:35</span> <span class="p-id">#11</span> <span class="p-type t-P" title="Practice">P</span><br><span class="p-title">Retrieval-Augmented Generation System for the Digital Library of Old Polish Ephemeral Prints</span></li><li><span class="p-time">13:35–13:50</span> <span class="p-id">#61</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">Exploratory Literature Search via Position Queries on Personalized Two-Dimensional Literature Maps</span></li><li><span class="p-time">13:50–14:05</span> <span class="p-id">#137</span> <span class="p-type t-S" title="Short">S</span><br><span class="p-title">RAG-Driven Discovery: Architecting a Semantic Search Layer for Historical Inscriptions</span></li><li><span class="p-time">14:05–14:25</span> <span class="p-id">#143</span> <span class="p-type t-F" title="Full">F</span><br><span class="p-title">Large Language Models in Corpus Query Language Generation</span></li><li class="free">Free time — 5 min</li></ol></td>
+              <td class="col-link">
+                <div class="link-item"><span class="room-tag room-a">Room A</span><br>
+                <span class="coming-soon">Coming soon!</span>
+                <!-- <a class="prog-link" href="https://" target="_blank" rel="noopener noreferrer">Link</a> -->
+                </div>
+                <div class="link-item"><span class="room-tag room-b">Room B</span><br>
+                <span class="coming-soon">Coming soon!</span>
+                <!-- <a class="prog-link" href="https://" target="_blank" rel="noopener noreferrer">Link</a> -->
+                </div>
+              </td>
+            </tr>
+            <tr class="row-break">
+              <td class="col-time">14:30–14:50</td>
+              <td class="col-agenda" colspan="2"><div class="plen-title">Coffee and room change</div></td>
+              <td class="col-link"></td>
+            </tr>
+            <tr class="row-plenary">
+              <td class="col-time">14:50–15:20</td>
+              <td class="col-agenda" colspan="2"><div class="plen-title">Poster/demo lightning talks — all seven papers (Room A) · Chair: [to be confirmed]</div><ol class="paper-list lightning"><li><span class="p-time">14:51</span> <span class="p-id">#32</span> <span class="p-title">From Resource Provision to Campus-Life-Oriented Promotion</span></li><li><span class="p-time">14:55</span> <span class="p-id">#42</span> <span class="p-title">SinoArchRAG</span></li><li><span class="p-time">14:59</span> <span class="p-id">#73</span> <span class="p-title">SUSHI BAR</span></li><li><span class="p-time">15:03</span> <span class="p-id">#88</span> <span class="p-title">Cheap First, Escalate on Evidence</span></li><li><span class="p-time">15:07</span> <span class="p-id">#96</span> <span class="p-title">Hanshiru</span></li><li><span class="p-time">15:11</span> <span class="p-id">#114</span> <span class="p-title">BRIDGE</span></li><li><span class="p-time">15:15</span> <span class="p-id">#116</span> <span class="p-title">What, Why, and How Research Data Are Cited? Investigating Research Data Citation Practices Across Time and Domains</span></li></ol></td>
+              <td class="col-link"><span class="coming-soon">Coming soon!</span>
+                <!-- <a class="prog-link" href="https://" target="_blank" rel="noopener noreferrer">Link</a> --></td>
+            </tr>
+            <tr class="row-break">
+              <td class="col-time">15:20–15:30</td>
+              <td class="col-agenda" colspan="2"><div class="plen-title">Move to the poster room</div></td>
+              <td class="col-link"></td>
+            </tr>
+            <tr class="row-plenary">
+              <td class="col-time">15:30–16:30</td>
+              <td class="col-agenda" colspan="2"><div class="plen-title">Poster/demo session — all seven posters/demos (poster room) · Chair: [to be confirmed]</div></td>
+              <td class="col-link"><span class="coming-soon">Coming soon!</span>
+                <!-- <a class="prog-link" href="https://" target="_blank" rel="noopener noreferrer">Link</a> --></td>
+            </tr>
+            <tr class="row-break">
+              <td class="col-time">16:30–16:40</td>
+              <td class="col-agenda" colspan="2"><div class="plen-title">Move to the plenary room</div></td>
+              <td class="col-link"></td>
+            </tr>
+            <tr class="row-plenary">
+              <td class="col-time">16:40–17:10</td>
+              <td class="col-agenda" colspan="2"><div class="plen-title">Closing ceremony</div></td>
+              <td class="col-link"><span class="coming-soon">Coming soon!</span>
+                <!-- <a class="prog-link" href="https://" target="_blank" rel="noopener noreferrer">Link</a> --></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="back-top"><a href="#programme-top">▲ Back to top</a></div>
+    </div>
+
+    <!-- Day 3: Friday, 4 December 2026 -->
+    <div class="day-block" id="day3">
+      <div class="day-header">
+        <div class="day-title">Day 3 (Friday, 4 December 2026)</div>
+        <div class="day-sub">Khon Kaen · Thailand time (UTC+7)</div>
+      </div>
+      <div class="table-responsive">
+        <table class="prog-table">
+          <thead><tr><th class="col-time">Time</th><th colspan="2">Agenda</th><th class="col-link">Link</th></tr></thead>
+          <tbody>
+            <tr class="row-plenary">
+              <td class="col-time">–</td>
+              <td class="col-agenda" colspan="2"><div class="plen-title">Workshops and AP-iConference (programmed separately)</div></td>
+              <td class="col-link"><span class="coming-soon">Coming soon!</span>
+                <!-- <a class="prog-link" href="https://" target="_blank" rel="noopener noreferrer">Link</a> --></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="back-top"><a href="#programme-top">▲ Back to top</a></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container container-narrow text-center">
+    <div class="fw-semibold">ICADL 2026</div>
+    <small>Copyright © 2026 The 26th International Conference on Asia-Pacific Digital Libraries (ICADL2026)</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
