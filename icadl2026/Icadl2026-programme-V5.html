@@ -208,6 +208,9 @@ const ROOM = {
   POSTER  : { name: "Poster room",             zoom: "" },
   Network  : { name: "Udon  Meeting Room, 1st Floor, COPA", zoom: "https://zoom.us/j/10000000010" },
   Workshop2  : { name: "Building Next-Generation AI Agents for Libraries", zoom: "https://zoom.us/j/10000000011" },
+  Track1  : { name: "Udon  Meeting Room, 1st Floor, COPA", zoom: "https://zoom.us/j/10000000012" },
+  Track2  : { name: "Learning Center Room, 2nd Floor, COPA", zoom: "https://zoom.us/j/10000000013" },
+  Track3  : { name: "", zoom: "https://zoom.us/j/10000000014" },
 
 
   /* rooms not confirmed yet — shown as "Coming soon" (dashed label) */
@@ -419,7 +422,7 @@ const PROGRAMME = [
 
     /* Talk format on Day 3: ["time", "#no [TYPE] Title", "Presenter"] */
     parallel("13:00–14:45", [
-      { code: "Track 1", title: "Short Papers (SP)", hybrid: true, room: ROOM.AP_A, groups: [
+      { code: "Track 1", title: "Short Papers (SP)", hybrid: true, room: ROOM.Track1, groups: [
         { code: "A1", title: "User behavior and human-computer interaction in AI environment", meta: "13:00–13:45 · Host: Qinggong Shi", talks: [
           ["13:00–13:15", "#67 [SP] From Invocation to Continuation: How AI Social Bot Replies Shape Continuance Behavior Across Gratification Types", "Xue Pan & Jing Qin"],
           ["13:15–13:30", "#75 [SP] Through the Looking Glass: A Longitudinal Diary Study of Academic GenAI Users’ Behaviors, Ethical Risks, and Coping Strategies", "Qinquan Dai et al."],
@@ -429,7 +432,7 @@ const PROGRAMME = [
           ["14:00–14:15", "#91 [SP] Research on the Construction of a Knowledge Service System for Ancient Chinese Texts Integrating Knowledge Graphs and Large Language Models: A Case Study of Ming Shilu", "Jiayi Xu et al."],
           ["14:15–14:30", "#135 [SP] Constructing a Metadata Framework and Knowledge Graph for Local Documentary Heritage: A Case Study of Qiaopi Archives", "Lihong Zhou et al."] ]}
       ]},
-      { code: "Track 2", title: "Student Symposium (SS)", hybrid: true, room: ROOM.AP_B, groups: [
+      { code: "Track 2", title: "Student Symposium (SS)", hybrid: true, room: ROOM.Track2, groups: [
         { code: "B1", title: "AI literacy, service evaluation, and industry application", meta: "13:00–14:30 · Host: Naya Sucha-xaya", talks: [
           ["13:00–13:15", "#109 [SS] The Development of Artificial Intelligence Literacy Framework for Content and Creative Media Works of Undergraduates in Thailand", "Patiphan Pholmat et al."],
           ["13:15–13:30", "#118 [SS] Spatial Precision Agriculture System Development for Cocoa Cultivation in Thailand’s Young Smart Farmer", "Tassanee Lunrasri"],
@@ -455,14 +458,14 @@ const PROGRAMME = [
     brk("14:30–14:45", "Coffee Break and Potential Room Change (Tracks 1 & 2)"),
 
     parallel("14:45–16:00", [
-      { code: "Track 1", title: "Short Papers (SP)", hybrid: true, room: ROOM.AP_A, groups: [
+      { code: "Track 1", title: "Short Papers (SP)", hybrid: true, room: ROOM.Track1, groups: [
         { code: "A3", title: "Scientometrics, data governance, and intelligent analysis methods", meta: "14:45–15:45 · Host: Zhihao Gao", talks: [
           ["14:45–15:00", "#36 [SP] What Is “More Disclosure”? Validating Corporate Data-Governance Disclosure Indicators Across Report Corpora", "Moyan Yang & Jie Ma"],
           ["15:00–15:15", "#41 [SP] CDMA+ARL: A Constrained Multi-Agent Workflow for Auditable Evidence-Traceable Literature Synthesis", "Lufei Qi et al."],
           ["15:15–15:30", "#133 [SP] How Do Social Collaboration Networks Emerge in Grassroots Libraries? A Decade-Long Case Study of Central–Branch Library System Development", "Qinggong Shi et al."],
           ["15:30–15:45", "#99 [SP] Bottom-Up Competition Based on Label Hierarchy Trees for In-Context Learning with Large Label Space", "Mingzhu Wei et al."] ]}
       ]},
-      { code: "Track 2", title: "Student Symposium (SS)", hybrid: true, room: ROOM.AP_B, groups: [
+      { code: "Track 2", title: "Student Symposium (SS)", hybrid: true, room: ROOM.Track2, groups: [
         { code: "B2", title: "Data governance, knowledge graph, and intelligent methods", meta: "14:45–16:00 · Host: Yi Song", talks: [
           ["14:45–15:00", "#136 [SS] Detecting Silent Semantic Drift in Evolving Enterprise Knowledge Graphs: A Structure- and Definition-Aware Approach", "Yawen Bai & Ganghui Zhang"],
           ["15:00–15:15", "#152 [SS] ◇ online From Text to Relations: Applying Large Language Models to Scientific Literature Knowledge Graph Construction", "Junru Yue"],
@@ -472,10 +475,10 @@ const PROGRAMME = [
       ]}
     ]),
 
-    plenary("16:00–16:30", "Closing Ceremony", { room: ROOM.SOON }),
-    plenary("16:30–17:30", "AP-iSchools Deans’ Meeting", { closed: true, room: ROOM.SOON_MTG,
+    plenary("16:00–16:30", "Closing Ceremony", { room: ROOM.PK }),
+    plenary("16:30–17:30", "AP-iSchools Deans’ Meeting", { closed: true, room: ROOM.Network,
       sub: "Hybrid · Deans and representatives of AP-iSchools · Moderator: Prof. Lihong Zhou" }),
-    plenary("17:30–18:00", "AP-iNext Members Meeting", { closed: true, room: ROOM.SOON_MTG,
+    plenary("17:30–18:00", "AP-iNext Members Meeting", { closed: true, room: ROOM.Network,
       sub: "Hybrid · AP-iNext All Members Meeting · Moderators: Misita Anwar & Houqiang Yu" })
   ]
 }
