@@ -206,6 +206,9 @@ const ROOM = {
   LEARNING: { name: "Learning Center Room, 2nd Floor, COPA", zoom: "" },
   BANQUET : { name: "North Star Hall, COPA",   zoom: "" },
   POSTER  : { name: "Poster room",             zoom: "" },
+  Network  : { name: "Udon  Meeting Room, 1st Floor, COPA", zoom: "https://zoom.us/j/10000000010" },
+  Workshop2  : { name: "Building Next-Generation AI Agents for Libraries", zoom: "https://zoom.us/j/10000000011" },
+
 
   /* rooms not confirmed yet — shown as "Coming soon" (dashed label) */
   SOON_A  : { name: "Coming soon", zoom: "https://zoom.us/j/1000000006" },  // Room A track: A4, A5, A6
@@ -407,9 +410,9 @@ const PROGRAMME = [
     brk("10:20–10:45", "Group Photo & Coffee Break"),
 
     parallel("10:45–12:00", [
-      { code: "Meeting",    title: "AP-iSchools’ Networking Meeting", desc: "Open to all", room: ROOM.SOON },
+      { code: "Meeting",    title: "AP-iSchools’ Networking Meeting", desc: "Open to all", room: ROOM.Network },
       { code: "Workshop 1", title: "MAGIC Workshop", desc: "Manga, Anime and video Games Information Commons", room: ROOM.LEARNING },
-      { code: "Workshop 2", title: "Books to Bots: Building Next-Generation AI Agents for Libraries", desc: "No-code, hands-on masterclass", room: ROOM.SOON }
+      { code: "Workshop 2", title: "Books to Bots: Building Next-Generation AI Agents for Libraries", desc: "No-code, hands-on masterclass", room: ROOM.Workshop2 }
     ]),
 
     brk("12:00–13:00", "Lunch"),
