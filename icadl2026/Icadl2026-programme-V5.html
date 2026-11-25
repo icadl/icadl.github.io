@@ -198,6 +198,8 @@
    ------------------------------------------------------------------------- */
 const ROOM = {
   PK      : { name: "Peerasit Kamnuansilpa",   zoom: "https://zoom.us/j/1000000001" },
+  COPA105 : { name: "COPA105",                 zoom: "https://zoom.us/j/10000000016" },
+  COPA106 : { name: "COPA106",                 zoom: "https://zoom.us/j/10000000017" },
   COPA202 : { name: "COPA202",                 zoom: "https://zoom.us/j/10000000015" },
   COPA207 : { name: "COPA207",                 zoom: "https://zoom.us/j/1000000002" },
   COPA208 : { name: "COPA208",                 zoom: "https://zoom.us/j/1000000003" },
@@ -345,7 +347,7 @@ const PROGRAMME = [
 
     parallel("10:50–12:20", [
       { code: "A5", title: "Open science and research data: availability, description and curation", chair: "Ruan Wang",
-        room: ROOM.SOON_A, talks: [
+        room: ROOM.COPA105, talks: [
         ["10:50–11:10", "#68 [F] ◇ online (recorded) How Open Access Improves the Disruption Index: Evidence from Chinese LIS Publications"],
         ["11:10–11:25", "#111 [S] The Comprehensiveness of Dataset Descriptions: A Preliminary Content Analysis of Zenodo Records"],
         ["11:25–11:40", "#113 [S] Characterizing Dataset Mentions in Publications Reusing BioLINCC Datasets"],
@@ -353,7 +355,7 @@ const PROGRAMME = [
         ["11:55–12:15", "#28 [F] ◇ online The Relative Importance of Data Availability Statements Among Predictors of Citation Impact"],
         ["12:15–12:20", "Free time"] ]},
       { code: "B5", title: "Corpus construction and computational text analysis", chair: "Maciej Ogrodniczuk",
-        room: ROOM.SOON_B, talks: [
+        room: ROOM.COPA106, talks: [
         ["10:50–11:10", "#71 [F] Leveraging Large Language Models to Induce Pattern-Matching Rules to Diagnose Grammatical Difficulty of Documents"],
         ["11:10–11:30", "#77 [F] CASPER: Character-Anchored Salient Passage Extraction for Character Profile Generation from Long-Form Fiction"],
         ["11:30–11:50", "#98 [F] Analyzing the Relations between Seed Terms and Retrieved Web Content: Towards Enhancing Seed-Based Term Crawling"],
@@ -364,13 +366,13 @@ const PROGRAMME = [
 
     parallel("13:20–14:30", [
       { code: "A6", title: "Online session: AI in libraries and digital collections", chair: "Sei-Ching Joanna Sin",
-        room: ROOM.SOON_A, talks: [
+        room: ROOM.COPA105, talks: [
         ["13:20–13:40", "#21 [F] ◇ online Academic Libraries in University Generative AI Governance: A Cross-Method Analysis of Southeast Asian Public Guidance"],
         ["13:40–13:55", "#112 [S] ◇ online AI Literacy Frameworks for Library Professionals: A Comparative Analysis and Proposed Five-Component Model"],
         ["13:55–14:10", "#29 [S] ◇ online Next-Generation User Experiences in AI-Driven Digital Libraries: A Systematic Review of Intelligent Interaction and Interface Design (2022–2026)"],
         ["14:10–14:30", "#17 [F] ◇ online IADICO: Internet Archive-based DIachronic COrpus for Document- and Timeline-oriented Studies"] ]},
       { code: "B6", title: "Semantic search and query interfaces", chair: "Douglas Oard",
-        room: ROOM.SOON_B, talks: [
+        room: ROOM.COPA106, talks: [
         ["13:20–13:35", "#11 [P] Retrieval-Augmented Generation System for the Digital Library of Old Polish Ephemeral Prints"],
         ["13:35–13:50", "#61 [S] Exploratory Literature Search via Position Queries on Personalized Two-Dimensional Literature Maps"],
         ["13:50–14:05", "#137 [S] RAG-Driven Discovery: Architecting a Semantic Search Layer for Historical Inscriptions"],
@@ -382,7 +384,7 @@ const PROGRAMME = [
 
     parallel("14:50–15:20", [
       { code: "Lightning", title: "Poster/demo lightning talks", chair: "Songphan Choemprayong",
-        room: ROOM.SOON_LT, talks: [
+        room: ROOM.PK, talks: [
         ["14:51–14:55", "#32 [Poster/Demo] From Resource Provision to Campus-Life-Oriented Promotion: Changes in WeChat-Based Reading Promotion Content in Leading Chinese University Libraries"],
         ["14:55–14:59", "#42 [Poster/Demo] SinoArchRAG: A GraphRAG-Enhanced Question-Answering System for Chinese Ancient Architecture"],
         ["14:59–15:03", "#73 [Poster/Demo] SUSHI BAR: Visualizing Results for Experiments with Searching Physical Archives"],
@@ -393,7 +395,8 @@ const PROGRAMME = [
     ]),
 
     brk("15:20–15:30", "Move to the poster room"),
-    plenary("15:30–16:30", "Poster/demo session", { sub: "Chair as for the lightning talks", room: ROOM.POSTER })
+    plenary("15:30–16:30", "Poster/demo session", { sub: "Chair as for the lightning talks", room: ROOM.PK })
+    plenary("16:30–17:00", "Closing ceremony", { sub: "", room: ROOM.PK })
   ]
 },
 
