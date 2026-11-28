@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Programme – ICADL 2026</title>
+  <meta name="description" content="ICADL 2026 Programme Details, Khon Kaen, 2–4 December 2026" />
+  <!--
+    HOW TO EDIT THIS PAGE
+    • Header text ............ the <header> block in <body>
+    • Rooms + Zoom links ..... PART 1 (const ROOM) near the bottom of the file
+    • Rooms / times / papers . PART 2 (const PROGRAMME) — one block per day
+    • Colours ................ the :root section at the top of <style>
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#1d2230; --ink2:#4a5162; --muted:#7a7f8c;
+      --paper:#f6f3ec; --card:#ffffff; --line:#e4ddcf; --line2:#efe9dd;
+      --navy:#1f3550; --navy2:#2c4a6e; --gold:#a8844b; --gold-l:#f3ead9;
+      --num:#0f6b68;            /* submission number */
+      --f:#8a2f3b; --s:#2c5f8d; --p:#5d7a37; --pd:#6b4d7c;
+      --sp:#2c5f8d; --ss:#8a5a1e; --pn:#5e4a86;
+      --on:#c25a1c; --on-bg:#fdf0e6;   /* online */
+      --room:#1f3550; --room-bg:#e9eef4;
+      --zoom:#2D8CFF;
+    }
+    html{scroll-behavior:smooth}
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;font-family:'Prompt',system-ui,sans-serif;background:var(--paper);color:var(--ink);font-weight:400;line-height:1.5}
+    .container{width:100%;margin:0 auto;padding:0 16px}
+    .text-center{text-align:center} .fw-semibold{font-weight:600}
+    h1,h2,h3,h4,p{margin-top:0}
+    .container-narrow{max-width:1180px}
+
+    /* header */
+    .page-header{background:linear-gradient(160deg,#3b5677 0%,#4d6a8c 100%);color:#fff;padding:46px 0 34px;border-bottom:4px solid var(--gold)}
+    .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:#f0dcae;margin-bottom:6px}
+    .page-header h1{font-family:'Source Serif 4',Georgia,serif;font-weight:700;font-size:clamp(1.7rem,3.6vw,2.6rem);margin:0 0 8px}
+    .page-header .when{color:rgba(255,255,255,.88);margin:0 0 18px;font-weight:300}
+    .key{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:10px;padding:10px 14px;font-size:.88rem}
+    .key .type{border-color:rgba(255,255,255,.6)}
+    .key .k{display:inline-flex;align-items:center;gap:7px}
+
+    /* day tabs */
+    .daybar{position:sticky;top:0;z-index:20;background:rgba(246,243,236,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:12px 0}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap}
+    .tab{flex:1 1 200px;border:1px solid var(--line);background:#fff;color:var(--ink2);border-radius:10px;padding:9px 14px;text-align:left;font-family:inherit;cursor:pointer;transition:.15s}
+    .tab b{display:block;color:var(--navy);font-weight:600}
+    .tab small{font-size:.8rem}
+    .tab:hover{border-color:var(--gold)}
+    .tab[aria-selected="true"]{background:var(--navy);border-color:var(--navy);color:#e8edf3}
+    .tab[aria-selected="true"] b{color:#fff}
+
+    /* day */
+    .day{display:none;padding:26px 0 10px}
+    .day.active{display:block}
+    .day-head{margin-bottom:18px}
+    .day-head h2{font-family:'Source Serif 4',Georgia,serif;font-weight:700;color:var(--navy);font-size:1.6rem;margin:0}
+    .day-head h2 span{font-weight:500;color:var(--ink2);font-size:1.15rem}
+    .loc{color:var(--muted);margin:2px 0 10px;font-size:.92rem}
+    .dnote{font-size:.88rem;color:var(--ink2);background:var(--gold-l);border-left:3px solid var(--gold);padding:8px 12px;border-radius:0 6px 6px 0}
+    .legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.84rem;color:var(--ink2)}
+    .legend>span{display:inline-flex;align-items:center;gap:6px}
+
+    /* rows */
+    .sched{display:flex;flex-direction:column;gap:10px}
+    .row{display:grid;grid-template-columns:118px 1fr;gap:0;margin:0}
+    .row>.time{font-weight:600;color:var(--navy);font-size:.92rem;padding:14px 12px 0 0;font-variant-numeric:tabular-nums;border-right:2px solid var(--line);position:relative}
+    .row>.time::after{content:"";position:absolute;right:-6px;top:19px;width:10px;height:10px;border-radius:50%;background:var(--gold)}
+    .row>.body{padding-left:18px;min-width:0}
+    .row.break>.body{color:var(--muted);font-style:italic;font-size:.92rem;padding-top:12px;padding-bottom:4px}
+    .row.break>.time{color:var(--muted);font-weight:500;padding-top:11px}
+    .row.break>.time::after{background:var(--line);top:16px}
+    .row.plenary>.body{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--navy);border-radius:10px;padding:12px 16px;margin-left:18px}
+    .row.keynote>.body{border-left-color:var(--gold);background:linear-gradient(90deg,var(--gold-l),#fff 55%)}
+    .row.social>.body{border-left-color:var(--f)}
+    .ptitle{font-family:'Source Serif 4',Georgia,serif;font-weight:600;font-size:1.12rem;color:var(--ink)}
+    .sub{color:var(--ink2);font-size:.9rem;margin-top:3px;line-height:1.55}
+    .closed{font-family:'Prompt',sans-serif;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;background:#efe9df;color:var(--ink2);border-radius:4px;padding:2px 6px;vertical-align:middle}
+
+    /* parallel sessions */
+    .grid{display:grid;gap:14px}
+    .grid.g1{grid-template-columns:1fr}
+    .grid.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .sess{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 1px 2px rgba(30,40,60,.04)}
+    .sess header{padding:14px 16px 12px;border-bottom:1px solid var(--line2);background:linear-gradient(180deg,#fbf9f4,#fff)}
+    .sess header:last-child{border-bottom:0}
+    .scode{display:inline-block;background:var(--navy);color:#fff;font-weight:600;font-size:.78rem;letter-spacing:.04em;border-radius:6px;padding:2px 9px;margin-bottom:6px}
+    .scode.sm{font-size:.7rem;padding:1px 7px;margin:0 8px 0 0;background:var(--navy2);vertical-align:2px}
+    .hyb{display:inline-block;margin-left:6px;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--zoom);border:1px solid var(--zoom);border-radius:5px;padding:1px 6px;vertical-align:1px}
+    .stime{display:inline-block;margin-left:6px;font-size:.78rem;font-weight:700;color:var(--gold);background:var(--gold-l);border:1px solid var(--gold);border-radius:5px;padding:1px 7px;vertical-align:1px;font-variant-numeric:tabular-nums}
+    .sess h3{font-family:'Source Serif 4',Georgia,serif;font-size:1.08rem;font-weight:600;margin:2px 0 4px;color:var(--ink);line-height:1.35}
+    .chair{font-size:.86rem;color:var(--ink2)}
+    .sub-sess{padding:12px 16px 4px;border-top:1px dashed var(--line)}
+    .sub-sess:first-of-type{border-top:0}
+    .sub-sess h4{font-size:.95rem;font-weight:600;color:var(--navy);margin:0 0 2px;line-height:1.4}
+
+    /* ROOM + ZOOM (emphasised) */
+    .where{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .room{display:inline-flex;align-items:center;gap:6px;background:var(--room-bg);color:var(--room);border:1px solid #c9d5e3;border-radius:8px;padding:5px 11px;font-size:.88rem;font-weight:500}
+    .room b{font-weight:700}
+    .room .pi{width:15px;height:15px;color:var(--gold);flex:none}
+    .room.tba{background:#f4f1ea;color:var(--ink2);border-style:dashed;border-color:#cfc6b4}
+    .zoom{display:inline-flex;align-items:center;gap:7px;background:#fff;color:#0b5cd5;border:1.5px solid var(--zoom);border-radius:8px;padding:4px 12px 4px 5px;font-size:.88rem;font-weight:600;text-decoration:none;transition:.15s}
+    .zoom:hover{background:var(--zoom);color:#fff}
+    .zoom .zi{width:22px;height:22px;flex:none}
+
+    /* talks */
+    .talks{list-style:none;margin:0;padding:4px 0}
+    .talk{display:grid;grid-template-columns:96px 1fr;gap:10px;padding:9px 16px;border-top:1px solid var(--line2);font-size:.92rem;line-height:1.45}
+    .sub-sess .talk{padding-left:0;padding-right:0}
+    .talk:first-child{border-top:0}
+    .tt{color:var(--ink2);font-variant-numeric:tabular-nums;font-size:.84rem;padding-top:2px;white-space:nowrap}
+    .title{color:#111;display:block}
+    .presenter{display:block;margin-top:2px;font-size:.82rem;color:var(--ink2);font-style:italic}
+    .codes{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:3px}
+    .num{font-weight:700;color:var(--num);font-size:.9rem}
+    .type{display:inline-block;min-width:22px;text-align:center;font-weight:700;font-size:.72rem;letter-spacing:.03em;color:#fff;border-radius:5px;padding:1px 6px;line-height:1.5}
+    .t-f{background:var(--f)} .t-s{background:var(--s)} .t-p{background:var(--p)} .t-pd{background:var(--pd)}
+    .t-sp{background:var(--sp)} .t-ss{background:var(--ss)} .t-pn{background:var(--pn)}
+    .online{display:inline-block;font-weight:600;font-size:.76rem;color:var(--on);background:var(--on-bg);border:1px solid #f0c9ab;border-radius:5px;padding:0 7px;line-height:1.6}
+    .talk.is-online{background:linear-gradient(90deg,var(--on-bg),#fff 40%);box-shadow:inset 3px 0 0 var(--on)}
+    .talk.is-online .num{color:var(--on)}
+    .sub-sess .talk.is-online{margin:0 -16px;padding-left:16px;padding-right:16px}
+    .talk.free .ttl,.talk.free .tt{color:var(--muted);font-style:italic}
+    .talk.note .ttl{color:var(--ink2);font-style:italic}
+    .muted{color:var(--muted);font-style:normal;font-size:.84rem}
+
+    .totop-wrap{text-align:center;margin:30px 0 10px}
+    .totop{display:inline-block;color:var(--navy);border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 18px;font-weight:500;text-decoration:none;font-size:.9rem}
+    .totop:hover{border-color:var(--gold);color:var(--gold)}
+    .site-footer{background:var(--navy);color:rgba(255,255,255,.85);padding:22px 0;margin-top:30px}
+
+    @media (max-width:991px){ .grid.g3{grid-template-columns:1fr} }
+    @media (max-width:767px){
+      .grid.g2{grid-template-columns:1fr}
+      .row{grid-template-columns:1fr}
+      .row>.time{border-right:0;padding:6px 0 4px}
+      .row>.time::after{display:none}
+      .row>.body,.row.plenary>.body{margin-left:0;padding-left:0}
+      .row.plenary>.body{padding:12px 14px}
+      .talk{grid-template-columns:1fr;gap:2px}
+      .daybar{padding:8px 0}
+      .tab{flex:1 1 0;padding:7px 8px;text-align:center}
+      .tab b{font-size:.85rem}
+      .tab small{font-size:.68rem}
+    }
+    @media print{ .daybar,.totop-wrap{display:none} .day{display:block!important} }
+  </style>
+</head>
+<body id="top">
+
+<!-- =====================================================================
+     HEADER  (edit text directly here)
+     ===================================================================== -->
+<header class="page-header">
+  <div class="container container-narrow">
+    <div class="eyebrow">The 26th International Conference on Asia-Pacific Digital Libraries</div>
+    <h1>Programme Details · ICADL 2026, Khon Kaen</h1>
+    <p class="when">2–4 December 2026, Khon Kaen · all times Thailand time (UTC+7)</p>
+    <div class="key">
+      <span class="k"><span class="type t-f">F</span> Full (20 min)</span>
+      <span class="k"><span class="type t-s">S</span> Short and <span class="type t-p">P</span> Practice (15 min), each including Q&amp;A and speaker change</span>
+      <span class="k"><span class="online">◇</span> = presented online</span>
+    </div>
+  </div>
+</header>
+
+<!-- Day buttons and day content are generated from the PROGRAMME data below -->
+<div class="daybar"><div class="container container-narrow"><div class="tabs" id="tabs" role="tablist" aria-label="Select a day"></div></div></div>
+<main class="container container-narrow" id="programme"></main>
+
+<footer class="site-footer">
+  <div class="container container-narrow text-center">
+    <div class="fw-semibold">ICADL 2026</div>
+    <small>Copyright © 2026 The 26th International Conference on Asia-Pacific Digital Libraries (ICADL2026)</small>
+  </div>
+</footer>
+
+<script>
+/* #####################################################################
+   ##                                                                 ##
+   ##   PART 1 — SETTINGS   (edit here)                               ##
+   ##                                                                 ##
+   ##################################################################### */
+
+/* ---- ROOMS: one Zoom link per room --------------------------------------
+   • Each room has its OWN Zoom link.
+   • The same room on another day re-uses the same link automatically.
+   • Change a link here once → every session in that room updates.
+   • zoom: ""  → no Zoom button is shown for that room.
+   • When a "Coming soon" room is confirmed, change  room: ROOM.SOON_A
+     in PART 2 to the real room (e.g. room: ROOM.COPA207), or add a new
+     room below and use it.
+   ------------------------------------------------------------------------- */
+const ROOM = {
+  PK      : { name: "Peerasit Kamnuansilpa",   zoom: "https://zoom.us/j/1000000001" },
+  COPA105 : { name: "COPA105",                 zoom: "https://zoom.us/j/10000000016" },
+  COPA106 : { name: "COPA106",                 zoom: "https://zoom.us/j/10000000017" },
+  COPA202 : { name: "COPA202",                 zoom: "https://zoom.us/j/10000000015" },
+  COPA207 : { name: "COPA207",                 zoom: "https://zoom.us/j/1000000002" },
+  COPA208 : { name: "COPA208",                 zoom: "https://zoom.us/j/1000000003" },
+  AP_A    : { name: "Room A",                  zoom: "https://zoom.us/j/1000000004" },   // Day 3 Track 1
+  AP_B    : { name: "Room B",                  zoom: "https://zoom.us/j/1000000005" },   // Day 3 Track 2
+  AP_C    : { name: "Room C",                  zoom: "" },                               // Day 3 Track 3 (not hybrid — add a link if needed)
+  LEARNING: { name: "Learning Center Room, 2nd Floor, COPA", zoom: "" },
+  BANQUET : { name: "North Star Hall, COPA",   zoom: "" },
+  POSTER  : { name: "Poster room",             zoom: "" },
+  Network  : { name: "COPA 107", zoom: "https://zoom.us/j/10000000010" },
+  Workshop2  : { name: "Building Next-Generation AI Agents for Libraries", zoom: "https://zoom.us/j/10000000011" },
+  Track1  : { name: "COPA 107", zoom: "https://zoom.us/j/10000000012" },
+  Track2  : { name: "Learning Center Room, 2nd Floor, COPA", zoom: "https://zoom.us/j/10000000013" },
+  Track3  : { name: "", zoom: "https://zoom.us/j/10000000014" },
+
+
+  /* rooms not confirmed yet — shown as "Coming soon" (dashed label) */
+  SOON_A  : { name: "Coming soon", zoom: "https://zoom.us/j/1000000006" },  // Room A track: A4, A5, A6
+  SOON_B  : { name: "Coming soon", zoom: "https://zoom.us/j/1000000007" },  // Room B track: B4, B5, B6
+  SOON_LT : { name: "Coming soon", zoom: "https://zoom.us/j/1000000008" },  // Day 2 lightning talks
+  SOON_MTG: { name: "Coming soon", zoom: "https://zoom.us/j/1000000009" },  // Day 3 hybrid meetings (Deans / AP-iNext)
+  SOON    : { name: "Coming soon", zoom: "" }                                // no Zoom
+};
+
+/* #####################################################################
+   ##                                                                 ##
+   ##   PART 2 — PROGRAMME DATA   (edit here)                         ##
+   ##                                                                 ##
+   ##   Row types:                                                    ##
+   ##     plenary(time, title, {sub, room, style, closed})            ##
+   ##   room: ROOM.xxx (from PART 1) — Zoom button comes with it;     ##
+   ##         add  noZoom: true  to hide the button for one item      ##
+   ##        style: "keynote" (gold) | "social" (red) | omit          ##
+   ##        closed: true  → adds a "closed door" label               ##
+   ##     brk(time, text)                → grey line (coffee, lunch)  ##
+   ##     parallel(time, [session, session, ...])                     ##
+   ##                                                                 ##
+   ##   Session:  { code, title, chair, desc, room, hybrid,           ##
+   ##               talks: [...]  or  groups: [{code,title,meta,talks}] }
+   ##                                                                 ##
+   ##   Talk:  ["10:50–11:05", "#15 [S] Paper title"]                 ##
+   ##     online  → "#26 [S] ◇ online Paper title"                    ##
+   ##     recorded→ "#68 [F] ◇ online (recorded) Paper title"         ##
+   ##     types   → F S P Poster/Demo SP SS PN                        ##
+   ##     optional 3rd item = presenter: ["13:00–13:15","#67 [SP] Title","Name"]
+   ##     anything else (e.g. "Free time") → shown as a plain note;   ##
+   ##     use " | " to add a small second line                        ##
+   ##                                                                 ##
+   ##################################################################### */
+
+const PROGRAMME = [
+
+/* =========================== DAY 1 =========================== */
+{
+  id: "day1", tab: "Day 1", date: "Wed, 2 December 2026",
+  heading: "Day 1", headingSub: "(Wednesday, 2 December 2026)",
+  legend: "icadl",
+  rows: [
+    plenary("09:00–10:30", "Opening ceremony", { room: ROOM.PK }),
+    plenary("09:30–10:30", "Keynote speaker: Prof. Gobinda Chowdhury", { room: ROOM.PK, style: "keynote" }),
+    brk("10:30–10:50", "Coffee and move to paper rooms"),
+
+    parallel("10:50–12:05", [
+      { code: "A1", title: "Inclusive information access and learning", chair: "Hao-Ren Ke",
+        room: ROOM.COPA207, talks: [
+        ["10:50–11:05", "#15 [S] Navigating Information Barriers: Information Literacy and Information-Seeking Experiences of Rohingya Refugees in Bangladesh"],
+        ["11:05–11:25", "#22 [F] Packing Web Search Results into 40-Character Lines: A Lightweight SERP Transformation Pipeline for Refreshable Braille Displays"],
+        ["11:25–11:40", "#34 [S] Web Accessibility in Local E-Government: A WCAG 2.2 Audit of a Provincial Digital Library Service in East Java, Indonesia"],
+        ["11:40–11:55", "#85 [S] Navigating Online Learning: Understanding the Barriers and Strategies of Neurodivergent Learners"],
+        ["11:55–12:05", "Free time"] ]},
+      { code: "B1", title: "Historical document processing", chair: "Kazufumi Fukuda",
+        room: ROOM.COPA208, talks: [
+        ["10:50–11:10", "#3 [F] Metadata as Prompt Context for Historical OCR Post-Correction"],
+        ["11:10–11:30", "#78 [F] From Ephemeral Art Exhibitions to Reliable Digital Corpora: A Reproducible Adaptive OCR Workflow for Heterogeneous Archival Collections"],
+        ["11:30–11:45", "#54 [S] From Traceability to Verifiability: Selective Quality Routing and IIIF-Compatible Evidence for Historical Document Restoration"],
+        ["11:45–12:05", "Free time"] ]}
+    ]),
+
+    brk("12:05–13:05", "Lunch"),
+
+    parallel("13:05–14:35", [
+      { code: "A2", title: "User experience, engagement and reader services", chair: "Chei Sian Lee",
+        room: ROOM.COPA207, talks: [
+        ["13:05–13:25", "#6 [F] Exploratory Access to Game Archives through Visual Semantic Search: A User Study of Package Image Retrieval"],
+        ["13:25–13:40", "#26 [S] ◇ online Information System Quality and User Continuance Intention in Digital Cultural Heritage Platforms: The Roles of Visualization Experience, Perceived Usefulness, and Cultural Identity"],
+        ["13:40–13:55", "#60 [S] Comparing Four User-Facing Messages for Reducing Harmful-Content Engagement: An Exploratory Randomized Experiment"],
+        ["13:55–14:15", "#70 [F] Understanding the Target Reader Levels of Books: An Empirical Study on Librarians’ Judgements"],
+        ["14:15–14:30", "#131 [S] ◇ online More Claims, Less Evidence: Bounded Verification of AI-Generated Digital Knowledge Artifacts"],
+        ["14:30–14:35", "Free time"] ]},
+      { code: "B2", title: "Language-model methods: reliability and communication", chair: "Emanuela Boros",
+        room: ROOM.COPA208, talks: [
+        ["13:05–13:25", "#2 [F] Detecting Generative AI Content in Digital Libraries: A Hybrid Framework for Information Integrity in Southeast Asian Cultural Heritage Collections"],
+        ["13:25–13:40", "#84 [S] MITI-Based Evaluation of Motivational Interviewing Dialogues Using LLM-as-a-Judge"],
+        ["13:40–14:00", "#105 [F] Compressing Inter-Model Communication: Transferring Each Sentence as a Single Hidden-State Vector"],
+        ["14:00–14:35", "Free time"] ]}
+    ]),
+
+    brk("14:35–14:55", "Coffee and room change"),
+
+    parallel("14:55–16:05", [
+      { code: "A3", title: "Knowledge organisation and heritage metadata", chair: "Magnus Pfeffer",
+        room: ROOM.COPA207, talks: [
+        ["14:55–15:15", "#59 [F] Semantic Modeling of Traditional Wooden Boatbuilding Knowledge Using CIDOC CRM"],
+        ["15:15–15:30", "#81 [S] Cultural Semantic Spans for Low-Resource Heritage Metadata: Evidence from Japanese–Chinese Ukiyo-e Titles"],
+        ["15:30–15:50", "#95 [F] A Multi-layer Context Metadata Model for Environmental Sound Archives: Initial Implementation of Weather Metadata"],
+        ["15:50–16:05", "#104 [S] ◇ online CAFE: Confidence-Aware Framework for Entity Enrichment in Historical Digitised Documents"] ]},
+      { code: "B3", title: "Scholarly metadata extraction; infrastructure spotlight", chair: "Wirapong Chansanam",
+        room: ROOM.COPA208, talks: [
+        ["14:55–15:10", "#97 [S] Exploring README Files as Sources of Research Data Metadata"],
+        ["15:10–15:25", "#103 [S] Where Are Research Data Published? Identifying Their Publication URLs in Scholarly Papers"],
+        ["15:25–15:40", "#120 [S] Evaluation of Large Language Models for Japanese Bibliographic Reference Parsing across Diverse Citation Styles"],
+        ["15:40–16:00", "#93 [F] When Faster Primitives Yield Lower Throughput: A Diagnostic Case Study of Post-Quantum TLS 1.3 Performance"],
+        ["16:00–16:05", "Free time"] ]}
+    ]),
+
+    plenary("15:00–16:00", "ICADL Steering Committee Meeting", { closed: true, room: ROOM.SOON }),
+
+    brk("16:05–16:25", "Coffee and room change"),
+
+    parallel("16:25–17:25", [
+      { code: "A4", title: "AI literacy and research training", chair: "Di Wang",
+        room: ROOM.COPA207, talks: [
+        ["16:25–16:40", "#115 [S] Investigating Information and AI Literacy Among Generation Z Students: Associations with Environmental and Individual Factors"],
+        ["16:40–16:55", "#149 [S] Comparing Local and International Students' Generative AI Perception, Use, and Preferred University Support"],
+        ["16:55–17:15", "#134 [F] Rethinking Information Literacy in the Age of Generative AI: An ACRL Framework-Based Approach to AI for Research Training in an Academic Library"],
+        ["17:15–17:25", "Free time"] ]},
+      { code: "B4", title: "Visual and audiovisual information processing", chair: "Jun Deng",
+        room: ROOM.COPA208, talks: [
+        ["16:25–16:45", "#8 [F] Retrieving Instance Segmentation Models using Local Image Features via Transformer Encoder"],
+        ["16:45–17:05", "#119 [F] Multimodal Topic Segmentation of Japanese Television News for Digital Archives"],
+        ["17:05–17:20", "#139 [S] Background Diversification for Improved Object Detection in Illustrated Images"],
+        ["17:20–17:25", "Free time"] ]}
+    ]),
+
+    plenary("17:30–19:30", "Official banquet", { room: ROOM.BANQUET, style: "social" })
+  ]
+},
+
+/* =========================== DAY 2 =========================== */
+{
+  id: "day2", tab: "Day 2", date: "Thu, 3 December 2026",
+  heading: "Day 2", headingSub: "(Thursday, 3 December 2026)",
+  legend: "icadl",
+  rows: [
+    plenary("09:30–10:30", "Keynote speaker: Dr. Thepchai Sapnithi", { room: ROOM.PK, style: "keynote" }),
+    brk("10:30–10:50", "Coffee and move to paper rooms"),
+
+    parallel("10:50–12:20", [
+      { code: "A5", title: "Open science and research data: availability, description and curation", chair: "Ruan Wang",
+        room: ROOM.COPA105, talks: [
+        ["10:50–11:10", "#68 [F] ◇ online (recorded) How Open Access Improves the Disruption Index: Evidence from Chinese LIS Publications"],
+        ["11:10–11:25", "#111 [S] The Comprehensiveness of Dataset Descriptions: A Preliminary Content Analysis of Zenodo Records"],
+        ["11:25–11:40", "#113 [S] Characterizing Dataset Mentions in Publications Reusing BioLINCC Datasets"],
+        ["11:40–11:55", "#9 [P] ◇ online Sustainable Curation and Data Services for Long-Term Polar Observation Data: A Case Study of Southern Ocean Zooplankton Records"],
+        ["11:55–12:15", "#28 [F] ◇ online The Relative Importance of Data Availability Statements Among Predictors of Citation Impact"],
+        ["12:15–12:20", "Free time"] ]},
+      { code: "B5", title: "Corpus construction and computational text analysis", chair: "Maciej Ogrodniczuk",
+        room: ROOM.COPA106, talks: [
+        ["10:50–11:10", "#71 [F] Leveraging Large Language Models to Induce Pattern-Matching Rules to Diagnose Grammatical Difficulty of Documents"],
+        ["11:10–11:30", "#77 [F] CASPER: Character-Anchored Salient Passage Extraction for Character Profile Generation from Long-Form Fiction"],
+        ["11:30–11:50", "#98 [F] Analyzing the Relations between Seed Terms and Retrieved Web Content: Towards Enhancing Seed-Based Term Crawling"],
+        ["11:50–12:20", "Free time"] ]}
+    ]),
+
+    brk("12:20–13:20", "Lunch"),
+
+    parallel("13:20–14:30", [
+      { code: "A6", title: "Online session: AI in libraries and digital collections", chair: "Sei-Ching Joanna Sin",
+        room: ROOM.COPA105, talks: [
+        ["13:20–13:40", "#21 [F] ◇ online Academic Libraries in University Generative AI Governance: A Cross-Method Analysis of Southeast Asian Public Guidance"],
+        ["13:40–13:55", "#112 [S] ◇ online AI Literacy Frameworks for Library Professionals: A Comparative Analysis and Proposed Five-Component Model"],
+        ["13:55–14:10", "#29 [S] ◇ online Next-Generation User Experiences in AI-Driven Digital Libraries: A Systematic Review of Intelligent Interaction and Interface Design (2022–2026)"],
+        ["14:10–14:30", "#17 [F] ◇ online IADICO: Internet Archive-based DIachronic COrpus for Document- and Timeline-oriented Studies"] ]},
+      { code: "B6", title: "Semantic search and query interfaces", chair: "Douglas Oard",
+        room: ROOM.COPA106, talks: [
+        ["13:20–13:35", "#11 [P] Retrieval-Augmented Generation System for the Digital Library of Old Polish Ephemeral Prints"],
+        ["13:35–13:50", "#61 [S] Exploratory Literature Search via Position Queries on Personalized Two-Dimensional Literature Maps"],
+        ["13:50–14:05", "#137 [S] RAG-Driven Discovery: Architecting a Semantic Search Layer for Historical Inscriptions"],
+        ["14:05–14:25", "#143 [F] Large Language Models in Corpus Query Language Generation"],
+        ["14:25–14:30", "Free time"] ]}
+    ]),
+
+    brk("14:30–14:50", "Coffee and room change"),
+
+    parallel("14:50–15:20", [
+      { code: "Lightning", title: "Poster/demo lightning talks", chair: "Songphan Choemprayong",
+        room: ROOM.PK, talks: [
+        ["14:51–14:55", "#32 [Poster/Demo] From Resource Provision to Campus-Life-Oriented Promotion: Changes in WeChat-Based Reading Promotion Content in Leading Chinese University Libraries"],
+        ["14:55–14:59", "#42 [Poster/Demo] SinoArchRAG: A GraphRAG-Enhanced Question-Answering System for Chinese Ancient Architecture"],
+        ["14:59–15:03", "#73 [Poster/Demo] SUSHI BAR: Visualizing Results for Experiments with Searching Physical Archives"],
+        ["15:03–15:07", "#88 [Poster/Demo] Cheap First, Escalate on Evidence: Quality-Gated Extraction for Heterogeneous Research Collections"],
+        ["15:07–15:11", "#96 [Poster/Demo] Hanshiru: An AI-Supported Annotation Tool for Analyzing Internal Structure of Documents"],
+        ["15:11–15:15", "#114 [Poster/Demo] BRIDGE: An AI-Assisted Consultation Form to Elicit Lesson and Resource Requirements for Teacher and Librarian Collaboration"],
+        ["15:15–15:19", "#116 [Poster/Demo] What, Why, and How Research Data Are Cited? Investigating Research Data Citation Practices Across Time and Domains"] ]}
+    ]),
+
+    brk("15:20–15:30", "Move to the poster room"),
+    plenary("15:30–16:30", "Poster/demo session", { sub: "Chair as for the lightning talks", room: ROOM.PK }),
+    plenary("16:30–17:00", "Closing Ceremony", { sub: "", room: ROOM.PK })
+
+    
+    
+    
+  ]
+},
+
+/* ===================== DAY 3 (AP-iConference) ===================== */
+/* Source: AP_Agenda_1122-24-11-69.docx                               */
+{
+  id: "day3", tab: "Day 3 · Workshop", date: "Fri, 4 December 2026",
+  heading: "Day 3", headingSub: "(Friday, 4 December 2026) : Workshop",
+  legend: "ap",
+  note: "AP-iConference 2026 · Every slot is 15 minutes including speaker change. Conference Coordinators: Jie Ma, Jilin University · Naya Sucha-xaya, Chulalongkorn University.",
+  rows: [
+    plenary("09:00–09:10", "Opening Ceremony & Welcoming Remarks", { room: ROOM.PK,
+      sub: "Speaker:<br>Prof. Lihong Zhou, Wuhan University, iSchools-Asia Pacific Regional Chair<br>Prof. Atsuyuki Morishima, University of Tsukuba, iSchools Ambassador" }),
+    plenary("09:10–09:20", "Organization Overview", { room: ROOM.PK,
+      sub: "Speaker:AP-iConference 2026 Co-Chairs<br> Prof. Jie Ma, Jilin University <br> Dr. Naya Sucha-xaya, Chulalongkorn University" }),
+    plenary("09:20–10:20", "Keynote Speech", { room: ROOM.PK, style: "keynote",
+      sub: "Speaker: Prof. Wanida Kanarkard, Khon Kaen University<br>Host: Prof. Jun Deng, Jilin University" }),
+    brk("10:20–10:45", "Group Photo & Coffee Break"),
+
+    parallel("10:45–12:00", [
+      { code: "Meeting",    title: "AP-iSchools’ Networking Meeting", desc: "Open to all", room: ROOM.Network },
+      { code: "Workshop 1", time: "09:00–12:00", title: "MAGIC Workshop", desc: "Manga, Anime and video Games Information Commons", room: ROOM.LEARNING },
+      { code: "Workshop 2", title: "Books to Bots: Building Next-Generation AI Agents for Libraries", desc: "No-code, hands-on masterclass", room: ROOM.Workshop2 }
+    ]),
+
+    brk("12:00–13:00", "Lunch"),
+
+    /* Talk format on Day 3: ["time", "#no [TYPE] Title", "Presenter"] */
+    parallel("13:00–14:45", [
+      { code: "Track 1", title: "Short Papers (SP)", hybrid: true, room: ROOM.Track1, groups: [
+        { code: "A1", title: "User behavior and human-computer interaction in AI environment", meta: "13:00–13:45 · Host: Qinggong Shi", talks: [
+          ["13:00–13:15", "#67 [SP] From Invocation to Continuation: How AI Social Bot Replies Shape Continuance Behavior Across Gratification Types", "Xue Pan & Jing Qin"],
+          ["13:15–13:30", "#75 [SP] Through the Looking Glass: A Longitudinal Diary Study of Academic GenAI Users’ Behaviors, Ethical Risks, and Coping Strategies", "Qinquan Dai et al."],
+          ["13:30–13:45", "#83 [SP] ◇ online When Answers Precede Sources: Post-Literacy, Epistemic Agency, and Academic Libraries", "Dridge Paul Reyes"] ]},
+        { code: "A2", title: "Intelligent knowledge organization of archival and documentary heritage", meta: "13:45–14:30 · Host: Mingzhu Wei", talks: [
+          ["13:45–14:00", "#90 [SP] From Archival Records to Historical Processes: LLM-Assisted Event Discovery in the Study of Chinese Grenade Technology, 1929–1949", "Jun Deng et al."],
+          ["14:00–14:15", "#91 [SP] Research on the Construction of a Knowledge Service System for Ancient Chinese Texts Integrating Knowledge Graphs and Large Language Models: A Case Study of Ming Shilu", "Jiayi Xu et al."],
+          ["14:15–14:30", "#135 [SP] Constructing a Metadata Framework and Knowledge Graph for Local Documentary Heritage: A Case Study of Qiaopi Archives", "Lihong Zhou et al."] ]}
+      ]},
+      { code: "Track 2", title: "Student Symposium (SS)", hybrid: true, room: ROOM.Track2, groups: [
+        { code: "B1", title: "AI literacy, service evaluation, and industry application", meta: "13:00–14:30 · Host: Naya Sucha-xaya", talks: [
+          ["13:00–13:15", "#109 [SS] The Development of Artificial Intelligence Literacy Framework for Content and Creative Media Works of Undergraduates in Thailand", "Patiphan Pholmat et al."],
+          ["13:15–13:30", "#118 [SS] Spatial Precision Agriculture System Development for Cocoa Cultivation in Thailand’s Young Smart Farmer", "Tassanee Lunrasri"],
+          ["13:30–13:45", "#121 [SS] A Strategic Data Utilization Model for Driving Sustainable Business in Thailand’s Agricultural Processing Industry", "Krittiwakorn Thammasaeng"],
+          ["13:45–14:00", "#150 [SS] Paying for a Smarter Model: Public Sense-Making of Capability Stratification in China’s Generative AI Monetization", "Lufei Qi & Zhihao Gao"],
+          ["14:00–14:15", "#151 [SS] Content Analysis of the Library Websites of Indian Institutions of Eminence (IoE)", "Dipanwita Mandal et al."],
+          ["14:15–14:30", "Comment and group discussion | Commentators: Misita Anwar, Hiroyoshi Ito, Yi Song"] ]}
+      ]},
+      { code: "Track 3", title: "Special Panel (PN)", room: ROOM.COPA202, groups: [
+        { code: "Theme 1", title: "Methodological Innovation: Measurement, Discovery and Evaluation", meta: "13:00–13:45 · Host: Di Wang", talks: [
+          ["13:00–13:15", "#39 [PN] Multi-dimensional Measurement of Academic Paper Innovativeness Based on Multi-agent Logical Synergy", "Jia Feng & Ming Shuang Xu"],
+          ["13:15–13:30", "#44 [PN] Early Identification of Breakthrough Biomedical Literature via Semantic Novelty and Expert Knowledge Integration", "Jia Feng & Rui Li"],
+          ["13:30–13:45", "#48 [PN] Single-LLM or Multi-Agent? An Automated Evaluation of Medical Question-Answering Workflows", "Yingchi Gu et al."] ]},
+        { code: "Theme 2", title: "Theoretical Innovation: Paradigm and Framework Reconstruction", meta: "13:45–14:15 · Host: Jia Feng", talks: [
+          ["13:45–14:00", "#76 [PN] Paradigm Reconstruction of Archival Work in the Context of Artificial Intelligence: A Dual Examination of Technological Logic and Service Transformation", "Ruan Wang & Junru Yue"],
+          ["14:00–14:15", "#43 [PN] Factors Influencing Public Participation in Cultural Heritage Crowdsourcing Projects: A Grounded Theory Study", "Jun Deng et al."] ]},
+        { code: "Theme 3", title: "Practical Innovation: Intelligent Services and Inclusive Access", meta: "14:15–14:45 · Host: Ruan Wang", talks: [
+          ["14:15–14:30", "#45 [PN] Research on the Evaluation and Adaptability of Agentic Reference Services in Academic Libraries Based on OpenClaw", "Yunsong Dai et al."],
+          ["14:30–14:45", "#100 [PN] Bridging the Silver Digital Divide in Livestream Commerce: A Mixed-Methods Study on Information Adoption and Technological Inclusiveness", "Mingzhu Wei et al."] ]}
+      ]}
+    ]),
+
+    brk("14:30–14:45", "Coffee Break and Potential Room Change (Tracks 1 & 2)"),
+
+    parallel("14:45–16:00", [
+      { code: "Track 1", title: "Short Papers (SP)", hybrid: true, room: ROOM.Track1, groups: [
+        { code: "A3", title: "Scientometrics, data governance, and intelligent analysis methods", meta: "14:45–15:45 · Host: Zhihao Gao", talks: [
+          ["14:45–15:00", "#36 [SP] What Is “More Disclosure”? Validating Corporate Data-Governance Disclosure Indicators Across Report Corpora", "Moyan Yang & Jie Ma"],
+          ["15:00–15:15", "#41 [SP] CDMA+ARL: A Constrained Multi-Agent Workflow for Auditable Evidence-Traceable Literature Synthesis", "Lufei Qi et al."],
+          ["15:15–15:30", "#133 [SP] How Do Social Collaboration Networks Emerge in Grassroots Libraries? A Decade-Long Case Study of Central–Branch Library System Development", "Qinggong Shi et al."],
+          ["15:30–15:45", "#99 [SP] Bottom-Up Competition Based on Label Hierarchy Trees for In-Context Learning with Large Label Space", "Mingzhu Wei et al."] ]}
+      ]},
+      { code: "Track 2", title: "Student Symposium (SS)", hybrid: true, room: ROOM.Track2, groups: [
+        { code: "B2", title: "Data governance, knowledge graph, and intelligent methods", meta: "14:45–16:00 · Host: Yi Song", talks: [
+          ["14:45–15:00", "#136 [SS] Detecting Silent Semantic Drift in Evolving Enterprise Knowledge Graphs: A Structure- and Definition-Aware Approach", "Yawen Bai & Ganghui Zhang"],
+          ["15:00–15:15", "#152 [SS] ◇ online From Text to Relations: Applying Large Language Models to Scientific Literature Knowledge Graph Construction", "Junru Yue"],
+          ["15:15–15:30", "#154 [SS] ◇ online Configurational Mechanisms of Enterprise Archival Data Governance System Transformation: A Multi-Case Comparative Study", "Han Yan"],
+          ["15:30–15:45", "#155 [SS] ◇ online The Formation Process of Digital Government Development Outcomes: An Event Evolutionary Graph Approach", "Han Li"],
+          ["15:45–16:00", "Comment and group discussion | Commentators: Di Wang, Houqiang Yu, Naya Sucha-xaya"] ]}
+      ]}
+    ]),
+
+    plenary("16:00–16:30", "Closing Ceremony", { room: ROOM.PK }),
+    plenary("16:30–17:30", "AP-iSchools Deans’ Meeting", { closed: true, room: ROOM.Network,
+      sub: "Hybrid · Deans and representatives of AP-iSchools · Moderator: Prof. Lihong Zhou" }),
+    plenary("17:30–18:00", "AP-iNext Members Meeting", { closed: true, room: ROOM.Network,
+      sub: "Hybrid · AP-iNext All Members Meeting · Moderators: Misita Anwar & Houqiang Yu" })
+  ]
+}
+
+]; /* ← end of PROGRAMME */
+
+
+/* #####################################################################
+   ##   PART 3 — DISPLAY CODE   (normally no need to edit below)      ##
+   ##################################################################### */
+
+function plenary(time, title, opt) { return Object.assign({ kind: "plenary", time: time, title: title }, opt || {}); }
+function brk(time, text)          { return { kind: "break", time: time, text: text }; }
+function parallel(time, sessions) { return { kind: "parallel", time: time, sessions: sessions }; }
+</script>
+<script>
+(function () {
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+
+  var ICON_ZOOM = '<svg class="zi" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#2D8CFF"/><path d="M5.5 8.6c0-.6.5-1.1 1.1-1.1h6.6c1.2 0 2.2 1 2.2 2.2v4.8c0 .6-.5 1.1-1.1 1.1H7.7c-1.2 0-2.2-1-2.2-2.2V8.6z" fill="#fff"/><path d="M16.2 10.4l2.6-1.9c.3-.2.7 0 .7.4v6.2c0 .4-.4.6-.7.4l-2.6-1.9v-3.2z" fill="#fff"/></svg>';
+  var ICON_PIN  = '<svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z" fill="currentColor"/></svg>';
+  var TYPE_CLASS = { "F": "f", "S": "s", "P": "p", "Poster/Demo": "pd", "SP": "sp", "SS": "ss", "PN": "pn" };
+
+  var LEGENDS = {
+    icadl: '<span><span class="type t-f">F</span> Full (20 min)</span><span><span class="type t-s">S</span> Short</span><span><span class="type t-p">P</span> Practice (15 min)</span><span><span class="type t-pd">Poster/Demo</span> Lightning (4 min)</span><span><span class="online">◇ online</span> presented online</span>',
+    ap: '<span><span class="num">#n</span> AP26 submission no.</span><span><span class="type t-sp">SP</span> Short Paper</span><span><span class="type t-ss">SS</span> Student Symposium</span><span><span class="type t-pn">PN</span> Special Panel</span><span><span class="online">◇ online</span> presented online</span>'
+  };
+
+  function where(item) {
+    var r = item.room; if (!r) return "";
+    var room = typeof r === "string" ? r : r.name;
+    var zoom = item.noZoom ? "" : (typeof r === "string" ? item.zoom : r.zoom);
+    var h = '<div class="where">';
+    if (room) h += '<span class="room' + (room === "Coming soon" ? ' tba' : '') + '">' + ICON_PIN + '<span><b>Room:</b> ' + esc(room) + '</span></span>';
+    if (zoom) h += '<a class="zoom" href="' + esc(zoom) + '" target="_blank" rel="noopener noreferrer">' + ICON_ZOOM + '<span>Join on Zoom</span></a>';
+    return h + '</div>';
+  }
+
+  function talk(t) {
+    var time = t[0], text = t[1];
+    var m = text.match(/^#(\d+)\s*\[([^\]]+)\]\s*(◇ online(?: \(recorded\))?)?\s*(.*)$/);
+    if (!m) {
+      var parts = text.split(" | "), cls = text === "Free time" ? "free" : "note";
+      return '<li class="talk ' + cls + '"><span class="tt">' + esc(time) + '</span><span class="ttl">' + esc(parts[0]) +
+             (parts[1] ? '<br><span class="muted">' + esc(parts[1]) + '</span>' : '') + '</span></li>';
+    }
+    var online = !!m[3];
+    return '<li class="talk' + (online ? ' is-online' : '') + '"><span class="tt">' + esc(time) + '</span><span class="ttl">' +
+      '<span class="codes"><span class="num">#' + m[1] + '</span><span class="type t-' + (TYPE_CLASS[m[2]] || 's') + '">' + esc(m[2]) + '</span>' +
+      (online ? '<span class="online">' + esc(m[3]) + '</span>' : '') + '</span>' +
+      '<span class="title">' + esc(m[4]) + '</span>' +
+      (t[2] ? '<span class="presenter">' + esc(t[2]) + '</span>' : '') + '</span></li>';
+  }
+
+  function talks(list) { return '<ol class="talks">' + list.map(talk).join("") + '</ol>'; }
+
+  function session(s) {
+    var h = '<article class="sess"><header><span class="scode">' + esc(s.code) + '</span>' +
+            (s.hybrid ? '<span class="hyb">Hybrid</span>' : '') +
+            (s.time ? '<span class="stime">' + esc(s.time) + '</span>' : '') +   /* own time, if different from the row */
+            '<h3>' + esc(s.title) + '</h3>' +
+            (s.chair ? '<div class="chair">Chair: ' + esc(s.chair) + '</div>' : '') +
+            (s.desc ? '<div class="chair">' + esc(s.desc) + '</div>' : '') +
+            where(s) + '</header>';
+    if (s.talks) h += talks(s.talks);
+    if (s.groups) h += s.groups.map(function (g) {
+      return '<div class="sub-sess"><h4><span class="scode sm">' + esc(g.code) + '</span>' + esc(g.title) + '</h4>' +
+             '<div class="chair">' + esc(g.meta || "") + '</div>' + talks(g.talks) + '</div>';
+    }).join("");
+    return h + '</article>';
+  }
+
+  function row(r) {
+    var time = '<div class="time">' + esc(r.time) + '</div>';
+    if (r.kind === "break") return '<div class="row break">' + time + '<div class="body">' + esc(r.text) + '</div></div>';
+    if (r.kind === "parallel") {
+      var n = Math.min(r.sessions.length, 3);
+      return '<div class="row parallel">' + time + '<div class="body"><div class="grid g' + n + '">' + r.sessions.map(session).join("") + '</div></div></div>';
+    }
+    return '<div class="row plenary' + (r.style ? ' ' + r.style : '') + '">' + time + '<div class="body">' +
+      '<div class="ptitle">' + esc(r.title) + (r.closed ? ' <span class="closed">closed door</span>' : '') + '</div>' +
+      (r.sub ? '<div class="sub">' + r.sub + '</div>' : '') +       /* sub allows <br> */
+      where(r) + '</div></div>';
+  }
+
+  var tabsEl = document.getElementById("tabs"), mainEl = document.getElementById("programme");
+  tabsEl.innerHTML = PROGRAMME.map(function (d, i) {
+    return '<button class="tab" role="tab" data-day="' + d.id + '" aria-controls="' + d.id + '" aria-selected="' + (i === 0) + '"><b>' + esc(d.tab) + '</b><small>' + esc(d.date) + '</small></button>';
+  }).join("");
+  mainEl.innerHTML = PROGRAMME.map(function (d, i) {
+    return '<section class="day' + (i === 0 ? ' active' : '') + '" id="' + d.id + '">' +
+      '<div class="day-head"><h2>' + esc(d.heading) + ' <span>' + esc(d.headingSub) + '</span></h2>' +
+      '<p class="loc">Khon Kaen · Thailand time (UTC+7)</p>' +
+      (d.note ? '<p class="dnote">' + esc(d.note) + '</p>' : '') +
+      '<div class="legend">' + (LEGENDS[d.legend] || "") + '</div></div>' +
+      '<div class="sched">' + d.rows.map(row).join("") + '</div>' +
+      '<div class="totop-wrap"><a href="#top" class="totop">▲ Back to top</a></div></section>';
+  }).join("");
+
+  /* day switching */
+  var tabs = tabsEl.querySelectorAll(".tab"), days = mainEl.querySelectorAll(".day");
+  function show(id, scroll) {
+    if (!document.getElementById(id)) id = PROGRAMME[0].id;
+    days.forEach(function (d) { d.classList.toggle("active", d.id === id); });
+    tabs.forEach(function (t) { t.setAttribute("aria-selected", t.dataset.day === id ? "true" : "false"); });
+    if (history.replaceState) history.replaceState(null, "", "#" + id);
+    if (scroll) window.scrollTo({ top: document.querySelector(".daybar").offsetTop, behavior: "smooth" });
+  }
+  tabs.forEach(function (t) { t.addEventListener("click", function () { show(t.dataset.day, true); }); });
+  var h = (location.hash || "").slice(1); if (h) show(h, false);
+  mainEl.querySelectorAll(".totop").forEach(function (a) {
+    a.addEventListener("click", function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); });
+  });
+})();
+</script>
+</body>
+</html>
